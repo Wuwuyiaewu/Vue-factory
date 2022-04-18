@@ -15,7 +15,7 @@
 
 	<div class="content_page_banner">
 		<p class="bg">
-			<img src="main/images/information/teaching_banner.jpg">
+			<img src="@/assets/images/information/teaching_banner.jpg">
 		</p>
 		<div>
 			<p>
@@ -29,7 +29,7 @@
 	<div class="teaching_center_list">
 		<ul class="page_list">
 			<li>
-				<span class="pic"><img src="main/images/information/teaching_list_pic1.jpg"></span>
+				<span class="pic"><img src="@/assets/images/information/teaching_list_pic1.jpg"></span>
 				<div>
 					<p>
 						<b>外汇汇率如何看? 你只需要看懂走势图</b>
@@ -39,7 +39,7 @@
 				</div>
 			</li>
 			<li>
-				<span class="pic"><img src="main/images/information/teaching_list_pic2.jpg"></span>
+				<span class="pic"><img src="@/assets/images/information/teaching_list_pic2.jpg"></span>
 				<div>
 					<p>
 						<b>投资者口中的“外汇牌价”究竟有什么作用</b>
@@ -49,7 +49,7 @@
 				</div>
 			</li>
 			<li>
-				<span class="pic"><img src="main/images/information/teaching_list_pic3.jpg"></span>
+				<span class="pic"><img src="@/assets/images/information/teaching_list_pic3.jpg"></span>
 				<div>
 					<p>
 						<b>外汇投资行情怎么看?柏富环球:不看大盘你就输了</b>
@@ -59,7 +59,7 @@
 				</div>
 			</li>
 			<li>
-				<span class="pic"><img src="main/images/information/teaching_list_pic4.jpg"></span>
+				<span class="pic"><img src="@/assets/images/information/teaching_list_pic4.jpg"></span>
 				<div>
 					<p>
 						<b>外汇汇率如何看? 你只需要看懂走势图</b>
@@ -69,7 +69,7 @@
 				</div>
 			</li>
 			<li>
-				<span class="pic"><img src="main/images/information/teaching_list_pic5.jpg"></span>
+				<span class="pic"><img src="@/assets/images/information/teaching_list_pic5.jpg"></span>
 				<div>
 					<p>
 						<b>投资者口中的“外汇牌价”究竟有什么作用</b>
@@ -79,7 +79,7 @@
 				</div>
 			</li>
 			<li>
-				<span class="pic"><img src="main/images/information/teaching_list_pic6.jpg"></span>
+				<span class="pic"><img src="@/assets/images/information/teaching_list_pic6.jpg"></span>
 				<div>
 					<p>
 						<b>外汇投资行情怎么看?柏富环球:不看大盘你就输了</b>
@@ -89,7 +89,7 @@
 				</div>
 			</li>
 			<li>
-				<span class="pic"><img src="main/images/information/teaching_list_pic7.jpg"></span>
+				<span class="pic"><img src="@/assets/images/information/teaching_list_pic7.jpg"></span>
 				<div>
 					<p>
 						<b>外汇汇率如何看? 你只需要看懂走势图</b>
@@ -99,7 +99,7 @@
 				</div>
 			</li>
 			<li>
-				<span class="pic"><img src="main/images/information/teaching_list_pic8.jpg"></span>
+				<span class="pic"><img src="@/assets/images/information/teaching_list_pic8.jpg"></span>
 				<div>
 					<p>
 						<b>投资者口中的“外汇牌价”究竟有什么作用</b>

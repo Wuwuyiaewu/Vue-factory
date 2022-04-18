@@ -4,6 +4,7 @@ import Learningcentre_details from '../components/learningcentre_details.vue'
 import Learningcentre_beginne from '../components/learningcentre_beginner.vue'
 import "@/assets/css/global.css"
 import "@/assets/css/content_page.css"
+import "@/assets/css/content_page.css"
 const routes = [
   {
     path: '/',

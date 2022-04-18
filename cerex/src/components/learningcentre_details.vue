@@ -15,7 +15,7 @@
 
 	<div class="content_page_banner">
 		<p class="bg">
-			<img src="main/images/information/teaching_banner.jpg">
+			<img src="@/assets/images/information/teaching_banner.jpg">
 		</p>
 		<div>
 			<p>

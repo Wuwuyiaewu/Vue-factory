@@ -6,7 +6,7 @@
 <div class="header" id="header">
 <div class="header_inside">	
 	<a href="index.html" class="top_logo">
-		<img src="main/images/top_logo.png">
+		<img src="@/assets/images/top_logo.png">
 	</a>	
 		
 	<div class="main_menu">
@@ -24,7 +24,7 @@
 					<li><a href="products.html">产品概览</a></li>	
 					<li><a href="contract.html">合约细则</a></li>	
 					<li><a href="marginrule.html">交易安排</a></li>	
-					<li><a href="main/images/products/Cerex_expiry_date.pdf" target="_blank">合约到期日</a></li>	
+					<li><a href="@/assets/images/products/Cerex_expiry_date.pdf" target="_blank">合约到期日</a></li>	
 					<li><a href="advantages.html">产品优势</a></li>							
 				</ul>
 			</li>
@@ -60,7 +60,7 @@
 		</ul>
         
         <div class="top_right">
-            <a href="#" class="btn1"><svg  x="0px" y="0px"viewBox="0 0 100 100" >
+            <a href="#" class="btn1"><svg  x="0px" y="0px" viewBox="0 0 100 100" >
 <path class="st0" d="M15.08,36.69c0,8.96,4.15,15.42,11.48,18.01v26.99L33.67,90h10.94V79.58l-3.28-2.59v-0.34l3.28-3.11V69.3
 	l-3.28-3.71v-0.47l3.28-2.59v-3.95h0.84c2.69-0.01,5.15-0.44,7.33-1.31l19.24,19.6h10.46l7.32-7.79l-6.48-6.97h-4.27v-4.64
 	l-4.28-3.56h-3.93v-4.69l-6.54-6.37c1.1-6.05-0.91-12.42-5.41-16.92c-0.11-0.12-0.23-0.22-0.35-0.33v-2.04
@@ -84,10 +84,10 @@
 			
 			
 			<a href="#" class="btn3">下载APP</a>
-			<a href="#" class="btn4"><img src="main/images/mobile_cs.png"></a>
+			<a href="#" class="btn4"><img src="@/assets/images/mobile_cs.png"></a>
 			<p class="mobile_menu" onClick="show_mobile_menu()">
-				<img src="main/images/mobile_top_menu1.png">
-				<img src="main/images/mobile_top_menu2.png">
+				<img src="@/assets/images/mobile_top_menu1.png">
+				<img src="@/assets/images/mobile_top_menu2.png">
 			</p>
         </div><!-- /top_right-->
         
@@ -186,7 +186,7 @@
 </template>
 
 <script>
-	remCompute(750, true);	
+
 </script>
 <style>
 </style>

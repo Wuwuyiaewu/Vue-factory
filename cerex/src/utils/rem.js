@@ -14,7 +14,7 @@ var remCompute = function (width,device) {
 		window.addEventListener(resizeEvt, function () {recalc(width,device)}, false);
 	};
 };
-
+export default{ remCompute }
 
 // NOTE:
 	// html页面body下的最上方引入方法

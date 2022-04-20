@@ -1,10 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Learningcentre from '../layer/learningcentre'
+import Learningcentre from '../views/learningcentre'
 import Learningcentre_details from '../components/learningcentre_details.vue'
 import Learningcentre_beginne from '../components/learningcentre_beginner.vue'
 import "@/assets/css/global.css"
 import "@/assets/css/content_page.css"
-import "@/utills/rem"
 const routes = [
   {
     path: '/learningcentre.html',

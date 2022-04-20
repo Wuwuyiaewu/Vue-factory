@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Header/>
     <div class="hierarchy_menu">
       <p>首页 &gt; 资讯中心 &gt; <b>教学中心</b></p>
     </div>
@@ -16,18 +17,24 @@
       </div>
     </div>
     <Newcome/>
+    <Skill/>
+    <Adv/>
+    <Footer/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import Header from "@/layer/header";
+import Footer from "@/layer/footer";
 import Newcome from "@/components/newcome";
-import Learningcentre from "@/components/learningcentre.vue";
+import Skill from "@/components/skill";
+import Adv from "@/components/adv";
 import Learningcentre from "@/components/learningcentre.vue";
 export default {
   name: "HomeView",
   components: {
-    Newcome,
+    Header,Newcome,Skill,Adv,Footer
   },
 };
 </script>

@@ -3,7 +3,7 @@
     <div class="footer">
         <div>
             <p class="text1">
-                <img src="main/images/footer_icon.png">
+                <img src="@/assets/images/footer_icon.png">
                 风险警告：保证金交易具高风险，投资者考虑投资金额时需视乎自身的能力。投资有盈有亏，您可能因此损失全部本金。保证金交易不一定适合所有投资者，交易前请确认您已完全了解相关风险。
             </p>
             <p class="text2">

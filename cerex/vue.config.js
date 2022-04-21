@@ -6,12 +6,6 @@ module.exports = defineConfig({
   configureWebpack: {
     externals: {
       'rem': 'rem',
-    },
-    plugins: [
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery"
-      })
-    ],
+    }
   },
 })

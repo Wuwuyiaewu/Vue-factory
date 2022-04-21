@@ -1,6 +1,14 @@
 <template>
   <div class="home">
     <Header/>
+    
+<div class="mobile_bg"></div>
+
+
+
+	
+
+<div class="main_content">
     <div class="hierarchy_menu">
       <p>首页 &gt; 资讯中心 &gt; <b>教学中心</b></p>
     </div>

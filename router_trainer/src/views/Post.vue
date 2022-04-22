@@ -1,16 +1,18 @@
-
 <template>
-<!-- 擷取 router id 發送api 取 json 資料 -->
-  <h1>User id {{ $route.params.userId }}</h1>
-  {{userId}}
-  {{ userInfo }}
+<h1>Post from User - {{userId}}</h1>
+<ol>
+    <li v-for="post in posts" :key="post.id">
+        <h3>{{post.title}}</h3>
+        <p>{{post.body}}</p>
+    </li>
+</ol>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      userInfo: {},
+      posts: [],
     };
   },
   computed: {
@@ -26,19 +28,19 @@ export default {
   },
   methods: {
     fetchUserInfo(id) {
-      return fetch("https://jsonplaceholder.typicode.com/users/" + id)
+      return fetch("https://jsonplaceholder.typicode.com/posts?userId" + id)
         .then((res) => res.json())
         .then((json) => json);
     },
   },
   async created() {
-    this.userInfo = await this.fetchUserInfo(this.userId);
+    this.posts = await this.fetchUserInfo(this.userId);
   },
   // 同步非同步設定，能幫助等待 fetch 取得資料後回傳
-  async beforeRouteUpdate(to,from){
-    this.userInfo = await this.fetchUserInfo(to.params.userId);
-    console.log(to.params.userId,from);
-  }
+//   async beforeRouteUpdate(to,from){
+//     this.userInfo = await this.fetchUserInfo(to.params.userId);
+//     console.log(to.params.userId,from);
+//   }
 };
 </script>
 

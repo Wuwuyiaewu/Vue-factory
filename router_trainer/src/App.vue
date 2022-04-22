@@ -1,10 +1,45 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <ul>
+      <li v-for="i in 5" :key="i">
+        <router-link :to="`/user_child/${i}`">/user_child/{{i}}</router-link>
+      </li>
+    </ul>
   </nav>
   <router-view/>
+  {{userInfo}}
 </template>
+<script>
+export default {
+  data() {
+    return {
+      userInfo: {},
+    };
+  },
+  computed: {
+    userId() {
+      return this.$route.params.userId;
+    },
+  },
+  watch: {
+    // async userId(val) {
+    //   this.userInfo = await this.fetchUserInfo(val);
+    // },
+  },
+  methods: {
+    fetchUserInfo(id) {
+      return fetch("https://jsonplaceholder.typicode.com/users/" + id)
+        .then((res) => res.json())
+        .then((json) => json);
+    },
+  },
+  async created() {
+    this.userInfo = await this.fetchUserInfo(this.userId);
+  },
+  
+}
+</script>
 
 <style lang="scss">
 #app {

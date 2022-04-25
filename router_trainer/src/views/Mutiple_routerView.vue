@@ -1,9 +1,11 @@
 
 <template>
-<h1>Mutiple_routerView</h1>
-<router-view>123</router-view>
-<router-view name="Mutiple_two">123</router-view>
-<router-view name="Mutiple_three">123</router-view>
+  <div>
+    <h1>Mutiple_routerView</h1>
+    <router-view name="Mutiple_one"></router-view>
+    <router-view name="Mutiple_two"></router-view>
+    <router-view name="Mutiple_three"></router-view>
+  </div>
 </template>
 
 <script>

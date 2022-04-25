@@ -27,14 +27,12 @@ const routes = [{
   },
   {
     path: "/mutiple_routerView",
-    component: Mutiple_routerView,
-    children: [
-      {
-        default: Mutiple_one,
-        Mutiple_two: Mutiple_two,
-        Mutiple_three: Mutiple_three
-      }
-    ]
+    components: {
+      default: Mutiple_routerView,
+      Mutiple_one: Mutiple_one,
+      Mutiple_two: Mutiple_two,
+      Mutiple_three: Mutiple_three
+    }
   },
   {
     path: "/users/:userId",
@@ -62,7 +60,7 @@ const routes = [{
     component: Notfound
   },
   // 多層路由 router-view
-  
+
 ]
 
 const router = createRouter({

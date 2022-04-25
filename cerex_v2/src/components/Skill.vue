@@ -95,7 +95,7 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "Skill",
 };
 </script>
 

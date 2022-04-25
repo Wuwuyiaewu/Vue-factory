@@ -3,11 +3,12 @@
 	<div class="left_menu list2 wow fadeInLeft">
     	<h2>进阶教学</h2>
         <p>
-        	<a href="#">K线入门</a>
+        	<!-- <a href="#">K线入门</a>
         	<a href="#">基本面因素</a>
         	<a href="#">技术分析</a>
-        	<a href="#">交易系统构建</a>  
-            <router-link to="/about">About</router-link>
+        	<a href="#">交易系统构建</a>   -->
+            <button href="" @click="goPath">goPath by @click</button>
+            <router-link :to="{path:'/learningcentre/beginner.html'}">beginner</router-link>
         </p>
     	<a href="teaching_center_list.html" class="more">更多&gt;</a>
     </div>
@@ -79,7 +80,13 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "Adv",
+  methods:{
+      goPath(){
+          console.log(this.$router);
+          this.$router.push({name: 'Beginner'})
+      }
+  }
 };
 </script>
 

@@ -1,9 +1,10 @@
 const { defineConfig } = require('@vue/cli-service')
+const path = require('path')
 const webpack = require('webpack')
 module.exports = defineConfig({
   outputDir: 'dist', // 輸出檔案目錄
   assetsDir: 'main',
-  indexPath:'learningcentre.html',
+  indexPath: 'learningcentre.html',
   transpileDependencies: true,
   configureWebpack: {
     plugins: [

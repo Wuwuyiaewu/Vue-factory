@@ -7,7 +7,8 @@ import "@/assets/css/animate.css"
 import "@/assets/css/content_page.css"
 const routes = [{
   path: '/learningcentre.html',
-  alias: ['/Learningcentre'],
+  alias: ['/Learningcentre','/teaching_center.html'],
+  name:"Learningcentre",
   component: () => import( /* webpackChunkName: "about" */ '../views/Learningcentre.vue'),
   children: [{
       path: '',
@@ -21,7 +22,6 @@ const routes = [{
     },
     {
       path: 'beginner/detail/:id',
-      alias: ['beginner/detail'],
       name: "Beginner_detail",
       props:true,
       component: () => import( /* webpackChunkName: "about" */ '../layer/Beginner_detail.vue'),
@@ -34,7 +34,6 @@ const routes = [{
     },
     {
       path: 'advanced/detail/:id',
-      alias: ['detail'],
       name: "Advanced_detail",
       props:true,
       component: () => import( /* webpackChunkName: "about" */ '../layer/Advanced_detail.vue'),
@@ -47,11 +46,14 @@ const routes = [{
     },
     {
       path: 'technical/detail/:id',
-      alias: ['detail'],
       name: "Technical_detail",
       props:true,
       component: () => import( /* webpackChunkName: "about" */ '../layer/Technical_detail.vue'),
-    }
+    },
+    {
+      path: "/:pathMatch(.*)*",
+      redirect:'/learningcentre.html'
+    },
   ]
 }, ]
 

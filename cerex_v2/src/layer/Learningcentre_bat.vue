@@ -1,6 +1,6 @@
 <template>
   <div class="main_content">
-    <Newcome />
+    <Newbie />
     <div class="teaching_content2">
       <Adv />
       <Skill />
@@ -10,12 +10,12 @@
 
 <script>
 
-import Newcome from "@/components/Newcome";
-import Adv from "@/components/Adv";
-import Skill from "@/components/Skill";
+import Newbie from "@/components/Newbie_grid";
+import Adv from "@/components/Adv_grid";
+import Skill from "@/components/Skill_grid";
 export default {
   components: {
-    Newcome,
+    Newbie,
     Adv,
     Skill,
   },

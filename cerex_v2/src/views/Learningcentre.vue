@@ -24,6 +24,7 @@ export default {
   },
   mounted() {
     var wow = new WOW({
+       live: false,
       boxClass: "wow",
       animateClass: "animated",
       offset: 0,

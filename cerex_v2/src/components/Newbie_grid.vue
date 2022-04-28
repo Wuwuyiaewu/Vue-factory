@@ -108,10 +108,6 @@ export default {
         document.body.appendChild(tag);
       });
     },
-    goPath() {
-      console.log(this.$router);
-      this.$router.push({ name: "Beginner" });
-    },
     swiper() {
       var swiper = new Swiper("#m_list1", {
         slidesPerView: 1,

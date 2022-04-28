@@ -2,14 +2,14 @@
     <div class="teaching_pic_list">
       <div class="left_menu list3 wow fadeInLeft">
         <h2>技术指标</h2>
-        <p>
-          <a href="#">均线及均线组</a>
-          <a href="#">MACD指标</a>
-          <a href="#">布林带</a>
-          <a href="#">KD指标</a>
-          <a href="#">黄金分割线</a>
+        <p v-if="sideLink.length">
+          <router-link v-for="i of sideLink" :key="i.id" :to="{ path: `/learningcentre/beginner/detail/${i.id}.html` }">{{ i.title }}</router-link>
         </p>
-        <a href="teaching_center_list.html" class="more">更多&gt;</a>
+        <router-link
+          :to="{ path: `/learningcentre/beginner.html` }"
+          class="more"
+          >更多&gt;</router-link
+        >
       </div>
       <div class="right_pic wow fadeIn">
         <div class="big_pic">

@@ -3,13 +3,8 @@
     <div class="teaching_pic_list">
       <div class="left_menu list1 wow fadeInLeft">
         <h2>新手入门</h2>
-        <p>
-          <a style="cursor: pointer;"
-            @click="this.$router.push({path:`/learningcentre/beginner/detail/${i.id}.html`})"
-            v-for="i of listLink"
-            :key="i.id"
-            >{{ i.title }}</a
-          >
+        <p v-if="sideLink.length">
+          <router-link v-for="i of sideLink" :key="i.id" :to="{ path: `/learningcentre/beginner/detail/${i.id}.html` }">{{ i.title }}</router-link>
         </p>
         <router-link
           :to="{ path: `/learningcentre/beginner.html` }"
@@ -18,82 +13,45 @@
         >
       </div>
       <div class="right_pic wow fadeIn">
-        <div class="big_pic">
-          <a href="#"></a>
-          <span
-            ><img src="@/assets/images/information/teaching_list1_pic1.jpg"
+        <div class="big_pic" v-if="listLinkFirst.length">
+          <router-link :to="{ path: `/learningcentre/beginner/detail/${listLinkFirst[0].id}.html` }"></router-link>
+          <span 
+            ><img :src="`https://cerexx.com/${listLinkFirst[0].img}`"
           /></span>
-          <p>告别混乱生活：人生十二法则</p>
+          <p>{{listLinkFirst[0].title}}</p>
         </div>
-        <div class="s_pic_group">
-          <div class="s_pic">
-            <a href="#"></a>
+        <div class="s_pic_group" v-if="listLinkFour.length">
+          <div class="s_pic" v-for="item of listLinkFour" :key="item.id">
+            <router-link :to="{ path: `/learningcentre/beginner/detail/${item.id}.html` }"></router-link>
             <span
-              ><img src="@/assets/images/information/teaching_list1_pic2.jpg"
+              ><img :src="`https://cerexx.com/${item.img}`"
             /></span>
-            <p>如何在手机上拍摄专</p>
-          </div>
-          <div class="s_pic">
-            <a href="#"></a>
-            <span
-              ><img src="@/assets/images/information/teaching_list1_pic3.jpg"
-            /></span>
-            <p>入门级甜点制作教程</p>
-          </div>
-          <div class="s_pic">
-            <a href="#"></a>
-            <span
-              ><img src="@/assets/images/information/teaching_list1_pic4.jpg"
-            /></span>
-            <p>超J吉他:吉他入门教程</p>
-          </div>
-          <div class="s_pic">
-            <a href="#"></a>
-            <span
-              ><img src="@/assets/images/information/teaching_list1_pic5.jpg"
-            /></span>
-            <p>看完后改变人生的纪录片</p>
+            <p>{{item.title}}</p>
           </div>
         </div>
         <div class="swiper s_pic_group_m" id="m_list1">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="s_pic_group page1">
-                <div class="s_pic">
-                  <a href="#"></a>
+              <div class="s_pic_group page1" >
+                <div class="s_pic" v-for="item of listLinkFour.slice(0,2)" :key="item.id">
+                 <router-link :to="{ path: `/learningcentre/beginner/detail/${item.id}.html` }"></router-link>
                   <span
                     ><img
-                      src="@/assets/images/information/teaching_list1_pic2.jpg"
+                      :src="`https://cerexx.com/${item.img}`"
                   /></span>
-                  <p>如何在手机上拍摄专</p>
-                </div>
-                <div class="s_pic">
-                  <a href="#"></a>
-                  <span
-                    ><img
-                      src="@/assets/images/information/teaching_list1_pic4.jpg"
-                  /></span>
-                  <p>超J吉他:吉他入门教程</p>
+                  <p>{{item.title}}</p>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="s_pic_group">
-                <div class="s_pic">
-                  <a href="#"></a>
+                <div class="s_pic" v-for="item of listLinkFour.slice(2,4)" :key="item.id">
+                 <router-link :to="{ path: `/learningcentre/beginner/detail/${item.id}.html` }"></router-link>
                   <span
                     ><img
-                      src="@/assets/images/information/teaching_list1_pic3.jpg"
+                      :src="`https://cerexx.com/${item.img}`"
                   /></span>
-                  <p>入门级甜点制作教程</p>
-                </div>
-                <div class="s_pic">
-                  <a href="#"></a>
-                  <span
-                    ><img
-                      src="@/assets/images/information/teaching_list1_pic5.jpg"
-                  /></span>
-                  <p>看完后改变人生的纪录片</p>
+                  <p>{{item.title}}</p>
                 </div>
               </div>
             </div>
@@ -124,9 +82,15 @@ export default {
     };
   },
   computed: {
-    listLink() {
-      return this.newbie_list.slice(0, 5);
+    sideLink() {
+      return this.newbie_list.slice(5,10);
     },
+    listLinkFirst(){
+      return this.newbie_list.slice(0,1)
+    },
+    listLinkFour(){
+      return this.newbie_list.slice(1,5)
+    }
   },
   methods: {
     getJSON() {
@@ -152,7 +116,7 @@ export default {
       var swiper = new Swiper("#m_list1", {
         slidesPerView: 1,
         spaceBetween: 0,
-        loop: true,
+        loop: false,
         autoplay: {
           delay: 5000,
           disableOnInteraction: false,

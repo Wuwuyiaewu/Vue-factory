@@ -3470,7 +3470,7 @@ button.ui-datepicker-current {
 	background-image: url(../images/information/top2.png);
 }
 
-.teaching_pic_list .right_pic .s_pic_group .s_pic:nth-child(3):before {
+.teaching_pic_list .right_pic .s_pic_group .s_pic:nth-child(2):before {
 	background-image: url(../images/information/top3.png);
 }
 

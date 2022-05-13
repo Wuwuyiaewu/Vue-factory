@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div class="hierarchy_menu">
-      <p>首页 &gt; 资讯中心 &gt; <b>教学中心</b></p>
-    </div>
+    <Breadcrumb/>
 
     <div class="content_page_banner">
       <p class="bg">
@@ -19,8 +17,14 @@
 </template>
 
 <script>
-export default {};
+import Breadcrumb from '@/components/Breadcrumb.vue'
+export default {
+  components:{
+    Breadcrumb
+  }
+};
 </script>
 
-<style>
+<style lang="scss">
+
 </style>

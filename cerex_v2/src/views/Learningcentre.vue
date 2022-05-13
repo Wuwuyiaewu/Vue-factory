@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="main_content">
     <Header />
-    <Banner />
+    <!-- <Banner /> -->
     <div class="mobile_bg"></div>
     <router-view></router-view>
     <Footer />
@@ -11,20 +11,23 @@
 <script>
 // @ is an alias to /src
 import Header from "@/components/Header";
-import Banner from "@/components/Banner";
+// import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
 import { WOW } from "wowjs";
 
 export default {
   name: "Teaching_center",
+  data() {
+    return {};
+  },
+  computed: {},
   components: {
     Header,
-    Banner,
     Footer,
   },
   mounted() {
     var wow = new WOW({
-       live: false,
+      live: false,
       boxClass: "wow",
       animateClass: "animated",
       offset: 0,

@@ -5,7 +5,6 @@
       <a href="index.html" class="top_logo">
         <img src="@/assets/images/top_logo.png" />
       </a>
-
       <div class="main_menu">
         <ul>
           <li class="<!--#if expr='$menu_select = 1' -->select<!--#endif -->">

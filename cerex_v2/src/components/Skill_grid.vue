@@ -62,6 +62,7 @@
 </template>
 
 <script>
+import Swiper from '@/assets/js/swiper-bundle.js'
 export default {
   name: "Skill",
   data() {

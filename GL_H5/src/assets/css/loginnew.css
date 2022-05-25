@@ -1,0 +1,75 @@
+.login.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.login #head {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+}
+.login #head .headItem {
+  overflow: hidden;
+  width: 6.9rem;
+  margin: 0.41rem auto 0;
+  display: flex;
+}
+.login .close {
+  width: 0.44rem;
+  height: 0.44rem;
+}
+.login .register {
+  font-size: 0.28rem;
+  flex: 1;
+  text-align: right;
+  color: #fe6a1a;
+}
+.login .form-box {
+  color: #ffffff;
+  margin: 0 auto;
+  padding: 2.08rem 0.3rem;
+  border-radius: 0.2rem;
+  position: relative;
+}
+.login .form-box {
+  color: #000000;
+  font-size: 0.36rem;
+}
+.login .submit-box {
+  text-align: center;
+}
+.login .login-btn {
+  outline: none;
+  border: none;
+  text-align: center;
+  margin: 0.6rem auto;
+  width: 3.26rem;
+  height: 0.71rem;
+  font-size: 0.31rem;
+  line-height: 0.71rem;
+  background-color: #007AFF;
+  color: #fff;
+  border-radius: 0.55rem;
+}
+.login .alternatives {
+    font-size: 0.26rem;
+    color: #D1D1D1;
+    text-align: center;
+}
+.login .alternatives span {
+  color: #888888;
+  cursor: pointer;
+}
+.login .footer-cs {
+  width: 100%;
+  position: absolute;
+  color: #888888;
+  text-align: center;
+  margin: 0 auto;
+  font-family: PingFang SC Medium;
+  font-size: 0.24rem;
+  bottom: 0.65rem;
+}
+.login .footer-cs .link {
+  color: #1E85FF;
+}

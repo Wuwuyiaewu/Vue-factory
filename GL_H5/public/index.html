@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="keywords"
+      content="指数,指数交易,指数平台,指数交易平台,金隆环球"
+    />
+    <meta
+      name="description"
+      content="在金隆环球，汇省就会赚，迎新客，赠金最高达$5000，热炒金银首月享交易返点$20/手，另送高达150元现金红包"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="wap-font-scale" content="no" />
+    <link rel="shortcut icon" href="fav.ico" />
+    <link rel="apple-touch-icon image_src" href="fav.ico" />
+    <script src="<%= BASE_URL %>charting_library/charting_library.min.js?t=2"></script>
+
+    <!-- Add VConsole for debugging -->
+    <!-- <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+    <script>
+      // VConsole will be exported to `window.VConsole` by default.
+      var vConsole = new window.VConsole();
+    </script> -->
+    
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MJZ39PB");
+    </script>
+    <!-- End Google Tag Manager -->
+    <script type="text/javascript">
+      window.onload = function() {
+        document.addEventListener("touchstart", function(event) {
+          if (event.touches.length > 1) {
+            event.preventDefault();
+          }
+        });
+        var lastTouchEnd = 0;
+        document.addEventListener(
+          "touchend",
+          function(event) {
+            var now = new Date().getTime();
+            if (now - lastTouchEnd <= 300) {
+              event.preventDefault();
+            }
+            lastTouchEnd = now;
+          },
+          false
+        );
+      };
+      var event =
+        "onorientationchange" in window ? "orientationchange" : "resize"; //判断是屏幕旋转还是resize;
+      !(function(doc, win) {
+        var docEle = doc.documentElement, //获取html元素
+          fn = function() {
+            var width = docEle.clientWidth;
+            if (width <= 750)
+              width && (docEle.style.fontSize = 50 * (width / 375) + "px");
+            //设置html的fontSize，随着event的改变而改变。
+            else docEle.style.fontSize = 50 * (750 / 375) + "px";
+          };
+        fn();
+        win.addEventListener(event, fn, false);
+        doc.addEventListener("DOMContentLoaded", fn, false);
+      })(document, window);
+      //判断手机横竖屏状态：
+      function screenRotation() {
+        //竖屏状态
+        if (window.orientation == 180 || window.orientation == 0)
+          window.location.reload();
+        //横屏状态
+        if (window.orientation == 90 || window.orientation == -90)
+          window.location.reload();
+      }
+      var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+      if (userAgent.indexOf("Chrome") > -1) {
+        window.addEventListener(event, screenRotation, false);
+      }
+      /*GA*/
+      //   (function(i, s, o, g, r, a, m) {
+      //     i["GoogleAnalyticsObject"] = r;
+      //     (i[r] =
+      //       i[r] ||
+      //       function() {
+      //         (i[r].q = i[r].q || []).push(arguments);
+      //       }),
+      //       (i[r].l = 1 * new Date());
+      //     (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      //     a.async = 1;
+      //     a.src = g;
+      //     m.parentNode.insertBefore(a, m);
+      //   })(
+      //     window,
+      //     document,
+      //     "script",
+      //     "https://www.google-analytics.com/analytics.js",
+      //     "ga"
+      //   );
+      //   var hostname = window.location.hostname;
+      //   if (hostname == "www.cf860.net") {
+      //     ga("create", "UA-132914093-1", "auto");
+      //   } else {
+      //     ga("create", "UA-71703518-1", "auto");
+      //   }
+      //   ga("send", "pageview");
+    </script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MJZ39PB"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+  </body>
+</html>

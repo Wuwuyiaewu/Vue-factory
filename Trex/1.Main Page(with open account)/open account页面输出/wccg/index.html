@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/intlTelInput.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/intlTelInput.js"></script>
+</head>
+
+<body>
+  <section class="main-container">
+    <p class="form-title">Create an Account!</p>
+    <img class="blue-heading" src="images/blue_heading.png" alt="">
+    <div class="form-container">
+      <div class="form active-form" id="mobile-form">
+        <div class="form-select-button-container">
+          <button class="mobile-button select-button-active" onclick="setActive('mobile')">Mobile</button>
+          <button class="email-button" onclick="setActive('email')">Email</button>
+        </div>
+        <div class="switch-field-container">
+          <input class="field active-field" type="tel" id="mobile" placeholder="Telephone No.">
+          <input class="field" type="text" id="email" placeholder="Email">
+        </div>
+        <div class="input-container">
+          <p class="input4 ">
+            <input class="password text-gray-blue pw modal-pw" name="pw" type="password" placeholder="Password" />
+            <span class="pw_btn"></span>
+          </p>
+        </div>
+        <p class="password-instruction">Password must be numeric or alphabets, 6-18 digits.</p>
+        <div class="input-container">
+          <p class="input4 ">
+            <input class="password text-gray-blue pw modal-pw" name="pw" type="password"
+              placeholder="Confirm Password" />
+            <span class="pw_btn"></span>
+          </p>
+        </div>
+        <p class="password-warning">Error message</p>
+        <button class="register-button" onclick="register()">Register</button>
+      </div>
+      <div class="success-container">
+        <div class="success-container-inner">
+          <img src="images/tick.png" alt="">
+          <p class="success-title">Successful!</p>
+          <p class="success-text">Congratulations, your account has been successfully created!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function setActive(form) {
+      document.querySelector(".select-button-active").classList.remove("select-button-active");
+      console.log(form + "-button");
+      document.querySelector("." + form + "-button").classList.add("select-button-active");
+      if (form === "email") {
+        document.querySelector(".iti").style.display = "none";
+        document.querySelector("#email").style.display = "block"
+      } else {
+        document.querySelector(".iti").style.display = "block";
+        document.querySelector("#email").style.display = "none";
+      }
+    }
+
+    function register() {
+      document.querySelector(".form").style.display = "none";
+      document.querySelector(".success-container").style.display = "block";
+      document.querySelector(".form-title").textContent = "Registration";
+    }
+    const input = document.querySelector("#mobile");
+    window.intlTelInput(input, {
+      separateDialCode: true,
+      preferredCountries: [""],
+      initialCountry: "us",
+      utilsScript: "js/utils.js",
+    });
+    let pw_btns = document.querySelectorAll(".input-container .pw_btn");
+    pw_btns.forEach(button => {
+      button.addEventListener("click", function () {
+        let p = button.closest("p");
+        p.classList.toggle("show_pw");
+
+        if (p.classList.contains("show_pw")) {
+          p.querySelector(".pw").setAttribute("type", "text");
+        } else {
+          p.querySelector(".pw").setAttribute("type", "password")
+        }
+      })
+    });
+  </script>
+</body>
+
+</html>

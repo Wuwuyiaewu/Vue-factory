@@ -1,0 +1,505 @@
+.tradeModify .navTitle { width: 7.5rem; margin: 0 auto; background: #007AFF; height: 1.28rem; position: relative; }
+.tradeModify .navTitle .navItem{ 
+width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; box-sizing: border-box; flex-direction:column;
+}
+.tradeModify .navTitle .back{ width: .44rem; position: absolute; left: .3rem; top: .42rem; }
+.tradeModify .navTitle p{ font-size: .36rem; line-height: .44rem; display: flex; align-items: center; color: #fff;}
+.tradeModify .navTitle p.symbol{ font-size: .24rem; line-height: .24rem; line-height: .24rem; }
+
+
+
+.tradeModify .orderCon {
+      overflow: hidden;
+      padding: .25rem .3rem;
+      display: flex;
+      justify-content: space-between;
+      border-top: solid .23rem #F7F7F7;
+}
+.tradeModify .orderCon ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 3.34rem;
+}
+.tradeModify .orderCon ul li{
+      overflow: hidden;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      height: .7rem;
+      line-height: .7rem;
+      padding: 0 .17rem;
+}
+.tradeModify .orderCon ul li:nth-child(odd){background: #F7F7F7}
+.tradeModify .orderCon ul li p{
+      overflow: hidden;
+      font-size: .24rem;
+      color: #999;
+}
+.tradeModify .orderCon ul li span{
+      overflow: hidden;
+      font-size: .24rem;
+      font-weight: bold;
+}
+.tradeModify .btn {
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 .3rem;
+      padding: .4rem 0 .65rem;
+}
+.tradeModify .btn span{
+      overflow: hidden;
+      display: block;
+      width: 3.2rem;
+      height: .8rem;
+      line-height: .8rem;
+      text-align: center;
+      border: solid .02rem #0A95FF;
+      border-radius: .06rem;
+      color: #0A95FF;
+      font-size: .32rem;
+}
+.tradeModify .btn span:last-child{
+      background: #0A95FF;
+      color: #fff;
+}
+.tradeModify .btn span.err{
+      background: #999;
+      color: #fff;
+      border: solid .02rem #999;
+}
+.tradeModify .navFixed .masking{
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 101;
+      background: rgba(0,0,0,.5);
+}
+.tradeModify .btnList{
+      position: fixed;
+      bottom: .77em;
+      right: .11rem;
+      z-index: 102;
+}
+.tradeModify .btnList span {
+      overflow: hidden;
+      display: block;
+      background: url("../images/trade/nav_float.png") no-repeat;
+      background-size: 100% 100%;
+      width: 1.01rem;
+      height: 1.01rem;
+}
+.tradeModify .btnList .item{
+      position: fixed;
+      bottom: 1.57em;
+      right: .2rem;
+      z-index: 103;
+}
+.tradeModify .btnList .item a,.tradeModify .navFixed .item p{
+      overflow: hidden;
+      font-size: .24rem;
+      margin: 0 .15rem .24rem;
+      color: #fff;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+}
+.tradeModify .btnList .item a em,.tradeModify .navFixed .item p em {
+      overflow: hidden;
+      display: inline-block;
+      line-height: .66rem;
+      margin-right: .2rem;
+}
+.tradeModify .btnList .item a img,.tradeModify .navFixed .item p img{width: .66rem;display: inline-block}
+
+
+.tradeModify .positionFixed{
+      height: 100%;
+}
+.tradeModify .positionFixed .masking{
+      overflow: hidden;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 999999999;
+      background: rgba(0,0,0,.5);
+}
+.tradeModify .positionFixed .tcCon{
+      width: 100%; background: #fff;
+}
+.tradeModify .positionFixed .tcCon .fixedItem{
+      overflow: hidden;
+      width: 7.5rem;
+      margin: 0 auto;
+}
+.tradeModify .positionFixed .tcCon .tcTit{
+      overflow: hidden;
+      padding: 0 .23rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: solid .01rem #ddd;
+}
+.tradeModify .positionFixed .tcCon .tcTit img{width: .44rem;padding: .22rem 0}
+.tradeModify .positionFixed .tcCon .tcTit span{
+      overflow: hidden;
+      font-weight: bold;
+      font-size: .3rem;
+}
+
+.tradeModify .positionFixed .tcCon .itemCon{overflow: hidden;}
+.tradeModify .positionFixed .tcCon .itemCon .item{overflow: hidden}
+.tradeModify .positionFixed .tcCon .itemCon .item img{width: 1.2rem;margin: .8rem auto .2rem}
+.tradeModify .positionFixed .tcCon .itemCon .item span{
+      overflow: hidden;
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      font-size: .3rem;
+}
+
+.tradeModify .positionFixed .tcCon .itemCon .item1{
+      overflow: hidden;
+      padding: .3rem 0 .3rem 0;
+      margin: 0 .54rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: solid .01rem #ddd; font-size: .28rem;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item1.border{border-bottom: none}
+
+.tradeModify .positionFixed .tcCon .itemCon .item1 span{
+      overflow: hidden;
+      font-weight: bold;
+      text-align: center;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item1 p{ overflow: hidden; display: block; float: left;}
+.tradeModify .positionFixed .tcCon .itemCon .item1 p span{ color: #888888; font-size: .22rem; font-weight: normal; width: 100%; display: block; }
+.tradeModify .positionFixed .tcCon .itemCon .item1 p span.err{ color: #FB605A;}
+
+
+
+.tradeModify .positionFixed .tcCon .itemCon .item1 .itemsetbox{ display: flex;}
+
+.tradeModify .positionFixed .tcCon .itemCon .volumebox .setbox{
+      display: flex; width: 3.32rem; height: .68rem; background: #F2F8FF; border-radius: .02rem; align-items: center; justify-content: space-between;
+}
+.tradeModify .positionFixed .tcCon .itemCon .volumebox .reset{
+      width: .68rem; height: .68rem; background: #F2F8FF; display: flex; justify-content: center; align-items: center; margin-left: .06rem;
+}
+.tradeModify .positionFixed .tcCon .itemCon .volumebox .reset img{ width: .44rem; }
+
+.tradeModify .positionFixed .tcCon .itemCon .volumebox input{ border: none; background: transparent; font-size: .29rem; text-align: center; height: .68rem; line-height: .68rem; box-sizing: border-box; padding: 0 .2rem; flex: 1; overflow: hidden; }
+
+
+
+.tradeModify .positionFixed .tcCon .itemCon .item1 .pic{ width: .55rem; height: 100%;}
+
+.tradeModify .positionFixed .tcCon .itemCon .item1 .pic.add{
+      background: url("../../assets/images/quotation/volume_plus.png") no-repeat left center; background-size: .23rem .23rem;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item1 .pic.add.stop{
+      background: url("../../assets/images/quotation/volume_plus_p.png") no-repeat left center; background-size: .23rem .23rem;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item1 .pic.cut{
+      background: url("../../assets/images/quotation/volume_subtract.png") no-repeat right center; background-size: .23rem .23rem;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item1 .pic.cut.stop{
+      background: url("../../assets/images/quotation/volume_subtract_p.png") no-repeat right center; background-size: .23rem .23rem;
+}
+
+.tradeModify .positionFixed .tcCon .itemCon .item1 input{
+      overflow: hidden;
+      float: left;
+      width: 2.45rem;
+      border: none;
+      background: transparent;
+      font-size: .32rem;
+      font-weight: bold;
+      text-align: center;
+      height: .5rem;
+      line-height: .5rem;
+      color: #333;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item1 input::placeholder{color: #666;font-family: Microsoft JhengHei, Microsoft YaHei, arial, sans-serif;font-weight: normal;font-size: .28rem}
+.tradeModify .positionFixed .tcCon .itemCon .item2{
+      overflow: hidden;
+      margin: .46rem .3rem .15rem;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item2 ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item2 ul li{
+      overflow: hidden;
+      border-right: solid .01rem #ccc;
+      padding: 0 .1rem;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item2 ul li:last-child{border: none}
+.tradeModify .positionFixed .tcCon .itemCon .item2 ul li p{
+      overflow: hidden;
+      display: block;
+      color: #999;
+      font-size: .24rem;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item2 ul li p em{display: inline;}
+
+.tradeModify .positionFixed .tcCon .itemCon .item2 span{
+      display: block;
+      width: 6.42rem;
+      height: .88rem; line-height: .88rem;
+      background: #FF6A1A;
+      text-align: center;      
+      border-radius: .06rem;
+      color: #fff;
+      font-size: .31rem;
+      margin: .15rem auto;
+      position: relative;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item2 span img {
+      position: absolute;
+      top: .26rem;
+      right: 1rem;
+      width: .38rem;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item2 span.err{background: #999}
+
+.tradeModify .positionFixed .tcCon .itemCon .item3{
+      overflow: hidden;
+      padding: 0.3rem 0 0.3rem 0;
+      margin: 0 0.54rem;
+      border-bottom: solid .01rem #ddd;
+      display: flex; justify-content: space-between;
+}
+
+.tradeModify .positionFixed .tcCon .itemCon .item3 p{
+      overflow: hidden;
+      display: block;
+      font-size: .28rem;
+      width: 3.45rem;
+      height: .55rem;
+      line-height: .55rem;
+      float: left;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item3 p span{
+      display: inline;
+      color: #999;
+      font-size: .22rem;
+}
+
+
+.tradeModify .positionFixed .tcCon .itemCon .item3 ul{ display: flex; padding: 0; margin: 0; }
+.tradeModify .positionFixed .tcCon .itemCon .item3 ul li{ 
+      width: 1.19rem; height: .56rem; background: #F2F8FF; border-radius: .02rem; font-size: .3rem; line-height: .56rem;
+      text-align: center; margin-left: .15rem;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item3 ul li.checked{ background: #007AFF; color: #fff; }
+
+
+.tradeModify .positionFixed .tcCon .itemCon .item3 ul li p {
+      float: none;
+      width: auto;
+      margin-left: .2rem;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item3 ul li .radio {
+      display: none;
+}
+.radio + label,.radio{
+      color: transparent;
+      border: solid .04rem #D8EDFF;
+      width: .36rem;
+      height: .36rem;
+      border-radius: 100%;
+}
+.radio + label span {
+      display: none;
+      color: transparent;
+      background: #3699FF;
+      width: .18rem;
+      height: .18rem;
+      border-radius: 100%;
+      margin: .09rem 0 0 .09rem;
+}
+.radio:checked + label {
+      color: transparent;
+      border: solid .04rem #D8EDFF;
+}
+
+.radio:checked + label span{
+      display: block;
+}
+
+
+
+
+.tradeModify .positionFixed .tcCon .itemCon .item4{overflow: hidden;margin: .2rem .3rem 0;}
+.tradeModify .positionFixed .tcCon .itemCon .item4 ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item4 ul li{
+      overflow: hidden;
+      width: 3.45rem;
+      height: .8rem;
+      line-height: .8rem;
+      border-top:solid .01rem #ccc;
+      border-bottom:solid .01rem #ccc;
+      margin-bottom: .01rem
+}
+.tradeModify .positionFixed .tcCon .itemCon .item4 ul li:first-child{
+      border-top-left-radius: .06rem;
+      border-bottom-left-radius: .06rem;
+      border-left:solid .01rem #ccc;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item4 ul li:last-child{
+      border-top-right-radius: .06rem;
+      border-bottom-right-radius: .06rem;
+      border-right:solid .01rem #ccc;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item4 ul li.buy{
+      background: #4AC158;
+      border-left:solid .01rem #4AC158;
+      border-top:solid .01rem #4AC158;
+      border-bottom:solid .01rem #4AC158;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item4 ul li.sell{
+      background: #FB605A;
+      border-left:solid .01rem #FB605A;
+      border-top:solid .01rem #FB605A;
+      border-bottom:solid .01rem #FB605A;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item4 ul li.level{
+      background: #eee;
+      border-left:solid .01rem #eee;
+      border-top:solid .01rem #eee;
+      border-bottom:solid .01rem #eee;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item4 ul li p{
+      overflow: hidden;
+      display: block;
+      width: .6rem;
+      float: left;
+      font-size: .24rem;
+      margin: 0 .4rem 0 .35rem;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item4 ul li.buy p,
+.tradeModify .positionFixed .tcCon .itemCon .item4 ul li.sell p{color: #fff}
+.tradeModify .positionFixed .tcCon .itemCon .item4 ul li span{
+      overflow: hidden;
+      float: left;
+      font-size: .32rem;
+      font-weight: bold;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item4 ul li.buy span, .tradeModify .positionFixed .tcCon .itemCon .item4 ul li.sell span{color: #fff}
+.tradeModify .positionFixed .tcCon .itemCon .item4 ul li em{
+      overflow: hidden;
+      display: block;
+      float: right;
+      width: .18rem;
+      height: .27rem;
+      margin: .26em .5rem 0 .05rem;
+}
+
+/* 卖出买入价格 */
+.tradeModify .char_price{ width: 100%; padding-top: .5rem; margin-bottom: .45rem;}
+.tradeModify .char_price ul{ width: 100%; display: flex; margin: 0 auto; justify-content: space-between; position: relative; padding: 0 .32rem; box-sizing: border-box; }
+.tradeModify .char_price ul li{ width: 3.39rem; height: .97rem; font-size: .28rem; color: #fff; display: flex; justify-content: center; align-items: center; padding: 0 .4rem; box-sizing: border-box; border-radius: .08rem; background: #D7D7D7; }
+.tradeModify .char_price ul li:last-child em{ margin-left: 0; }
+.tradeModify .char_price ul li:last-child i{ margin-right: .18rem; }
+
+.tradeModify .char_price ul li em{ font-size: .42rem; margin-left: .18rem; }
+.tradeModify .char_price ul li.rise i{ width: .11rem; height: .24rem; display: block; background: url(../images/quotation/bottom_rise.png) no-repeat center center/100%; margin-left: .15rem;}
+.tradeModify .char_price ul li.fall i{ width: .11rem; height: .24rem; display: block; background: url(../images/quotation/bottom_fall.png) no-repeat center center/100%; margin-left: .15rem;}
+.tradeModify .char_price ul label{ display: block; width: .57rem; position: absolute; height: .29rem; line-height: .28rem; border-radius: .04rem; background: #fff; left: 50%; top: 50%; transform: translate(-50%,-50%); font-size: .22rem; color: #888888; text-align: center; }
+
+
+
+
+
+.tradeModify .positionFixed .tcCon .itemCon  .titShow{
+      flex-wrap: wrap;
+}
+.tradeModify .positionFixed .tcCon .itemCon  .titShow p{
+      overflow: hidden;
+      width: 50%;
+      color: #999;
+      font-size: .28rem;
+
+}
+.tradeModify .positionFixed .tcCon .itemCon  .titShow .arrow{
+      overflow: hidden;
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+}
+.tradeModify .positionFixed .tcCon .itemCon  .titShow .arrow ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-radius: .04rem;
+      display: flex;
+      justify-content: center;
+}
+.tradeModify .positionFixed .tcCon .itemCon  .titShow .arrow ul li{
+      text-align: center;
+      width: 1.19rem;
+      height: .56rem; line-height: .56rem; font-size: .3rem;
+      background: #F2F8FF;
+      border-radius: .02rem; margin-left: .15rem;
+}
+.tradeModify .positionFixed .tcCon .itemCon  .titShow .arrow ul li.checked{
+      color: #fff;
+      background: #0A95FF;
+}
+.tradeModify .positionFixed .tcCon .itemCon  .titShow .lpitem{
+      width: 100%; display: flex; margin-top: .27rem;
+}
+.tradeModify .positionFixed .tcCon .itemCon  .titShow .lpitem p span{
+      text-align: left;
+}
+.tradeModify .positionFixed .tcCon .itemCon .item2 span{ margin: 1.2rem auto .5rem auto;}
+
+
+/* 最大偏差 */
+.tradeModify .rangeScope{ padding: 0.3rem 0 0.3rem 0; margin: 0 0.54rem; padding: 0; overflow: hidden;}
+.tradeModify .rangeScope .showItem { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: .32rem 0; border-bottom: solid 0.01rem #ddd; }
+.tradeModify .rangeScope .showItem p { font-size: .28rem; line-height: 0.55rem;}
+.tradeModify .rangeScope .showItem p span { display: inline; color: #999; font-size: 0.22rem; }
+.tradeModify .rangeScope .showItem p span.err {color: #fb605a;}
+.tradeModify .rangeScope .showItem .rightCon { overflow: hidden; display: flex; justify-content: flex-end; align-items: center;}
+.tradeModify .rangeScope .showItem .rightCon label { font-size: .3rem; }
+.tradeModify .rangeScope .showItem .rightCon span { background: url("../images/quotation/item_icodown.png") no-repeat center center/100%; width: .18rem; height: .12rem; margin: 0 .12rem 0 .23rem;}
+.tradeModify .rangeScope .showItem .rightCon span.checked { background: url("../images/quotation/item_icoup.png") no-repeat center center/100%;}
+.tradeModify .rangeScope .rangbox_bg{ width: 100%; height: 100%; display: flex; background: rgba(0,0,0,.5); position: fixed; top: 0; z-index: 1; left: 0; }
+.tradeModify .rangeScope .rangbox{ width: 100%; height: 5.93rem; background: #fff; position: fixed; bottom: 0; z-index: 2; left: 0;}
+.tradeModify .rangeScope .rangbox .rangeTit{ position: relative; height: 1rem; width: 6.9rem; border-bottom: solid 1px rgba(141, 144, 155, .12); margin: 0 auto; font-size: .31rem; text-align: center; line-height: 1rem; }
+.tradeModify .rangeScope .rangbox .rangeTit img{ position: absolute; right: 0; top: .39rem; }
+.tradeModify .rangeScope .rangbox .rangeDesc{ text-align: center; font-size: .24rem; line-height: .32rem; margin-top: .42rem; }
+.tradeModify .rangeScope .rangbox .rangeNum{ font-size: .63rem; text-align: center; margin-top: .56rem;}
+.tradeModify .rangeScope .rangbox .rangeNum span{ width: 100%; font-size: .24rem; display: block; color: #888888; }
+.tradeModify .rangeScope .rangbox .barbox{ width: 100%; display: flex; align-items: center; justify-content: center; margin-top: .88rem; }
+.tradeModify .rangeScope .rangbox .barbox span{ font-size: .23rem; color: #888888;}
+.tradeModify .rangeScope .rectItem { overflow: hidden; width: 5.02rem; position: relative; margin: 0 .3rem; }
+.tradeModify .rangeScope .rect { width: 100%; height: .16rem; background: #D7D7D7; border-radius: .16rem;}
+.tradeModify .rangeScope .circle { width: 100%; position: absolute; top: 0; display: flex; justify-content: flex-start; overflow: hidden; border-radius: .13rem; }
+.tradeModify .rangeScope .rectItem span { overflow: hidden; display: block; background: #FE6A1A; height: .16rem; padding-left: .16rem; border-radius: .16rem;}
+.tradeModify .rangeScope .circle p { width: .16rem; height: .16rem; background: #FF9D68; border-radius: .16rem; margin-left: -.16rem;  }

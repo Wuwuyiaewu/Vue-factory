@@ -1,0 +1,79 @@
+.rankList{background: #f5f6fa}
+.rankList .dv_list {
+    margin-bottom: 1rem;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+.rankList .dv_list.noLogin{margin-bottom: 1.78rem;}
+.rankList .dv_list li{
+    overflow: hidden;
+    box-shadow: 0 0 .2rem rgba(23,35,52,.15);
+    width: 6.9rem;
+    margin: .3rem auto .3rem;
+    border-radius: .3rem;
+    background: #fff
+}
+.rankList .dv_list li .dv_title{
+    overflow: hidden;
+    background: #f5f6fa;
+    border-radius: .3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: .7rem;
+}
+.rankList .dv_list li .dv_title span,.rankList .dv_list li .dv_title time{
+    overflow: hidden;
+    font-size: .24rem;
+    color: #999;
+    margin-right: .3rem;
+}
+.rankList .dv_list li .dv_title span{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #333;
+    margin-right: 0;
+}
+.rankList .dv_list li .dv_title span img{width: .38rem;margin: 0 .1rem 0 .3rem}
+.rankList .dv_list li .dv_Con{margin: .35rem .3rem .4rem;}
+.rankList .dv_list li .dv_Con .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .3rem;
+}
+.rankList .dv_list li .dv_Con .item:first-child{margin-left: .2rem}
+.rankList .dv_list li .dv_Con .item span,.rankList .dv_list li .dv_Con .item p{
+    overflow: hidden;
+    font-size: .24rem;
+    color: #999;
+}
+.rankList .dv_list li .dv_Con .item span{
+    font-size: .32rem;
+    font-weight: bold;
+}
+.rankList .dv_list li .dv_Con .item span:last-child{font-weight: normal}
+.rankList .dv_list li .dv_Con .item span em{
+    display: inline;
+    font-weight: bold;
+}
+.rankList .dv_list li .dv_Con .item span:first-child em{font-weight: normal}
+.rankList .dv_list li .dv_Con .item span em.buy,
+.rankList .dv_list li .dv_Con .item span em.profit{color: #55bc7e}
+.rankList .dv_list li .dv_Con .item span em.sell,
+.rankList .dv_list li .dv_Con .item span em.deficit{color: #eb6540}
+.rankList .dv_list li .dv_Con .item p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.rankList .dv_list li .dv_Con .item p em{
+    background: #f5f6fa;
+    height: .38rem;
+    line-height: .38rem;
+    border-radius: .19rem;
+    margin-right: .1rem;
+    padding: 0 .2rem;
+}
+.rankList .bottom span{color: #eb6540}

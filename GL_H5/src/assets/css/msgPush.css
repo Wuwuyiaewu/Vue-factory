@@ -1,0 +1,60 @@
+/* .headNav .navTitle .navItem{ height: .68rem; padding: 0 .3rem; width: 100%; box-sizing: border-box; display: flex; align-items: center;  }
+.headNav .navTitle span{ height: auto; line-height: .68rem; font-size: .31rem; }
+.news.headNav .navTitle img{ width: .14rem; height: .25rem; } */
+
+.news .conList { overflow: hidden; padding-top: 0.9rem;}
+
+.news .conList .listNav {
+  overflow: hidden;
+  position: fixed;
+  width: 7.5rem;
+  z-index: 9999;
+  background: #F8F8F8;
+  height: .52rem;
+}
+.news .conList .listNav ul {
+  width: 100%; box-sizing: border-box;
+  overflow: hidden;
+  padding: 0 .8rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.news .conList .listNav ul li {
+  height: .52rem;
+  line-height: .46rem;
+  position: relative;
+  font-size: .28rem;
+  color: #888888;
+  text-align: center;
+}
+.news .conList .listNav ul li.checked{ color: #222222;}
+.news .conList .listNav ul li.checked::after { content: ""; display: block; background: #FE6A1A;
+  position: absolute; width: 1.12rem; height: .06rem;
+}
+
+.news .conList .pushList { position: relative; width: 100%; padding: .52rem .34rem; box-sizing: border-box;}
+.news .conList .pushList ul li{
+  font-size: .28rem; border-bottom: solid 1px rgba(141, 144, 155, .12); padding: .35rem 0 .25rem 0; display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+.news .conList .pushList ul li .contentBox{ width: 100%; display: flex; margin: 0 0 .15rem 0; align-items: center; }
+
+.news .conList .pushList ul li .leftBox{ width: 100%;}
+.news .conList .pushList ul li.picBox .leftBox{ width: 4.2rem; }
+
+.news .conList .pushList ul li .title{ font-weight: bold; color: #222222; line-height: .28rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.news .conList .pushList ul li .desc{ line-height: .38rem; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; margin-top: .15rem;
+}
+.news .conList .pushList ul li.picBox .desc{ -webkit-line-clamp: 3; }
+
+.news .conList .pushList ul li .price_time{ width: 100%; display: flex; justify-content: space-between; align-items: center; color: #888888; }
+.news .conList .pushList ul li .price_time .productPrice{ min-width: 2.56rem; height: .56rem; padding: 0 .15rem; box-sizing: border-box; 
+  line-height: .56rem; background: #F8F8F8; text-align: center; display: flex; justify-content: space-between; color: #222222;
+}
+
+
+.news .conList .pushList ul li .imgbox{ width: 1.98rem; height: 1.09rem; margin: .43rem 0 0 .56rem;}
+.news .conList .pushList ul li .imgbox img{ width: 100%; height: 100%; }
+
+.news .bottom-guide { color: #888888; font-size: .28rem; text-align: center; margin: .52rem 0 1.2rem; }

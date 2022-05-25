@@ -1,0 +1,101 @@
+.isOpenNav{ overflow: hidden; }
+.quote{ padding-bottom: 2.08rem; box-sizing: border-box; width: 7.5rem; margin: 0 auto; position: relative; }
+.quote .navTitle{ background: #F3F3F3; height: .96rem; width: 7.5rem; padding: 0 .3rem; box-sizing: border-box; position: fixed; top: 0; z-index: 4; }
+
+.quote .navItem { display: flex; justify-content: space-between; align-items: center; height: 100%;}
+.quote.Hot .navItem{ justify-content: center;}
+
+.quote .navItem span{ width: 2rem; height: .49rem; background: #fff; border-radius: .04rem; display: flex; align-items: center;}
+.quote .navItem span label{ color: #888888; font-size: .28rem; display: block; width: 50%; text-align: center; height: 100%; line-height: .49rem; }
+.quote .navItem span label.current{ background: #1E85FF; color: #fff; border-radius: .04rem; }
+.quote .navTitle p { background: url("../images/trade/orientation1.png") no-repeat center center/100%; width: .49rem; height: .48rem;}
+.quote .navTitle .back{ display: block; width: .49rem;}
+.quoteview .navTitle p { background: url("../images/trade/orientation2.png") no-repeat center center/100%;}
+
+.quote .content{ padding-top: 2.3rem;}
+
+.quote .quoteNav { width: 7.5rem; height: .54rem; z-index: 4; background: #F8F8F8; position: fixed; top: 1.76rem; margin: 0 auto; }
+
+.quote .quoteNav ul{ display: flex; justify-content: space-between; align-items: center; margin: 0 auto; padding: 0 .3rem; width: 100%; box-sizing: border-box; height: 100%;}
+.quote .quoteNav ul li{ overflow: hidden; list-style: none; position: relative; height: 100%;}
+.quote .quoteNav ul li span{ display: block; font-size: .28rem; line-height: .46rem; color: #888888; text-align: center; }
+.quote .quoteNav ul li.checked span{color: #222; font-weight: bold;}
+.quote .quoteNav ul li.checked::after{ content: ''; display: block; width: .52rem; height: .06rem; background: #FE6A1A; position: absolute; bottom: 0; left: 50%; transform: translate(-50%,0); }
+
+.quote .quote_banner{ width: 100%; height: .8rem; position: fixed; left: 0; top: .96rem; z-index: 4; display: flex; justify-content: center; background: #fff; }
+.quote .quote_banner img{ width: 7.5rem; height: .8rem; }
+
+/* 热门 */
+.quote .hotList{ width: 100%; padding-top: 1.8rem; }
+.quote .hotList .item{ height: .54rem; line-height: .54rem; display: flex; justify-content: space-between; align-items: center; padding: 0 .25rem; font-size: .28rem; border-bottom: solid .02rem rgba(141,144,155,.12);}
+.quote .hotList ul li{ width: 100%; box-sizing: border-box; height: 1.29rem; display: flex; justify-content: space-between; align-items: center; padding: 0 .25rem 0 .25rem; font-size: .21rem; border-bottom: solid .02rem rgba(141,144,155,.12); position: relative;}
+.quote .hotList .item span { background: url("../images/trade/rate_down.png") no-repeat; background-size: 100% 100%; width: .24rem; height: .14rem;  transition: .2s;}
+.quote .hotList .item.checked span { transform: rotate(180deg); }
+
+.quote .hotList ul li span:first-child{ font-size: .28rem; flex: 1;}
+.quote .hotList ul li span:first-child em{ overflow: hidden; display: block; font-size: .25rem; color: #999;}
+.quote .hotList ul li span:first-child em i{display: inline; margin-left: .05rem}
+
+.quote .hotList ul li span:nth-child(2){ font-size: .3rem; font-weight: bold; color: #F72C4D; text-align: right; margin-right: 1.1rem;}
+.quote .hotList ul li span:nth-child(2) em{ display: block; font-size: .25rem; color: #888888; font-weight: normal;}
+
+.quote .hotList ul li span:nth-child(3) label{ width: 1.41rem; height: .34rem; line-height: .34rem; display: block; text-align: center; font-size: .26rem; color: #fff; }
+.quote .hotList ul li span:nth-child(3) label:nth-child(2){ margin-top: .07rem;}
+
+.quote .hotList ul li .more{ position: absolute; bottom: .07rem; right: .25rem; width: .32rem; height: .14rem; display: flex; align-items: center; }
+.quote .hotList ul li .pop_box{ width: 2.41rem; height: 2.42rem; box-sizing: border-box; padding: .26rem 0 .21rem .35rem; background: url(../images/quotation/pop_bg.png) no-repeat center center/100%; position: absolute; top: 1.15rem; z-index: 6; right: 0; }
+.quote .hotList ul li .pop_box dl dd{ font-size: .28rem; color: #252525; display: flex; margin: .18rem 0; }
+.quote .hotList ul li .pop_box dl dd img{ width: .43rem; height: .42rem; margin-right: .08rem; }
+.quote .hotList ul li .pop_box.pop_top{ padding-top: .08rem; background: url(../images/quotation/pop_bg2.png) no-repeat center center/100%; top: -1.26rem;}
+
+.quote .pop_bg{ background: rgba(0, 0, 0, .2); width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 5; }
+
+/* 行情排版A */
+
+.quote .conList .item{ width: 7.5rem; background: #fff; display: flex; justify-content: space-between; align-items: center; padding: 0 .25rem; border-bottom: solid 1px rgba(141,144,155,.12); height: .5rem; box-sizing: border-box; position: fixed; top: 2.3rem; z-index: 4; }
+.quote .conList .item p{ font-size: .28rem; color: #d7d7d7; display: flex; justify-content: flex-start; align-items: center;}
+.quote .conList .item p:first-child{width: 2.5rem;}
+.quote .conList .item p span { background: url(../images/trade/trade_order_0.png) no-repeat center center/100%; width: .15rem; height: .17rem; margin-left: .05rem;}
+.quote .conList .item p.sort1 span{ background: url(../images/trade/trade_order_1.png) no-repeat center center/100%;}
+.quote .conList .item p.sort2 span{ background: url(../images/trade/trade_order_2.png) no-repeat center center/100%;}
+
+.quote .conList ul{ width: 100%; margin-top: .5rem;}
+.quote .conList ul li{ width: 100%; height: 1.29rem; display: flex; justify-content: space-between; align-items: center; padding: 0 .25rem 0 .25rem; border-bottom: solid .02rem rgba(141,144,155,.12); box-sizing: border-box; position: relative; }
+.quote .conList ul li span:first-child{ font-size: .28rem; flex: 1; color: #222222; }
+.quote .conList ul li span:first-child em{ overflow: hidden; display: block; font-size: .25rem; color: #888888;}
+.quote .conList ul li span:first-child em i{display: inline; margin-left: .05rem}
+
+.quote .conList ul li span:nth-child(2){ font-size: .31rem; font-weight: bold; text-align: right; padding-right: .98rem;}
+.quote .conList ul li span:nth-child(2) label{display: block; font-size: .25rem; color: #888888; font-weight: normal; }
+
+
+.quote .conList ul li .more{ position: absolute; bottom: .07rem; right: .25rem; z-index: 2; width: .32rem; height: .14rem; display: flex; align-items: center; }
+.quote .conList ul li .more img{ width: .32rem; height: .07rem; }
+.quote .conList ul li .pop_box{ width: 2.41rem; height: 2.42rem; box-sizing: border-box; padding: .3rem 0 .21rem .38rem; background: url(../images/quotation/pop_bg.png) no-repeat center center/100%; 
+    position: absolute; top: 1.15rem; z-index: 6; right: 0;
+}
+.quote .conList ul li .pop_box dl dd{ font-size: .28rem; color: #252525; display: flex; margin: .18rem 0; }
+.quote .conList ul li .pop_box dl dd img{ width: .43rem; height: .42rem; margin-right: .06rem; }
+.quote .conList ul li .pop_box.pop_top{ padding-top: .08rem; background: url(../images/quotation/pop_bg2.png) no-repeat center center/100%; top: -1.26rem;}
+.quote .conList ul li .pop_box.small{ padding-top: .15rem; height: .94rem; background: url(../images/quotation/popsmall_bg.png) no-repeat center top/100%;
+    top: 1.2rem; right: .02rem;
+}
+
+
+.quotedefault .conList ul li span:nth-child(3){ font-size: .26rem; width: 1.45rem; text-align: center; color: #fff;}
+.quotedefault .conList ul li span:nth-child(3) label{ width: 1.45rem; height: .36rem; line-height: .36rem; display: block; }
+.quotedefault .conList ul li span:nth-child(3) label:nth-child(2){ margin-top: .05rem;}
+
+
+.quotedefault .conList ul li span:nth-child(3).fall label i{ display: none;}
+
+.quotedefault .conList .item p:nth-child(3){width: 1.19rem; height: .36rem; box-sizing: border-box; justify-content: center; align-items: center; border-radius: .04rem; border: solid 1px #CFCFCF;}
+
+
+
+/* 行情排版B */
+.quoteview .conList .item p:first-child{ width: 2.3rem;}
+.quoteview .conList ul li span:nth-child(2){ padding-right: .53rem;}
+.quoteview .conList ul li span:nth-child(3){ width: 1.8rem; font-size: .3rem; text-align: right; font-weight: bold; }
+.quoteview .conList ul li span:nth-child(3) em{ display: flex; font-size: .22rem; font-weight: normal; justify-content: flex-end;}
+.quoteview .conList ul li span:nth-child(3) em label:nth-child(2){ margin-left: .3rem;}

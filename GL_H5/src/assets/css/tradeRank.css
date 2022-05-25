@@ -1,0 +1,62 @@
+.tradeRank{ width: 100%; padding-bottom: 1.3rem;}
+.tradeRank .navTitle{width: 7.5rem; height: 4.68rem; background: url(../images/trade/traderank_banner.png) no-repeat center center/100%;}
+.tradeRank .navTitle .navItem { overflow: hidden; width: 100%; margin: 0 auto; padding: .26rem .32rem; position: relative; box-sizing: border-box; }
+.tradeRank .navTitle .navItem img{ width: .15rem;}
+.tradeRank .navTitle .mark{ font-size: .21rem; text-align: center; color: #fff; margin-top: 2.7rem; }
+
+.tradeRank .conList{ background: #fff; border-radius: .4rem .4rem 0 0; margin: -.8rem auto 0 auto; display: flex; justify-content: center; }
+.tradeRank .conList ul{ margin: .25rem auto .65rem auto;}
+.tradeRank .conList ul li { display: flex; width: 6.6rem; margin: .4rem auto 0 auto; font-size: .26rem; align-items: center; }
+.tradeRank .conList ul li span.num { display: flex; width: .38rem; height: .52rem; font-size: .27rem; justify-content: center; align-items: center; }
+.tradeRank .conList ul li span.num img{ width: 100%; height: 100%; }
+
+.tradeRank .conList ul li .cat_title { color: #323232; margin-left: .23rem; font-size: .24rem; line-height: .35rem; font-weight: normal; }
+.tradeRank .conList ul li .cat_title b{ width: 100%; display: inline-block; font-size: .28rem; font-weight: normal; }
+
+.tradeRank .conList ul li .details_bar { display: flex; width: 4rem; flex-wrap: wrap; margin-left: auto; align-items: center; justify-content: space-between;}
+
+.tradeRank .conList ul li .details_bar .left { color: #e3525c; }
+.tradeRank .conList ul li .details_bar .right { color: #10b873; }
+
+.tradeRank .conList ul li .details_bar .barbox{ width: 3rem; }
+
+.tradeRank .conList ul li .bar_text { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+.tradeRank .conList ul li .bar_text span{ width: 33.33%;}
+.tradeRank .conList ul li .barbox .bar_text_up span{ font-size: .24rem; }
+.tradeRank .conList ul li .barbox .bar_text_up span:nth-child(1) { color: #e3525c;}
+.tradeRank .conList ul li .barbox .bar_text_up span:nth-child(2){ font-size: .31rem; color: #323232; text-align: center;}
+.tradeRank .conList ul li .barbox .bar_text_up span:nth-child(3) { color: #10b873; text-align: right; }
+.tradeRank .conList ul li .barbox .bar_text_up span i{ display: none;}
+.tradeRank .conList ul li .barbox .bar_text_up span.rise i{ display: inline;}
+
+.tradeRank .conList ul li .barbox .bar_text_down span{ font-size: .21rem; }
+.tradeRank .conList ul li .barbox .bar_text_down span:nth-child(1){ color: #e3525c; }
+.tradeRank .conList ul li .barbox .bar_text_down span:nth-child(2){ color: #10b873; text-align: right; }
+
+.tradeRank .conList ul li .details_bar .bar { display: block; width: 100%; margin: .05rem auto .1rem auto; background: #10b873; height: .1rem; border-radius: 0.2rem; overflow: hidden;}
+.tradeRank .conList ul li .details_bar .bar span { display: block; background-color: #e3525c; height: 100%; position: relative;}
+.tradeRank .conList li .details_bar .bar span i { display: block; position: absolute; height: .1rem; width: .1rem; margin: -0.05rem; right: 0; top: 50%; background: #fff; border-radius: 100%;}
+
+.tradeRank .statement{ width: 100%; text-align: center; color: #BABABA; font-size: .24rem; }
+.tradeRank .btn{ width: 5.55rem; height: .8rem; line-height: .8rem; background: #FF6A1A; border-radius: .62rem; margin: .25rem auto 0 auto; color: #fff; font-size: .31rem; text-align: center; }
+
+.tradeRank .popbox{ width: 6.4rem; height: 7.35rem; background: #FFFFFF; border-radius: .4rem; position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 2; box-sizing: border-box; padding: .66rem .37rem 0 .37rem; }
+.tradeRank .popbox .imgbox{ width: 100%; display: flex; justify-content: center; height: 1.29rem; }
+.tradeRank .popbox p.title{ color: #0288FB; font-size: .52rem; line-height: .52rem; font-weight: bold; margin: .39rem 0 .25rem 0; }
+.tradeRank .popbox p{ font-size: .28rem; line-height: .4rem; text-align: center; color: #aaaaaa; }
+.tradeRank .popbox .input{ width: 5.57rem; height: .64rem; line-height: .62rem; box-sizing: border-box; background: #F2F2F2; border: 1px solid #D3D3D3; border-radius: .08rem; margin-bottom: .15rem; font-size: .28rem; padding-left: .11rem; color: #949494; }
+.tradeRank .popbox .inputbox{ display: flex; flex-wrap: wrap; margin-top: .45rem; }
+.tradeRank .popbox .inputbox .box{ position: relative; display: flex;}
+.tradeRank .popbox .inputbox .box .close{ position: absolute; right: .33rem; top: .17rem; width: .29rem; }
+.tradeRank .popbox .btn{ margin-top: .2rem;}
+.tradeRank .popbox .big_close{ width: .56rem; height: .56rem; position: absolute; bottom: -1.5rem; left: 50%; margin-left: -.28rem; z-index: 2; }
+.tradeRank .popbox_bg{ width: 100%; height: 100%; position: fixed; left: 0; top: 0; background: #000000; opacity: 0.63; z-index: 1; }
+
+
+.tradeRank .popokbox{ width: 6.4rem; height: 4.37rem; background: #FFFFFF; border-radius: .4rem; position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 2; box-sizing: border-box; padding: .48rem 0 0 0; text-align: center; }
+.tradeRank .popokbox .imgbox{ width: 100%; display: flex; justify-content: center; height: 1.38rem; }
+.tradeRank .popokbox p.title{ color: #0288FB; font-size: .52rem; line-height: .52rem; font-weight: bold; margin: .37rem 0 .25rem 0; }
+.tradeRank .popokbox p{ font-size: .28rem; line-height: .28rem; text-align: center; color: #aaaaaa; }
+.tradeRank .popokbox .big_close{ width: .56rem; height: .56rem; position: absolute; bottom: -1.5rem; left: 50%; margin-left: -.28rem; z-index: 2; }
+
+.van-toast__text{ font-size: .22rem; padding: .05rem .1rem;}

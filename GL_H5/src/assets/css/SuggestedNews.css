@@ -1,0 +1,190 @@
+.suggest-analysis-group {
+  background-color: #f2f2f2;
+}
+.suggested-news {
+  min-height: 7.34rem;
+}
+
+/* Suggested News */
+.conList2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 0.3rem 0.4rem;
+}
+.conList2 .ctitlebox {
+  font-family: PingFang SC Medium;
+  width: 100%;
+  height: 0.54rem;
+  border: 0.5px solid rgba(141, 144, 155, 0.12);
+  border-radius: 0.42rem;
+  padding: 0 0.24rem;
+  font-size: 0.24rem;
+  line-height: 0.52rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #888888;
+  white-space: nowrap;
+}
+.conList2 .ctitlebox i {
+  display: block;
+  width: 0.52rem;
+  height: 0.18rem;
+  background: url(../images/index/triangle.png) no-repeat center bottom;
+  background-size: 0.2rem 0.2rem;
+  position: relative;
+  z-index: 3;
+}
+.conList2 .ctitlebox i.goback {
+  transition: all 0.4s;
+}
+.conList2 .ctitlebox i.go {
+  transform: rotate(180deg);
+  transition: all 0.4s;
+}
+
+.conList2 .item {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 0.01rem solid #eee;
+  padding: 0.2rem 0;
+}
+.conList2 .item p {
+  font-family: PingFang SC Regular;
+  overflow: hidden;
+  font-size: 0.24rem;
+  color: #aaaaaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+.conList2 .item p:nth-child(1) {
+  width: 26%;
+}
+.conList2 .item p:nth-child(2) {
+  width: 30%;
+  transform: translateX(0.1rem);
+}
+.conList2 .item p:nth-child(3) {
+  width: 42%;
+}
+
+.conList2 ul.plist {
+  width: 100%;
+}
+.conList2 ul.plist li {
+  width: 100%;
+  font-size: 0.26rem;
+  display: flex;
+  justify-content: space-between;
+  height: 0.92rem;
+  border-bottom: 0.01rem solid rgba(141, 144, 155, 0.12);
+  white-space: nowrap;
+}
+.conList2 ul.plist li:last-child {
+  border-bottom: none;
+}
+.conList2 ul.plist li span {
+  font-family: PingFang SC Medium;
+  display: flex;
+  align-items: center;
+  font-style: medium;
+}
+.conList2 ul.plist li span:first-child {
+  flex: 1;
+}
+.conList2 ul.plist li span:nth-child(2) {
+  width: 1.35rem; /*justify-content: center;*/
+}
+.conList2 ul.plist li span:nth-child(3) {
+  width: 1.8rem;
+  justify-content: center;
+}
+.conList2 ul.plist li span:last-child {
+  width: 1rem;
+  justify-content: center;
+  color: #1e85ff;
+}
+.conList2 ul.plist li .icon {
+  width: 0.38rem;
+  height: 0.52rem;
+  margin-right: 0.16rem;
+}
+.conList2 ul.plist li:nth-child(4) .icon,
+.conList2 ul.plist li:nth-child(5) .icon {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+/* .conList2 ul.plist li span:nth-child(2).rise, .conList2.alt ul.plist li span:nth-child(2).fall { color: #1ab46a; }
+.conList2 ul.plist li span:nth-child(2).fall, .conList2.alt ul.plist li span:nth-child(2).rise { color: #f72c4d; } */
+
+.suggest_popup_group {
+  width: 2.37rem;
+  height: 5rem;
+  background: url(../images/index/suggest_popup_bg.png) no-repeat;
+  position: absolute;
+  right: 0.16rem;
+  top: 0.25rem;
+  z-index: 2;
+  background-size: 100% 90%;
+  background-position-y: -0.05rem;
+}
+/* .suggest_popup_group::before{ content: ''; background: url(../images/index/suggest_popup_triangle.png) no-repeat; position: absolute; width: .65rem; height: .57rem; top: -.35rem; right: .08rem; z-index: 1; } */
+.suggest_popup_bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #000;
+  display: block;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0.01;
+}
+
+.suggest_popup_group ul {
+  width: 100%;
+  padding: 0.55rem 0 0 0;
+  box-sizing: border-box;
+}
+.suggest_popup_group ul li {
+  display: flex;
+  align-items: center;
+  font-size: 0.26rem;
+  margin-bottom: 0.16rem;
+  padding-left: 0.5rem;
+}
+.suggest_popup_group ul li input {
+  width: 0.28rem;
+  height: 0.28rem;
+  border-radius: 100%;
+  border: solid 1px #dedede;
+  margin-right: 0.15rem;
+}
+
+.suggest_popup_group ul li input.checked {
+  background: #fe6a1a 0% 0% no-repeat padding-box;
+  border: solid 1px #fe6a1a;
+  position: relative;
+}
+.suggest_popup_group ul li input.checked::after {
+  content: "";
+  top: 0.06rem;
+  left: 0.05rem;
+  position: absolute;
+  background: transparent;
+  border: #fff solid 1px;
+  border-radius: 0 0 0 0.5px;
+  border-top: none;
+  border-right: none;
+  height: 0.07rem;
+  width: 0.14rem;
+  transform: rotate(-45deg);
+}

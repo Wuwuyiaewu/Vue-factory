@@ -1,0 +1,112 @@
+/* 更多按钮 */
+.apply-common-tooltip[data-name='legend-more-action'] {
+    display: none !important;
+}
+
+/* 指标弹层 */
+.dialog-34XTwGTT {}
+
+.buttons-3yvtQ_uI {
+    margin: 0 auto;
+}
+
+.wrapper-1tN_aWXZ {
+    display: none !important;
+}
+
+.price-axis-stub-3MoqVLRB {
+    pointer-events: none !important;
+}
+
+/* 指标宽度 */
+.titleWrapper-1Zs2rjQ6 {
+    max-width: 96% !important;
+}
+
+/* 指标标题宽度 */
+.study-lgC0tuTJ .title-bcHj6pEn.title1st-2at68hKe {
+    min-width: 20px;
+}
+
+body {
+    min-width: auto;
+}
+
+.js-rootresizer__contents {
+    background: #E8E8EA;
+}
+
+.layout__area--center{
+    position: relative;
+}
+
+.layout__area--center:before{
+    position: absolute;
+    left: -4px;
+    top: 0;
+    content: '';
+    display: block;
+    width: 4px;
+    height: 100%;
+    background-image: linear-gradient(to right, #E8E8EA, #fff);
+}
+
+.background-1bSnR2Ey {
+    stroke: #e0e3eb !important;
+    fill: none !important;
+}
+
+.arrow-WcYWFXUn {
+    stroke: #9db2bd !important;
+}
+
+.toggleButton-3TAD9tll {
+    display: none;
+    /* top: 44%!important;
+    transform: translateY(-50%)!important;
+    bottom: auto!important; */
+}
+
+.pane-separator {
+    position: relative;
+}
+
+.pane-separator:before,
+.pane-separator:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 20px;
+    height: 1px;
+    background: #E8E8EA;
+    z-index: 1;
+}
+
+.pane-separator:before {
+    top: -2px;
+}
+
+.pane-separator:after {
+    bottom: -2px;
+}
+
+.chart-markup-table tr:nth-last-child(2) .pane-separator::before,
+.chart-markup-table tr:nth-last-child(2) .pane-separator::after {
+    display: none;
+}
+
+.toggler-_SUZ7r_5.pane-button-3IbFaPrJ.apply-common-tooltip {
+    display: none;
+}
+
+.fullScreenBtn {
+    position: absolute;
+    top: 12px;
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+    box-sizing: border-box;
+    margin-right: -35px;
+}

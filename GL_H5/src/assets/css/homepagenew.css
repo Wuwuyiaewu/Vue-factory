@@ -1,0 +1,411 @@
+#home {
+  position: relative;
+  background-color: #f2f2f2;
+  padding-bottom: 1.4rem;
+}
+#home.normal {
+  padding-bottom: 0.72rem;
+}
+
+#home .header {
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  padding: 0.15rem 0.3rem 0.3rem;
+}
+
+.header .title {
+  font-family: PingFang SC Heavy;
+  font-size: 0.34rem;
+}
+#home .header img {
+  width: 0.35rem;
+}
+
+/* Banner */
+.swiper-container {
+  width: 100%;
+}
+.swiper-container img {
+  width: 100%;
+}
+
+/* Card */
+.card {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 6.86rem;
+  height: 3.5rem;
+  border-radius: 0.16rem;
+  position: relative;
+  z-index: 79;
+  background-color: #fff;
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1px 6px #0000001a;
+}
+
+.card .getPrice {
+  height: 0.58rem;
+  line-height: 0.58rem;
+  padding: 0 0.2rem;
+  color: #fe6a1a;
+  font-size: 0.22rem;
+  background: rgba(255, 138, 0, 0.24);
+  background: linear-gradient(
+    180deg,
+    rgb(255 138 0 / 16%) 0%,
+    rgb(255 194 122 / 0%) 100%
+  );
+  display: flex;
+  align-items: center;
+}
+
+.card .getPrice img {
+  height: 40%;
+  margin: 0 0.22rem;
+}
+
+.getPrice p {
+  font-family: PingFang SC Medium;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  /*margin: 0 0 0 1.55rem;*/
+  /* margin: 0 0 0 0.2rem; */
+  position: relative;
+}
+.getPrice p span {
+  font-size: 0.23rem;
+  display: block;
+  position: absolute;
+  height: 100%;
+  left: 0.2rem;
+  transform: translate(0, 100%);
+  transition-duration: 0s;
+}
+.getPrice p span.show {
+  transform: translate(0, 0);
+  transition-duration: 0.5s;
+}
+.getPrice p span.hide {
+  transform: translate(0, -100%);
+  transition-duration: 0.5s;
+}
+
+.card .products-summary {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.card .products-summary .prod-title {
+  font-family: PingFang SC;
+  font-size: 0.26rem;
+  font-weight: medium;
+  color: #222222;
+}
+
+.card .products-summary .prod-cur-price {
+  font-size: 0.45rem;
+  /*padding: 0.1rem 0;*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .products-summary .prod-cur-price p {
+  font-family: PingFang SC;
+  font-weight: Bold;
+  margin-right: 0.1rem;
+}
+/* .card .products-summary .rise, .card .products-summary.alt .drop {
+  color: #f72c4d;
+}
+.card .products-summary .drop, .card .products-summary.alt .rise {
+  color: #1ab46a;
+} */
+
+.card .products-summary .prod-cur-price i {
+  display: inline-block;
+  width: 0.13rem;
+  height: 0.26rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-top: -0.03rem;
+}
+
+/* .card .products-summary .prod-cur-price i.rise {
+  background-image: url("../images/index/a_top_rise.png");
+}
+.card .products-summary.alt .prod-cur-price i.rise {
+  background-image: url("../images/index/a2_top_rise.png");
+}
+.card .products-summary .prod-cur-price i.drop {
+  background-image: url("../images/index/a_top_decline.png");
+}
+.card .products-summary.alt .prod-cur-price i.drop {
+  background-image: url("../images/index/a2_top_decline.png");
+} */
+
+.card .products-summary .prod-price-change {
+  /* font-family: SFProText-Regular; */
+  font-size: 0.24rem;
+}
+.card .products-summary .prod-price-change p > span:first-child {
+  margin-right: 0.1rem;
+}
+
+.card .products-summary .prod {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Home Large Buttons */
+.home-large-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+.home-large-btns > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 3.1rem;
+  height: 0.85rem;
+  border-radius: 0.08rem;
+  color: #fff;
+}
+.home-large-btns > div img {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+.home-large-btns .btn-left {
+  background-color: #3490ff;
+  margin-right: 0.2rem;
+}
+.home-large-btns .btn-right {
+  background-color: #fe6a1a;
+}
+.home-large-btns .lg-text {
+  font-family: PingFang SC;
+  font-size: 0.32rem;
+  font-weight: bold;
+}
+.home-large-btns .sm-text {
+  font-family: PingFang SC Light;
+  font-size: 0.19rem;
+  opacity: 0.6;
+}
+
+/* Home Small Buttons */
+.home-small-btns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 0.21rem;
+  /* Add some margin / padding to the bottom */
+  padding-bottom: 0.36rem;
+}
+.home-small-btns .button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-small-btns img {
+  height: 0.5rem;
+}
+
+.home-small-btns p {
+  font-size: 0.26rem;
+  margin-top: 0.1rem;
+  color: #222;
+}
+
+/* Trade Ranking */
+#home .tradeRankbox {
+  height: 3.1rem;
+  width: 100%;
+  margin-bottom: 0.2rem;
+  background: url("../images/index/rank_platform.png");
+  background-size: 6.37rem 1.82rem;
+  background-repeat: no-repeat;
+  background-position: center 85%;
+  padding-bottom: 1.8rem;
+}
+#home .tradeRankbox ul {
+  display: flex;
+  justify-content: center;
+}
+#home .tradeRankbox ul li {
+  width: 1.56rem;
+  margin: 0 0.26rem;
+}
+#home .tradeRankbox ul li:nth-child(odd) {
+  margin-top: 0.4rem;
+}
+#home .tradeRankbox .con {
+  position: relative;
+  width: 1.76rem;
+  height: 1.76rem;
+  margin-bottom: 0.16rem;
+}
+#home .tradeRankbox .percent-circle {
+  position: absolute;
+  height: 100%;
+  background: #1ab46a;
+  overflow: hidden;
+}
+#home .tradeRankbox .percent-circle-right {
+  right: 0;
+  width: 0.88rem;
+  border-radius: 0 0.88rem 0.88rem 0/0 0.88rem 0.88rem 0;
+}
+#home .tradeRankbox .percent-circle-right .right-content {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+  transform: rotate(0deg);
+  border-radius: 0 0.88rem 0.88rem 0/0 0.88rem 0.88rem 0;
+  background: #f72c4d;
+}
+#home .tradeRankbox .percent-circle-left {
+  width: 0.88rem;
+  border-radius: 0.88rem 0 0 0.88rem/0.88rem 0 0 0.88rem;
+}
+#home .tradeRankbox .percent-circle-left .left-content {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform-origin: right center;
+  transform: rotate(0deg);
+  border-radius: 0.88rem 0 0 0.88rem/0.88rem 0 0 0.88rem;
+  background: #f72c4d;
+}
+#home .tradeRankbox .text-circle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 0.24rem;
+  line-height: 0.22rem;
+  height: 1.52rem;
+  width: 1.52rem;
+  left: 0.125rem;
+  top: 0.125rem;
+  border-radius: 100%;
+  background: #fff;
+  color: #000;
+}
+#home .tradeRankbox .text-circle span {
+  width: 100%;
+  color: #f72c4d;
+  text-align: center;
+  font-family: PingFang SC Medium;
+}
+#home .tradeRankbox .text-circle span:nth-child(1) {
+  color: #1ab46a;
+}
+#home .tradeRankbox .text-title {
+  color: #252525;
+  font-size: 0.28rem;
+  font-weight: bold;
+  text-align: center;
+}
+#home .tradeRankbox .text-desc {
+  font-family: PingFang SC Regular;
+  font-size: 0.24rem;
+  text-align: center;
+  color: #888888;
+}
+#home .tradeRankbox .update-time p {
+  font-family: PingFang SC Medium;
+  font-size: 0.19rem;
+  color: #dddddd;
+  text-align: center;
+  margin-top: 1.4rem;
+}
+#home .tradeRankbox .update-time p span {
+  font-family: PingFang SC Medium;
+}
+
+/* Hot Topics Banner */
+.hot-topics {
+  padding: 0.3rem;
+}
+.hot-topics .section-header {
+  padding: 0;
+  margin: 0 0 0.3rem;
+}
+.hot-topics .swiper-wrapper {
+  width: 85%;
+}
+
+/* Login Bar 样式转移到组件中*/
+/* .login_bar {
+  position: fixed;
+  z-index: 99;
+  bottom: 0.97rem;
+  background-color: #fff;
+  font-size: 0.32rem;
+  height: 0.68rem;
+  width: 100%;
+  max-width: 750px;
+}
+.login_bar span {
+  font-family: PingFang SC Medium;
+  height: 100%;
+  line-height: 0.68rem;
+  text-align: center;
+  display: inline-block;
+}
+.login_bar span:nth-child(1) {
+  color: #fff;
+  background-color: #3490ff;
+  width: 20%;
+}
+.login_bar span:nth-child(2) {
+  width: 60%;
+}
+.login_bar span:nth-child(3) {
+  width: 20%;
+  color: #fff;
+  background-color: #fe6a1a;
+} */
+
+/* Swiper */
+.banner-swiper .swiper-slide {
+  height: 4.4rem !important;
+}
+.banner-swiper .swiper-slide img {
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0.4rem;
+}
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.hot-topics .swiper-slide img {
+  border-radius: 0.15rem;
+}

@@ -1,0 +1,180 @@
+.login.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    -45deg,
+    rgba(4, 129, 235, 1) 55%,
+    rgba(4, 190, 254, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(4, 129, 235, 1) 55%,
+    rgba(4, 190, 254, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(4, 129, 235, 1) 55%,
+    rgba(4, 190, 254, 1) 100%
+  );
+  background: -o-linear-gradient(
+    45deg,
+    rgba(4, 129, 235, 1) 55%,
+    rgba(4, 190, 254, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    45deg,
+    rgba(4, 129, 235, 1) 55%,
+    rgba(4, 190, 254, 1) 100%
+  );
+}
+.login #head {
+  position: absolute;
+  width: 100%;
+}
+.login #head .headItem {
+  overflow: hidden;
+  width: 6.9rem;
+  margin: 0.41rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login .close {
+  width: 0.44rem;
+  height: 0.44rem;
+}
+.login .chat {
+  width: 0.54rem;
+}
+.login .form-box {
+  color: #ffffff;
+  margin: 2.46rem auto 0;
+  width: 5rem;
+  padding: 1.08rem 0.5rem 0 0.5rem;
+  min-height: 4.52rem;
+  border-radius: 0.2rem;
+  position: relative;
+  background-color: rgba(4, 190, 254, 0.7);
+}
+.login .circle {
+  width: 1.37rem;
+  height: 1.37rem;
+  background: #0d597c;
+  box-shadow: 0 0.5rem 0.46rem 0.04rem rgba(34, 140, 214, 1);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: -0.6rem;
+}
+.login .circle img {
+  width: 100%;
+  border-radius: 100%;
+}
+.login .input-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 5rem;
+  border-bottom: 0.01rem solid #cccccc;
+  height: 1.12rem;
+}
+.login .input-item {
+  margin-top: 0.22rem;
+  height: 0.85rem;
+  color: #fff;
+  background: transparent;
+  outline: none;
+  border: 0;
+  font-size: 0.34rem;
+}
+.login .input-item::placeholder {
+  color: #ddd;
+  font-size: 0.29rem;
+  background: transparent;
+}
+.login .input-item:-webkit-autofill,
+.login .input-item:-webkit-autofill:hover,
+.login .input-item:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff !important;
+  -webkit-box-shadow: inset 0 0 0 1000px transparent !important;
+  box-shadow: inset 0 0 0 1000px rgba(0, 171, 255, 1) !important;
+}
+.login .icon {
+  margin-top: 0.22rem;
+  width: 0.44rem;
+  height: 0.44rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.login .icon.hide {
+  display: none;
+}
+.login .login-box {
+  width: 5rem;
+  height: 0.9rem;
+  background: linear-gradient(
+    -45deg,
+    rgba(40, 243, 236, 1),
+    rgba(45, 218, 255, 1)
+  );
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(40, 243, 236, 1),
+    rgba(45, 218, 255, 1)
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(40, 243, 236, 1),
+    rgba(45, 218, 255, 1)
+  );
+  background: -o-linear-gradient(
+    45deg,
+    rgba(40, 243, 236, 1),
+    rgba(45, 218, 255, 1)
+  );
+  background: -ms-linear-gradient(
+    45deg,
+    rgba(40, 243, 236, 1),
+    rgba(45, 218, 255, 1)
+  );
+  border-radius: 6px;
+  margin-top: 0.77rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login .login-btn {
+  height: 0.9rem;
+  font-size: 0.32rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  line-height: 0.9rem;
+}
+.login .opt-box {
+  width: 6rem;
+  margin: 0.29rem auto 0;
+  color: #cccccc;
+  font-size: 0.28rem;
+  display: flex;
+  justify-content: space-between;
+}
+.login .opt-box a {
+  text-decoration: none;
+  outline: none;
+  color: #cccccc;
+}
+input::-webkit-input-placeholder {
+  color: #dddddd;
+}
+input::-moz-placeholder {
+  color: #dddddd;
+}
+input::-ms-input-placeholder {
+  color: #dddddd;
+}
+.login .prompt {
+  color: #e30000;
+  font-size: 0.28rem;
+  margin-top: 0.1rem;
+}

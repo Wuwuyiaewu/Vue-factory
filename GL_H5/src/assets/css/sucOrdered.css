@@ -1,0 +1,165 @@
+.sucOrdered .navTitle { width: 7.5rem; margin: 0 auto; background: #007AFF; height: 1.28rem; position: relative; }
+.sucOrdered .navTitle .navItem{ 
+width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; box-sizing: border-box; flex-direction:column;
+}
+.sucOrdered .navTitle .back{ width: .14rem; position: absolute; left: .38rem; top: .52rem; }
+.sucOrdered .navTitle p{ font-size: .36rem; line-height: .44rem; display: flex; align-items: center; color: #fff;}
+.sucOrdered .navTitle p.symbol{ font-size: .24rem; line-height: .24rem; line-height: .24rem; }
+
+.attribute .navTitle { width: 100%; height: auto; margin: .3rem auto .1rem auto; background: #fff; position: relative; box-sizing: border-box; }
+.attribute .navTitle span{ font-size: .32rem; font-weight: bold; }
+.attribute .navTitle .back { width: .44rem; height: .44rem; top: 0rem; left: .3rem; }
+.sucOrdered.attribute .sucList ul li{ border-bottom: none;}
+.attribute .sucList ul li:nth-child(odd){ background: rgba(141, 144, 155, 0.12);}
+
+.sucOrdered .sucTit{ overflow: hidden; padding: .85rem 0 .45rem 0;}
+.sucOrdered .sucTit img{ width: .64rem; height: .64rem; margin: 0 auto .2rem auto;}
+.sucOrdered .sucTit span{
+      display: block;
+      text-align: center;
+      font-size: .36rem;
+      line-height: .54rem;
+      font-weight: bold;
+      color: #1AB46A;
+}
+
+.sucOrdered .quote_banner{ width: 7.5rem; display: flex; justify-content: center; margin: 0 auto; }
+.sucOrdered .quote_banner img{ width: 100%;}
+
+.sucOrdered .sucList {
+      width: 7.5rem; padding: .2rem .3rem .5rem .3rem; box-sizing: border-box; margin: 0 auto;
+}
+
+.sucOrdered .sucList .item{
+      overflow: hidden;
+      width: 100%;
+      display: block;
+      font-weight: bold;
+      font-size: .28rem;
+      margin: .1rem 0 .3rem;
+}
+.sucOrdered .sucList ul{
+      overflow: hidden;
+      display: block;
+      margin: 0 0 .3rem;
+      padding: 0;
+      list-style: none;
+}
+.sucOrdered .sucList ul li{
+      padding: .25rem .3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: solid 1px rgba(141, 144, 155, 0.12); width: 100%; box-sizing: border-box;
+}
+.sucOrdered .sucList ul li.time{padding-right: 0;align-items: baseline}
+
+
+.sucOrdered .sucList ul li p{
+      overflow: hidden;
+      display: block;
+      font-size: .28rem;
+}
+.sucOrdered .sucList ul li.time p{width: 35%}
+
+.sucOrdered .sucList ul li span{
+      overflow: hidden;
+      display: block;
+      font-size: .28rem;
+      text-align: right;
+      font-weight: bold; line-height: .28rem;
+}
+.sucOrdered .sucList ul li span.inline{display: inline;}
+
+.sucOrdered .sucList ul li span em{
+      display: inline;
+      color: #999;
+}
+.sucOrdered .sucList ul li span i{
+      display: inline;
+}
+.sucOrdered .sucList ul li span label.symbol{
+      width: 100%; display: block; font-size: .24rem; line-height: .24rem;
+}
+
+.sucOrdered .sucList ul li .item {
+      width: 65%;
+      margin: 0;
+}
+.sucOrdered .sucList ul li.margin .item {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.sucOrdered .sucList ul li.margin .item.flex{justify-content: flex-end}
+.sucOrdered .sucList ul li .item p {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: .2rem;
+}
+.sucOrdered .sucList ul li.margin .item p{width: auto;font-size: .28rem;}
+.sucOrdered .sucList ul li .item p span{display: inline;width: auto}
+.sucOrdered .sucList ul li.margin .item span{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: #0A95FF;
+}
+.sucOrdered .sucList ul li.margin .item em{
+      overflow: hidden;
+      background: url("../images/quotation/a_chart_open.png") no-repeat;
+      background-size: 100% 100%;
+      width: .5rem;
+      height: .5rem;
+      transform: rotate(180deg);
+}
+.sucOrdered .sucList ul li.margin .item em.checked{
+      transform: rotate(0deg);
+}
+.sucOrdered .sucList ul li.margin .item .itemWidth {
+      overflow: hidden;
+      width: 65%;
+}
+.sucOrdered .sucList ul li.margin .item .itemWidth .widthCon{
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.sucOrdered .sucList ul li.margin .item .itemWidth .widthCon p {
+      overflow: hidden;
+      width: 50%;
+      text-align: center;
+      display: inline-block;
+}
+.sucOrdered .sucBtn {
+      width: 7.5rem;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 0 .32rem .5rem .32rem;
+}
+.sucOrdered .sucBtn span{
+      display: block;
+      width: 3.35rem;
+      height: .89rem;
+      line-height: .89rem;
+      text-align: center;
+      background: #D7D7D7;
+      border-radius: .02rem;
+      color: #888888;
+      font-size: .31rem;
+}
+.sucOrdered .sucBtn.only span{ width: 100%; }
+
+.sucOrdered .sucBtn span:last-child{ background: #FF6A1A; color: #fff;}
+.sucOrdered .sucImg{ padding: .85rem 0 .45rem 0; }
+.sucOrdered .sucImg img{ width: .64rem; margin: 0 auto .2rem auto; }
+.sucOrdered .sucImg span{ display: block; text-align: center; font-weight: bold; font-size: .36rem; color: #1AB46A;}

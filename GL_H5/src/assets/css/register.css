@@ -1,0 +1,300 @@
+.register{
+    overflow: hidden;
+    background: #eee;
+}
+.register.headNav .navTitle{background: transparent}
+.register .content {
+    background: url("../images/register/banner.png") no-repeat;
+    background-size: 100% 3.6rem;
+}
+.register .form-box{
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    border-radius: .2rem;
+    margin: 2rem auto 1rem;
+    width: 6.9rem;
+}
+.register .form-box form{
+    width: 6.3rem;
+    margin: 0 auto .2rem;
+    position: relative;
+}
+.register .form-box .item {
+    margin-top: .25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid .02rem #F0F0F0;
+    background: #F0F0F0;
+    padding: 0 .25rem;
+    border-radius: .42rem;
+    position: relative;
+}
+.register .form-box .item.border {
+    border: .02rem solid #0088CF;
+    background: #FAFCFF;
+}
+.register .form-box .item img{width: .44rem}
+.register .form-box .item span{
+    overflow: hidden;
+    display: block;
+    width: 5.7rem;
+    font-size: .32rem;
+    margin: 0 auto .25rem;
+    font-weight: bold;
+}
+.register .form-box .item .emailCon{
+    overflow-y: scroll;
+    position: absolute;
+    max-height: 2rem;
+    top: .82rem;
+    left: .3rem;
+    width: 5.6rem;
+    background: #fff;
+    border: solid .02rem #eee;
+}
+.register .form-box .item .emailCon li{
+    font-size: .26rem;
+    padding: .1rem .2rem;
+}
+.register .form-box .item .emailCon li.checked,
+.register .form-box .item .emailCon li:hover{
+    background: #eee;
+}
+.register .input-box {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 6rem;
+    height: .8rem;
+    margin-left: .2rem;
+}
+.register .input-box em{
+    overflow: hidden;
+    background: url("../images/register/user-center-ky.png") no-repeat;
+    background-size: 100% 100%;
+    width: .44rem;
+    height: .44rem;
+}
+.register .input-box em.checked{
+    background: url("../images/register/register_user_closed.png") no-repeat;
+    background-size: 100% 100%;
+}
+.register .input-box input {
+    height: 0.8rem;
+    color: #333;
+    background: transparent;
+    outline: none;
+    border: 0;
+    font-size: .28rem;
+    font-weight: bold;
+    width: 5.2rem;
+}
+.register .input-box input::placeholder{
+    color: #999;
+    font-size: .26rem;
+    background: transparent
+}
+.register .input-box input::-webkit-input-placeholder{
+    color: #999;
+    font-size: .26rem;
+    background: transparent
+}
+.register .input-box input::-moz-placeholder{
+    color: #999;
+    font-size: .26rem;
+    background: transparent
+}
+.register .input-box input::-ms-input-placeholder{
+    color: #999;
+    font-size: .26rem;
+    background: transparent
+}
+.register .input-box input:-webkit-autofill,
+.register .input-box input:-webkit-autofill:hover,
+.register .input-box input:-webkit-autofill:focus{
+    -webkit-text-fill-color: #333 !important;
+    -webkit-box-shadow: inset 0 0 0 1000px transparent!important;
+    box-shadow: inset 0 0 0 1000px #fff!important;
+    height: .76rem;
+}
+.register .icon {
+    width: 0.44rem;
+    height: 0.44rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.register .icon.hide{display: none}
+.register .register-box {
+    width: 100%;
+}
+.register .register-box a{
+    overflow: hidden;
+    display: block;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    margin-bottom: .1rem;
+    font-size: 0.32rem;
+    border-radius: .04rem;
+    text-align: center;
+}
+.register .register-btn {
+    background: #ccc;
+    color: rgba(255, 255, 255, 1);
+}
+.register .register-btn.suc{
+    background: #0088CF;
+}
+.register .register-box p{
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    font-size: .24rem;
+    color: #999;
+    padding: 0 .1rem;
+}
+.register .register-box p a{
+    display: inline;
+    color: #0088CF;
+    text-decoration: none;
+    font-size: .24rem;
+    height: auto;
+    line-height: normal;
+}
+.register .register-box p em.color{color: #e30000;}
+.register .title{
+    width: 6.3rem;
+    margin: .25rem auto 0;
+}
+.register .title span,.register .title p{
+    overflow: hidden;
+    display: block;
+    font-size: .24rem;
+}
+.register .title span{
+    font-weight: bold;
+    font-size: .3rem;
+    text-align: center;
+    margin-bottom: .15rem;
+}
+.register .title p em{
+    display: inline;
+    color: #e30000;
+}
+.register .tabList{
+    overflow: hidden;
+    width: 6.3rem;
+    margin: .2rem auto 0;
+}
+.register .tabList p{
+    overflow: hidden;
+    display: block;
+    font-size: .28rem;
+    color: #005991;
+    margin: .2rem auto 0;
+}
+.register .tabList p em{
+    display: inline;
+    font-size: .22rem;
+    color: #999;
+}
+.register .tabList ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.register .tabList ul li{
+    overflow: hidden;
+    height: .58rem;
+    line-height: .58rem;
+    font-size: .28rem;
+    color: #333;
+    text-align: center;
+    padding: 0 .3rem;
+    background-color: #f0f0f0;
+    border: .02rem solid #f0f0f0;
+    margin-right: .2rem;
+    border-radius: .68rem;
+}
+.register .tabList ul li.checked{
+    background-color: #fafcff;
+    border-color: #0088D0;
+}
+.register .accCon{margin-top: .55rem}
+.register .accCon img{width: 1rem;margin: 0 auto .3rem}
+.register .accCon span,.register .accCon p{
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    font-size: .3rem;
+    color: #999;
+}
+.register .accCon span{
+    font-size: .32rem;
+    color: #005991;
+    margin-bottom: .1rem;
+    font-weight: bold;
+}
+.register .explain{
+    background: rgba(255,174,66,.3);
+    margin: .45rem 0;
+}
+.register .explain p {
+    width: 100%;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .28rem;
+    color: #333;
+    text-align: center;
+}
+.register .explain p em {
+    display: inline;
+    color: #f25632;
+}
+.register .btn{
+    width: 6.3rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.register .btn a {
+    display: block;
+    width: 4.28rem;
+    height: .8rem;
+    line-height: .78rem;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: .05rem;
+    font-size: .28rem;
+}
+.register .btn a.first{
+    border: 0.02rem solid #0088cf;
+    color: #0088cf;
+}
+.register .btn a.last {
+    background: #f25632;
+    border: 0.02rem solid #f25632;
+    color: #fff;
+    width: 2.38rem;
+    margin-left: .23rem;
+}
+.register .btn a.only{
+    width: 100%;
+    color: #fff;
+    background: #0088cf;
+}
+.register .errPrompt {
+    color: #e30000;
+    font-size: 0.28rem;
+    width: 100%;
+    text-align: center;
+    margin-top: .25rem;
+    margin-bottom: .1rem;
+}
+.register .errMessage{
+    margin-top: .1rem;
+    margin-left: .25rem;
+    text-align: left;
+}

@@ -1,0 +1,461 @@
+.tradeChart .orderCon {
+      overflow: hidden;
+      padding: .25rem .3rem;
+      display: flex;
+      justify-content: space-between;
+      border-top: solid .23rem #F7F7F7;
+}
+.tradeChart .orderCon ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 3.34rem;
+}
+.tradeChart .orderCon ul li{
+      overflow: hidden;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      height: .7rem;
+      line-height: .7rem;
+      padding: 0 .17rem;
+}
+.tradeChart .orderCon ul li:nth-child(odd){background: #F7F7F7}
+.tradeChart .orderCon ul li p{
+      overflow: hidden;
+      font-size: .24rem;
+      color: #999;
+}
+.tradeChart .orderCon ul li span{
+      overflow: hidden;
+      font-size: .24rem;
+      font-weight: bold;
+}
+.tradeChart .btn {
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 .3rem;
+      padding: .4rem 0 .65rem;
+}
+.tradeChart .btn span{
+      overflow: hidden;
+      display: block;
+      width: 3.2rem;
+      height: .8rem;
+      line-height: .8rem;
+      text-align: center;
+      border: solid .02rem #0A95FF;
+      border-radius: .06rem;
+      color: #0A95FF;
+      font-size: .32rem;
+}
+.tradeChart .btn span:last-child{
+      background: #0A95FF;
+      color: #fff;
+}
+.tradeChart .btn span.err{
+      background: #999;
+      color: #fff;
+      border: solid .02rem #999;
+}
+.tradeChart .navFixed .masking{
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 101;
+      background: rgba(0,0,0,.5);
+}
+.tradeChart .btnList{
+      position: fixed;
+      bottom: .77em;
+      right: .11rem;
+      z-index: 102;
+}
+.tradeChart .btnList span {
+      overflow: hidden;
+      display: block;
+      background: url("../images/trade/nav_float.png") no-repeat;
+      background-size: 100% 100%;
+      width: 1.01rem;
+      height: 1.01rem;
+}
+.tradeChart .btnList .item{
+      position: fixed;
+      bottom: 1.57em;
+      right: .2rem;
+      z-index: 103;
+}
+.tradeChart .btnList .item a,.tradeChart .navFixed .item p{
+      overflow: hidden;
+      font-size: .24rem;
+      margin: 0 .15rem .24rem;
+      color: #fff;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+}
+.tradeChart .btnList .item a em,.tradeChart .navFixed .item p em {
+      overflow: hidden;
+      display: inline-block;
+      line-height: .66rem;
+      margin-right: .2rem;
+}
+.tradeChart .btnList .item a img,.tradeChart .navFixed .item p img{width: .66rem;display: inline-block;}
+
+
+.tradeChart .positionFixed{ 
+      width: 100%;
+}
+.tradeChart .positionFixed .masking{
+      overflow: hidden;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 999999999;
+      background: rgba(0,0,0,.5);
+}
+.tradeChart .positionFixed .tcCon{
+      width: 100%;
+      background: #fff;
+}
+.tradeChart .positionFixed .tcCon .fixedItem{
+      overflow: hidden;
+      width: 7.5rem;
+      margin: 0 auto;
+}
+.tradeChart .positionFixed .tcCon .tcTit{
+      overflow: hidden;
+      padding: 0 .23rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: solid .01rem #ddd;
+}
+.tradeChart .positionFixed .tcCon .tcTit img{width: .44rem;padding: .22rem 0}
+.tradeChart .positionFixed .tcCon .tcTit span{
+      overflow: hidden;
+      font-weight: bold;
+      font-size: .3rem;
+}
+
+.tradeChart .positionFixed .tcCon .itemCon{overflow: hidden;}
+.tradeChart .positionFixed .tcCon .itemCon .item{overflow: hidden}
+.tradeChart .positionFixed .tcCon .itemCon .item img{width: 1.2rem;margin: .8rem auto .2rem}
+.tradeChart .positionFixed .tcCon .itemCon .item span{
+      overflow: hidden;
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      font-size: .3rem;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item1{
+      overflow: hidden;
+      padding: .46rem 0 .15rem;
+      margin: 0 .3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: solid .01rem #ddd;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item1.border{border-bottom: none}
+.tradeChart .positionFixed .tcCon .itemCon .item1 span{
+      overflow: hidden;
+      font-size: .32rem;
+      font-weight: bold;
+      text-align: center;
+      width: 3.45rem;
+      color: #333;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item1 p{
+      overflow: hidden;
+      display: block;
+      font-size: .28rem;
+      width: 3.45rem;
+      height: .55rem;
+      line-height: .55rem;
+      float: left;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item1 p span{
+      display: inline;
+      color: #999;
+      font-size: .22rem;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item1 p span.err{color: #FB605A}
+.tradeChart .positionFixed .tcCon .itemCon .item1 .pic{
+      float: left;
+      width: .5rem;
+      height: .5rem;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item1 .pic.add{
+      background: url("../../assets/images/quotation/a_chart_increase.png") no-repeat;
+      background-size: 100% 100%;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item1 .pic.add.stop{
+      background: url("../../assets/images/quotation/a_chart_increase_p.png") no-repeat;
+      background-size: 100% 100%;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item1 .pic.cut{
+      background: url("../../assets/images/quotation/a_chart_reduce.png") no-repeat;
+      background-size: 100% 100%;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item1 .pic.cut.stop{
+      background: url("../../assets/images/quotation/a_chart_reduce_p.png") no-repeat;
+      background-size: 100% 100%;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item1 input{
+      overflow: hidden;
+      float: left;
+      width: 2.45rem;
+      border: none;
+      background: transparent;
+      font-size: .32rem;
+      font-weight: bold;
+      text-align: center;
+      height: .5rem;
+      line-height: .5rem;
+      color: #333;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item1 input::placeholder{color: #666;font-family: Microsoft JhengHei, Microsoft YaHei, arial, sans-serif;font-weight: normal;font-size: .28rem}
+.tradeChart .positionFixed .tcCon .itemCon .item2{
+      overflow: hidden;
+      margin: .46rem .3rem .15rem;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item2 ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item2 ul li{
+      overflow: hidden;
+      border-right: solid .01rem #ccc;
+      padding: 0 .1rem;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item2 ul li:last-child{border: none}
+.tradeChart .positionFixed .tcCon .itemCon .item2 ul li p{
+      overflow: hidden;
+      display: block;
+      color: #999;
+      font-size: .24rem;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item2 ul li p em{display: inline;}
+.tradeChart .positionFixed .tcCon .itemCon .item2 span{
+      overflow: hidden;
+      display: block;
+      width: 6.9rem;
+      height: .9rem;
+      background: #0A95FF;
+      text-align: center;
+      line-height: .9rem;
+      border-radius: .06rem;
+      color: #fff;
+      font-size: .3rem;
+      margin: .15rem 0;
+      position: relative;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item2 span img {
+      position: absolute;
+      top: .26rem;
+      right: 1rem;
+      width: .38rem;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item2 span.err{background: #999}
+.tradeChart .positionFixed .tcCon .itemCon .item3{
+      overflow: hidden;
+      padding: .46rem 0 .15rem;
+      margin: 0 .3rem;
+      border-bottom: solid .01rem #ddd;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item3.border{border-bottom: none}
+.tradeChart .positionFixed .tcCon .itemCon .item3 p{
+      overflow: hidden;
+      display: block;
+      font-size: .28rem;
+      width: 3.45rem;
+      height: .55rem;
+      line-height: .55rem;
+      float: left;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item3 p span{
+      display: inline;
+      color: #999;
+      font-size: .22rem;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item3 ul{
+      overflow: hidden;
+      float: left;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 3.45rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item3 ul li{
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+
+}
+.tradeChart .positionFixed .tcCon .itemCon .item3 ul li p {
+      float: none;
+      width: auto;
+      margin-left: .2rem;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item3 ul li .radio {
+      display: none;
+}
+.radio + label,.radio{
+      color: transparent;
+      border: solid .04rem #D8EDFF;
+      width: .36rem;
+      height: .36rem;
+      border-radius: 100%;
+}
+.radio + label span {
+      display: none;
+      color: transparent;
+      background: #3699FF;
+      width: .18rem;
+      height: .18rem;
+      border-radius: 100%;
+      margin: .09rem 0 0 .09rem;
+}
+.radio:checked + label {
+      color: transparent;
+      border: solid .04rem #D8EDFF;
+}
+
+.radio:checked + label span{
+      display: block;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item4{overflow: hidden;margin: .2rem .3rem 0;}
+.tradeChart .positionFixed .tcCon .itemCon .item4 ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item4 ul li{
+      overflow: hidden;
+      width: 3.45rem;
+      height: .8rem;
+      line-height: .8rem;
+      border-top:solid .01rem #ccc;
+      border-bottom:solid .01rem #ccc;
+      margin-bottom: .01rem
+}
+.tradeChart .positionFixed .tcCon .itemCon .item4 ul li:first-child{
+      border-top-left-radius: .06rem;
+      border-bottom-left-radius: .06rem;
+      border-left:solid .01rem #ccc;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item4 ul li:last-child{
+      border-top-right-radius: .06rem;
+      border-bottom-right-radius: .06rem;
+      border-right:solid .01rem #ccc;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item4 ul li.buy{
+      background: #4AC158;
+      border-left:solid .01rem #4AC158;
+      border-top:solid .01rem #4AC158;
+      border-bottom:solid .01rem #4AC158;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item4 ul li.sell{
+      background: #FB605A;
+      border-left:solid .01rem #FB605A;
+      border-top:solid .01rem #FB605A;
+      border-bottom:solid .01rem #FB605A;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item4 ul li.level{
+      background: #eee;
+      border-left:solid .01rem #eee;
+      border-top:solid .01rem #eee;
+      border-bottom:solid .01rem #eee;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item4 ul li p{
+      overflow: hidden;
+      display: block;
+      width: .6rem;
+      float: left;
+      font-size: .24rem;
+      margin: 0 .4rem 0 .35rem;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item4 ul li.buy p,
+.tradeChart .positionFixed .tcCon .itemCon .item4 ul li.sell p{color: #fff}
+.tradeChart .positionFixed .tcCon .itemCon .item4 ul li span{
+      overflow: hidden;
+      display: inline-block;
+      float: left;
+      font-size: .32rem;
+      font-weight: bold;
+}
+.tradeChart .positionFixed .tcCon .itemCon .item4 ul li.buy span, .tradeChart .positionFixed .tcCon .itemCon .item4 ul li.sell span{color: #fff}
+.tradeChart .positionFixed .tcCon .itemCon .item4 ul li em{
+      overflow: hidden;
+      display: block;
+      float: right;
+      width: .18rem;
+      height: .27rem;
+      margin: .26em .5rem 0 .05rem;
+}
+
+.tradeChart .positionFixed .tcCon .itemCon .titShow{
+      overflow: hidden;
+      background: #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .3rem;
+}
+.tradeChart .positionFixed .tcCon .itemCon  .titShow p{
+      overflow: hidden;
+      width: 50%;
+      color: #999;
+      font-size: .28rem;
+}
+.tradeChart .positionFixed .tcCon .itemCon  .titShow .arrow{
+      overflow: hidden;
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+}
+.tradeChart .positionFixed .tcCon .itemCon  .titShow .arrow ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-radius: .04rem;
+      display: flex;
+      justify-content: center;
+}
+.tradeChart .positionFixed .tcCon .itemCon  .titShow .arrow ul li{
+      overflow: hidden;
+      list-style: none;
+      width: .6rem;
+      height: .36rem;
+      text-align: center;
+      line-height: .36rem;
+      font-size: .22rem;
+      border: solid .01rem #0A95FF;
+}
+.tradeChart .positionFixed .tcCon .itemCon  .titShow .arrow ul li.checked{
+      color: #fff;
+      background: #0A95FF;
+}

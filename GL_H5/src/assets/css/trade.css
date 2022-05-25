@@ -1,0 +1,332 @@
+.trade { margin-bottom: 1rem; padding-bottom: env(safe-area-inset-bottom);}
+.trade .navTitle{ background: #007AFF; height: 1.28rem; display: flex; font-size: .28rem; padding: 0 .3rem; box-sizing: border-box; }
+.trade .navTitle .navItem{ width: 100%; height: 100%; display: flex; justify-content: space-between; align-items: center;}
+.trade .navTitle .changeAccount{ display: block; width: 1.71rem; height: .48rem; background: #fff; border-radius: .3rem; color: #007AFF; line-height: .48rem;
+      font-size: .28rem; box-sizing: border-box; text-align: center;
+}
+.trade .navTitle .navItem .back{ width: .44rem; height: .44rem; }
+.trade .navTitle .fund{ display: flex; align-items: center; color: #fff; }
+.trade .navTitle .fund img{ width: .32rem; margin-right: .1rem; }
+
+.trade .navTitle p{
+      display: inline-block;
+      font-size: .28rem;
+      color: #999;
+      line-height: .44rem;
+      z-index: 3;
+      background: none;
+      width: auto;
+      height: auto;
+      margin: 0;
+}
+
+.trade .tradeBlank{ width: 100%; height: .08rem; background: #F8F8F8; }
+
+.trade .proParam { overflow: hidden; position: relative; }
+
+.trade .proParam .available p{
+      overflow: hidden;
+      display: block;
+      font-size: .24rem;
+      color: #999;
+      line-height: .44rem;
+      text-align: center;
+}
+.trade .proParam .available span{
+      overflow: hidden;
+      display: block;
+      font-size: .44rem;
+      text-align: center;
+      font-weight: bold;
+}
+.trade .proParam .isAsterisk {
+      overflow: hidden;
+      position: absolute;
+      top: 1rem;
+      right: 2.35rem;
+}
+.trade .proParam .isAsterisk span{
+      overflow: hidden;
+      display: block;
+      background: url("../images/trade/a_top_open.png") no-repeat;
+      background-size: 100% 100%;
+      width: .44rem;
+      height: .44rem;
+}
+.trade .proParam .isAsterisk span.checked{
+      background: url("../images/trade/a_top_hide.png") no-repeat;
+      background-size: 100% 100%;
+}
+.trade .proParam .paramList {
+      overflow: hidden; position: relative;
+}
+.trade .proParam .paramList .item{overflow: hidden;}
+.trade .proParam .paramList .item ul{
+      width: 100%; padding: 0 .15rem; box-sizing: border-box;
+}
+.trade .proParam .paramList .item ul li{
+      overflow: hidden;
+      list-style: none;
+      width: 25%;
+      float: left;
+      text-align: left; display: flex; flex-wrap: wrap; align-items: center; padding: .15rem 0 .15rem .2rem; box-sizing: border-box; position: relative;
+}
+.trade .proParam .paramList .item ul li::after{ content: ""; display: block; height: .56rem; width: 1px; background: rgba(141, 144, 155, 0.12);
+      position: absolute; left: 0; top: .23rem;
+}
+.trade .proParam .paramList .item ul li:nth-child(1)::after{ display: none; }
+.trade .proParam .paramList .item ul li span{ width: 100%; font-size: .26rem; line-height: .38rem; font-weight: bold; }
+.trade .proParam .paramList .item ul li p{ font-size: .24rem; line-height: .28rem; color: #888888;}
+
+.trade .proParam .paramList .item ul li span em{display: none}
+.trade .proParam .paramList .item ul li span.rise em{display: inline}
+
+.trade .proParam .paramList .itemArrow{
+      position: absolute; 
+      top: .26rem;
+      right: .16rem;
+      display: block;
+      width: .18rem;
+      height: .12rem;
+      background: url("../images/quotation/item_icodown.png") no-repeat center center/100%;
+}
+.trade .proParam .paramList .itemArrow.checked{
+      background: url("../images/quotation/item_icoup.png") no-repeat center center/100%;
+}
+.trade .tradeCon{overflow: hidden}
+.trade .tradeNav { height: .54rem; border-bottom: solid 1px #f8f8f8; box-sizing: border-box; }
+.trade .tradeNav ul{ width: 100%; padding: 0 .8rem; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center;}
+.trade .tradeNav ul li{
+      position: relative; font-size: .28rem; line-height: .5rem; height: .54rem; color: #888888;
+}
+.trade .tradeNav ul li.checked{ color: #222222;}
+.trade .tradeNav ul li.checked::after{ content: ""; display: block; width: .56rem; height: .06rem; background: #FE6A1A; 
+position: absolute; left: 50%; transform: translate(-50%,0); bottom: 0;
+}
+
+
+.trade .tradeList{overflow: hidden;}
+
+
+/* 持仓 */
+.trade .tradeList .position ul{ margin: 0rem auto 0 auto;}
+.trade .tradeList .position ul li{ width: 100%; box-sizing: border-box; padding: .4rem .25rem .4rem .25rem; border-bottom: solid 1px #f8f8f8; border-bottom: none; }
+.trade .tradeList .position ul li.checked{ background: #F2F8FF; }
+.trade .tradeList .position ul li .itemTit .rightCon{ font-size: .24rem; color: #888; margin-bottom: auto;}
+.trade .tradeList .position ul li .itemTit .leftCon span{ font-size: .3rem; line-height: .34rem;}
+.trade .tradeList .position ul li .itemTit .leftCon p{ font-size: .24rem; line-height: .32rem; margin-bottom: auto; }
+.trade .tradeList .position ul li .itemTit .leftCon p em{ margin-right: .1rem;}
+.trade .tradeList .position ul li .itemTit .leftCon span .shortname{ width: 100%; display: block; font-size: .24rem; line-height: .28rem; color: #888888; font-weight: normal;}
+.trade .tradeList .position ul li .itemCon .leftCon .itemList .item{ width: 2rem;}
+.trade .tradeList .position ul li .itemCon .leftCon .itemList .item span{ color: #888888;}
+.trade .tradeList .position ul li .itemCon .rightCon { display: flex; height: 100%; flex-wrap: wrap; justify-content: flex-end; position: relative;}
+.trade .tradeList .position ul li .itemCon .rightCon .item span{ font-size: .52rem; position: absolute; right: 0; top: -.34rem; }
+.trade .tradeList .position ul li .itemCon .rightCon time{ font-size: .22rem; color: #888888; display: flex; justify-content: flex-end; height: .72rem; align-items: flex-end;}
+.trade .tradeList .position ul li .operate { display: flex; justify-content: space-between; width: 100%; margin-top: .32rem; }
+.trade .tradeList .position ul li .operate span{ width: 1.75rem; height: .56rem; font-size: .28rem; line-height: .56rem; text-align: center; background: #FFFFFF;}
+
+
+/* 挂单 */
+.trade .tradeList .pending ul li .itemCon .rightCon .item span{ font-size: .3rem;}
+
+
+
+.trade .tradeList ul{
+      overflow: hidden;
+      display: block;
+      padding: 0;
+      list-style: none;
+      margin: 0 .3rem;
+}
+.trade .tradeList ul li{
+      overflow: hidden;
+      list-style: none;
+      display: block;
+      border-bottom: solid .01rem #ddd;
+      padding: .25rem 0;
+}
+.trade .tradeList ul li:last-child{border-bottom: none;}
+
+.trade .tradeList ul li .itemTit{
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.trade .tradeList ul li .itemTit .leftCon{
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+}
+.trade .tradeList ul li .itemTit .leftCon span{
+      overflow: hidden;
+      display: inline-block;
+      float: left;
+      font-weight: bold;
+      font-size: .28rem;
+      line-height: .36rem;
+}
+.trade .tradeList ul li .itemTit .leftCon p{
+      overflow: hidden;
+      display: inline-block;
+      float: left;
+      color: #999;
+      font-size: .2rem;
+      line-height: .36rem;
+      margin-left: 0.2rem;
+}
+.trade .tradeList ul li .itemTit .rightCon {
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-end;
+}
+.trade .tradeList ul li .itemTit .rightCon .item{
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: .3rem;
+}
+.trade .tradeList ul li .itemTit .rightCon .item img{width: .33rem;margin: 0 .1rem}
+.trade .tradeList ul li .itemTit .rightCon .item span {
+      overflow: hidden;
+      display: block;
+      font-size: .24rem;
+      line-height: .36rem;
+}
+.trade .tradeList ul li .itemTit .rightCon .item time {
+      overflow: hidden;
+      display: inline-block;
+      font-size: .24rem;
+      color: #999;
+}
+.trade .tradeList ul li .itemCon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: .15rem;
+}
+.trade .tradeList ul li .itemCon .leftCon{overflow: hidden}
+.trade .tradeList ul li .itemCon .leftCon .itemList {
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-start;
+}
+.trade .tradeList ul li .itemCon .leftCon .itemList .item {
+      overflow: hidden;
+      width: 3.1rem;
+      float: left;
+      padding: .05rem 0;
+}
+.trade .tradeList ul li .itemCon .leftCon .itemList .item.width{width: 2.3rem}
+
+
+.trade .tradeList ul li .itemCon .leftCon .itemList .item em{
+      overflow: hidden;
+      display: inline-block;
+      height: .3rem;
+      line-height: .3rem;
+      border-radius: .06rem;
+      color: #fff;
+      font-size: .22rem;
+      padding: 0 .12rem;
+      margin-right: .1rem;
+}
+.trade .tradeList ul li .itemCon .leftCon .itemList .item em.sell{background: #FB605A}
+.trade .tradeList ul li .itemCon .leftCon .itemList .item em.buy{background: #51B64C}
+.trade .tradeList ul li .itemCon .leftCon .itemList .item p{
+      overflow: hidden;
+      float: left;
+      font-size: .24rem;
+      line-height: .3rem;
+      display: flex; align-items: center;
+}
+.trade .tradeList ul li .itemCon .leftCon .itemList .item span,.trade .tradeList ul li .itemCon .leftCon .itemList .item time{
+      overflow: hidden;
+      float: left;
+      font-size: .24rem;
+      line-height: .3rem;
+      color: #999;
+      margin-right: .1rem;
+}
+.trade .tradeList ul li .itemCon .leftCon .itemList .item p.size{
+      font-size: .3rem;
+      line-height: normal;
+      font-weight: bold;
+}
+
+.trade .tradeList ul li .itemCon .leftCon .itemList .item p i{
+      width: .07rem; height: .16rem; display: block; background-size: 100%; margin-left: .05rem;
+}
+
+
+.trade .tradeList ul li .itemCon .leftCon .itemList .item p.size.rise em{display: inline}
+.trade .tradeList ul li .itemCon .leftCon .itemList .item p.size.fall em{display: none}
+.trade .tradeList ul li .itemCon .leftCon .itemList .item p.size.level em{display: none}
+
+.trade .tradeList ul li .itemCon .rightCon .item span{ overflow: hidden; display: block; font-size: .3rem; font-weight: bold;}
+
+
+.trade .tradeList ul li .itemCon .rightCon .item span.rise em{display: inline}
+.trade .tradeList ul li .itemCon .rightCon .item span.fall em{display: none}
+.trade .tradeList ul li .itemCon .rightCon .item span.level em{display: none}
+.trade .tradeList .more{overflow: hidden;}
+.trade .tradeList .more ul li{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.trade .tradeList .more li a{
+      overflow: hidden;
+      font-size: .28rem;
+}
+.trade .tradeList .more li img{width: .44rem}
+
+
+/* 撤单弹窗 */
+.pending .popFixed .tcCon{
+      width: 6.38rem; height: 3.96rem; background: #FFFFFF; border-radius: .12rem; padding: .77rem .3rem 0 .3rem; box-sizing: border-box;
+}
+.pending .popFixed .tcCon .item{ 
+      padding: 0; border-bottom: none;
+}
+.pending .popFixed .tcCon .item span{
+      color: #0288FB; font-size: .37rem; line-height: .37rem; margin-bottom: .3rem;
+}
+.pending .popFixed .tcCon .item p{
+      line-height: .4rem; color: #B0B0B0;
+}
+.pending .popFixed .tcCon .btnCon{ width: 100%; display: flex; justify-content: space-between; margin-top: .43rem; }
+.pending .popFixed .tcCon .btnCon span{ width: 2.68rem; height: .79rem; line-height: .79rem; background: #FF6A1A; border-radius: .62rem; color: #fff; font-size: .31rem; }
+.pending .popFixed .tcCon .btnCon span:first-child{
+      border: none; background: #BFBFBF;
+}
+
+
+
+/* 交易引导页 */
+
+.tradePage{ width: 7.5rem; height: 100vh; min-height: 13rem; background: url(../images/trade/trade_page_bg.png) no-repeat center top/100%;}
+.tradePage .logo{ width: 100%; display: flex; justify-content: center; height: 1.23rem; padding-top: 1.45rem; }
+.tradePage .logo img{ width: 3.75rem; height: 100%;}
+.tradePage .content{
+      width: 6.74rem; height: 5.14rem; background: #FFFFFF; box-shadow: 0 .06rem .24rem #CA48014D; border-radius: .08rem; margin: .93rem auto 0 auto;
+      box-sizing: border-box; padding: 0 1.05rem .8rem 1.05rem;
+}
+.tradePage .content ul{ display: flex; flex-wrap: wrap; width: 100%; justify-content: space-between;  }
+.tradePage .content ul li{ margin-top: .6rem; }
+.tradePage .content ul li .imgbox{ width: 100%; display: flex; justify-content: center; height: .79rem; align-items: center; }
+.tradePage .content ul li .imgbox img { height: 0.8rem; width: 0.8rem; max-width: 0.8rem; max-height: 0.8rem; object-fit: contain; }
+.tradePage .content ul li p{ font-size: .23rem; line-height: .27rem; color: #888888; text-align: center; }
+.tradePage .content ul li p.title{ font-size: .32rem; color: #000; font-weight: bold; line-height: .38rem; margin: .18rem 0 .05rem 0; }
+
+.tradePage .btn{
+      width: 6.73rem; height: 1.11rem; line-height: 1.11rem; background: url(../images/trade/openAccount_btn.png) no-repeat center center/100%; border-radius: .87rem;
+      margin: .62rem auto 0 auto; font-size: .4rem; font-weight: bold; color: #fff;
+      cursor: pointer;
+}
+.tradePage .btn span{ color: #FFF08B; }
+
+.tradePage .login{ width: 100%; text-align: center; font-size: .26rem; line-height: .3rem; margin-top: .5rem; }
+.tradePage .login span{ color: #1E85FF; cursor: pointer; }

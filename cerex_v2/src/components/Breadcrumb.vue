@@ -2,7 +2,7 @@
   <div class="hierarchy_menu">
     <ul>
       <li v-for="link of metaLink" :key="link.name">
-      <router-link :to="{path:`${link.link}`}">{{ link.name }}</router-link>
+      <router-link :to="{path:`${link.link}`,hash:'#main_content'}" >{{ link.name }}</router-link>
       </li>
     </ul>
   </div>

@@ -1,0 +1,641 @@
+.technical_analysis_content {
+  margin-bottom: 0;
+  min-height: 7rem;
+}
+.tech_analysis_group {
+  display: block;
+  margin: -0.2rem auto 0.25rem auto;
+}
+.tech_analysis_group .source_text {
+  display: block;
+  position: relative;
+  z-index: 5;
+}
+.tech_analysis_group .source_text span {
+  display: block;
+  position: absolute;
+  right: 0.35rem;
+  bottom: 0.18rem;
+  z-index: 5;
+  font-size: 0.23rem;
+  color: #DDDDDD;
+  transform-origin: center right;
+}
+.tech_analysis_menu {
+  display: flex;
+  justify-content: center;
+  border-radius: 0.15rem 0.15rem 0 0;
+  padding: 0 0.1rem;
+}
+.tech_analysis_menu:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.tech_analysis_menu li {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 0.85rem;
+  box-sizing: border-box;
+  text-align: center;
+  color: #888888;
+  font-size: 0.26rem;
+  line-height: 1.2;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(240, 240, 240);
+  white-space: nowrap;
+}
+.tech_analysis_menu li:first-child {
+  border-radius: 0.15rem 0 0 0;
+}
+.tech_analysis_menu li:last-child {
+  border-radius: 0 0.15rem 0 0;
+}
+.tech_analysis_menu li.selected {
+  color: #222222;
+  border-bottom: 5px solid #FE6A1A;
+}
+.tech_analysis_menu li.selected span {
+  font-family: PingFang SC;
+  font-weight: bold;
+}
+.tech_analysis_menu li:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.tech_analysis_menu li + li {
+  border-left: 1px solid #fff;
+}
+.tech_analysis_menu li span {
+  font-family: PingFang SC Medium;
+  display: inline-block;
+  width: 90%;
+  vertical-align: middle;
+  word-break: break-all;
+}
+.tech_analysis_data {
+  display: block;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 0 0 0.15rem 0.15rem;
+  position: relative;
+  border: 0.04rem solid #fff;
+  border-top: none;
+  box-shadow: 0 0.05rem 0.03rem rgba(0, 0, 0, 0);
+}
+.tech_analysis_data li {
+  display: block;
+  padding: 0.2rem 0.25rem 0.5rem 0.25rem;
+  min-height: 3.85rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transition-duration: 0.5s;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.tech_analysis_data li.selected {
+  position: relative;
+  opacity: 1;
+  z-index: 10;
+}
+.tech_analysis_data li h1 {
+  font-family: PingFang SC;
+  color: #222222;
+  font-size: 0.32rem;
+  display: block;
+  line-height: 0.45rem;
+}
+.tech_analysis_data li .more_btn {
+  font-family: PingFang SC Medium;
+  display: block;
+  float: right;
+  text-align: center;
+  color: #FE6A1A;
+  border-radius: 0.1rem;
+  cursor: pointer;
+  font-size: 0.26rem;
+  width: 1.5rem;
+  line-height: 0.45rem;
+}
+.tech_analysis_time_menu {
+  display: block;
+  border: 0.5px solid rgba(141, 144, 155, 0.12);
+  border-radius: 0.54rem;
+  padding: 0.1rem;
+  margin: 0.2rem auto 0.1rem auto;
+  position: relative;
+  text-align: left;
+  font-size: 0px;
+}
+.tech_analysis_time_menu > span {
+  /* font-family: PingFang SC Medium; */
+  display: inline-block;
+  height: 0.32rem;
+  line-height: 0.32rem;
+  text-align: center;
+  color: #888888;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.24rem;
+  width: 1.1rem;
+  border-radius: 0.1rem;
+}
+.tech_analysis_time_menu > span.selected {
+  color: #FE6A1A;
+}
+.tech_analysis_time_menu .other_menu {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0.6rem;
+  height: 0.6rem;
+  z-index: 10;
+  overflow: hidden;
+  margin-right: 0.2rem;
+}
+.tech_analysis_time_menu .other_menu i {
+  display: block;
+  width: 0.4rem;
+  height: 0.55rem;
+  margin: 0 0 0 auto;
+  background: url(../images/index/triangle.png) no-repeat center;
+  background-size: 0.2rem 0.2rem;
+  cursor: pointer;
+  transition: all .4s;
+}
+
+.tech_analysis_time_menu .other_menu.show {
+  height: 2.9rem;
+  width: 1.8rem;
+  overflow: unset;
+}
+.tech_analysis_time_menu .other_menu.show i {
+  transform: rotate(180deg);
+}
+/* .tech_analysis_time_menu .other_menu.show div {
+  box-shadow: 0 0 10px 4px #0000001a;
+} */
+.tech_analysis_time_menu .other_menu.show .other_menu_container {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3.08rem;
+  top: 0.3rem;
+  right: -0.3rem;
+  background: url(../images/index/suggest_popup_bg.png) no-repeat;
+  background-size: 100% 90%;
+}
+.tech_analysis_time_menu .other_menu div::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.tech_analysis_time_menu .other_menu div::-webkit-scrollbar:vertical {
+  width: 5px;
+}
+.tech_analysis_time_menu .other_menu div::-webkit-scrollbar-thumb {
+  border-radius: 2.5px;
+  /*border: 2px solid white;*/ /* should match background, can't be transparent */
+  background-color: #c1c1c1;
+}
+.tech_analysis_time_menu .other_menu div span {
+  display: block;
+  color: #333333;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.26rem;
+  padding: 0.1rem 0;
+  width: 1rem;
+  margin: 0 auto;
+}
+.tech_analysis_time_menu .other_menu div span:nth-child(1) {
+  margin-top: 0.3rem;
+}
+.tech_analysis_time_menu .other_menu div span:hover {
+  background-color: #e0f2ff;
+}
+/* original other_menu css */
+.tech_analysis_time_menu .other_menu p {
+  display: block;
+  height: 2.8rem;
+  background: #fff;
+  border-radius: 0.15rem;
+}
+.tech_analysis_time_menu .other_menu.show p {
+  box-shadow: 0 0 10px 4px #0000001a;
+}
+.tech_analysis_time_menu .other_menu p span {
+  display: block;
+  color: #333333;
+  line-height: 0.7rem;
+  padding-left: 0.3rem;
+  cursor: pointer;
+  font-size: 0.26rem;
+}
+
+.tech_analysis_table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  background: #fff;
+}
+.tech_analysis_table td p span.redFont {
+  color: #e3525c;
+}
+.tech_analysis_table td p span.greenFont {
+  color: #11b873;
+}
+
+.tech_analysis_table tr:first-child {
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+.tech_analysis_table th,
+.tech_analysis_table td {
+  color: #333333;
+  padding: 0.05rem;
+  box-sizing: border-box;
+  height: 0.7rem;
+  font-size: 0.32rem;
+}
+.tech_analysis_table.table2 tr:not(:last-child) {
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+.tech_analysis_table.table2 tr td + td {
+  padding: 0.05rem 0.025rem;
+  width: 32.5%;
+}
+.tech_analysis_table.table2 tr td:last-child {
+  padding-right: 0.05rem;
+}
+.tech_analysis_table th {
+  padding: 0.15rem 0 0.15rem 0;
+}
+.tech_analysis_table tr th + th {
+  padding: 0;
+}
+.tech_analysis_table th:first-child,
+.tech_analysis_table td:first-child {
+  width: 35%;
+}
+.tech_analysis_table td p {
+  display: block;
+  padding: 0.1rem 0;
+}
+.tech_analysis_table tr th p {
+  border-radius: 0.05rem;
+}
+.tech_analysis_table tr th .bg_green {
+  display: flex;
+  background: #11b873;
+  text-align: center;
+  color: #fff;
+  height: 0.72rem;
+  align-items: center;
+}
+.tech_analysis_table tr td p {
+  font-family: PingFang SC Medium;
+  display: flex;
+  background: #fff;
+  text-align: center;
+  color: #222222;
+  min-height: 0.6rem;
+  align-items: center;
+  line-height: 1.2;
+  padding: 0.04rem 0;
+  box-sizing: border-box;
+  font-size: 0.26rem;
+}
+.tech_analysis_table tr td .bg_green {
+  color: #085c00;
+}
+.tech_analysis_table tr th .animated-btn {
+  font-family: PingFang SC Medium;
+}
+.tech_analysis_table tr th .bg_red {
+  display: flex;
+  background: #e3525c;
+  text-align: center;
+  color: #fff;
+  height: 0.72rem;
+  align-items: center;
+}
+.tech_analysis_table tr td .bg_red {
+  color: #852121;
+}
+.tech_analysis_table tr th .bg_normal {
+  display: flex;
+  background: #8c8c8c;
+  text-align: center;
+  color: #fff;
+  height: 0.72rem;
+  align-items: center;
+}
+.tech_analysis_table tr td .bg_normal {
+  color: #8c8c8c;
+}
+
+.tech_analysis_table tr td p span,
+.tech_analysis_table tr .bg_normal span,
+.tech_analysis_table tr .bg_red span,
+.tech_analysis_table tr .bg_green span {
+  display: block;
+  margin: auto;
+}
+.tech_analysis_table tr .text_normal {
+  color: #999999;
+}
+.tech_analysis_table tr .text_green {
+  color: #1ab46a;
+}
+.tech_analysis_table.table2 tr .text_green {
+  color: #1ab46a;
+}
+
+.tech_analysis_table tr .text_red {
+  color: #f72c4d;
+}
+.tech_analysis_table.table2 tr .text_red {
+  color: #f72c4d;
+}
+.tech_analysis_group .tech_analysis_table tr td + td {
+  width: 21.66%;
+}
+
+.tech_analysis_table_top {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #cbcbcb;
+  font-size: 18px;
+}
+.tech_analysis_table_top td {
+  width: 35%;
+  padding: 0.1rem 0.15rem;
+  text-align: left;
+}
+.tech_analysis_table_top td + td {
+  width: 32.5%;
+  text-align: center;
+}
+.tech_analysis_table_top td + td + td {
+  padding-right: 0.2rem;
+}
+
+.tech_analysis_table_group {
+  display: block;
+  padding: 0;
+}
+.tech_analysis_table_group:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.tech_analysis_table_group > li {
+  float: left;
+  width: 48.5%;
+  display: block;
+}
+.tech_analysis_table_group > li + li {
+  margin-left: 2.2%;
+}
+
+.tech_analysis_btn {
+  display: block;
+  text-align: center;
+  padding: 0.2rem 0 0 0;
+}
+.tech_analysis_btn a {
+  display: block;
+  margin: auto;
+  font-size: 0.3rem;
+  width: 3.5rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0.1rem;
+
+  background: #1d87cc;
+  background: -moz-linear-gradient(left, #1d87cc 0%, #19b59d 100%);
+  background: -webkit-linear-gradient(left, #1d87cc 0%, #19b59d 100%);
+  background: linear-gradient(to right, #1d87cc 0%, #19b59d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d87cc', endColorstr='#19b59d',GradientType=1 );
+}
+
+.tech_analysis_popup {
+  /*display: none;*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  text-align: center;
+  font-size: 0px;
+}
+.tech_analysis_popup:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.tech_analysis_popup_content {
+  display: inline-block;
+  vertical-align: middle;
+  width: 90%;
+  max-width: 950px;
+  box-sizing: border-box;
+  background: #fff;
+  font-size: 0.24rem;
+  padding: 0.3rem 0.2rem;
+  position: relative;
+  border-radius: 0.1rem;
+  text-align: justify;
+}
+
+.tech_analysis_popup_content h4 {
+  font-size: 0.24rem;
+  color: #666666;
+  display: block;
+  padding: 0.05rem 0;
+}
+.tech_analysis_popup_content .tech_analysis_time_menu .other_menu {
+  display: block;
+}
+.tech_analysis_popup_content .tech_analysis_time_menu > span {
+  width: 11.11%;
+}
+.tech_analysis_popup_content .tech_analysis_time_menu {
+  padding: 0.1rem;
+  margin: 0 auto 0.1rem auto;
+}
+
+.tech_analysis_over {
+  display: block;
+  overflow: auto;
+  height: 600px;
+  margin: 0.2rem auto 0 auto;
+}
+.tech_analysis_over::-webkit-scrollbar {
+  width: 0.1rem;
+  height: 0.1rem;
+  border-radius: 2.5px;
+}
+.tech_analysis_over::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 2.5px;
+}
+.tech_analysis_over::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 2.5px;
+}
+.tech_analysis_over .tech_analysis_table.table2 {
+  margin-bottom: 0.35rem;
+}
+.tech_analysis_over .date_text {
+  float: right;
+  font-size: 18px;
+  color: #666666;
+  padding: 0.12rem 0.1rem 0 0;
+  margin: 0 0 0 -2rem;
+}
+.tech_analysis_over .tech_analysis_table.table2 td {
+  height: 0.8rem;
+}
+.tech_analysis_over .tech_analysis_table.table3 td {
+  font-size: 18px;
+  height: 0.8rem;
+}
+.tech_analysis_over .tech_analysis_table.table2 tr td p,
+.tech_analysis_over .tech_analysis_table.table3 tr td p {
+  min-height: auto;
+  font-size: 18px;
+  padding: 0;
+  height: 100%;
+}
+
+.tech_analysis_popup_close {
+  position: absolute;
+  right: 50%;
+  bottom: 3%;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: -0.25rem;
+  box-sizing: border-box;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.tech_analysis_popup_close:after,
+.tech_analysis_popup_close:before {
+  content: "";
+  position: absolute;
+  height: 60%;
+  width: 0.04rem;
+  background: #767676;
+  margin: -28% -0.02rem;
+  left: 50%;
+  top: 50%;
+  border-radius: 10px;
+  transform: rotate(45deg);
+}
+.tech_analysis_popup_close:before {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 960px) {
+  .tech_analysis_popup_content .tech_analysis_time_menu .other_menu {
+    display: block;
+  }
+  .tech_analysis_popup_content .tech_analysis_time_menu > span.mobile_hide {
+    display: none;
+  }
+  .tech_analysis_popup_content .tech_analysis_time_menu > span {
+    width: 1.1rem;
+  }
+
+  .pivot_point_table {
+    display: none;
+  }
+
+  .tech_analysis_table_group {
+    padding: 0.2rem 0 0 0;
+  }
+  .tech_analysis_table_group > li {
+    float: none;
+    width: 100%;
+  }
+  .tech_analysis_table_group > li + li {
+    margin: 0.4rem 0 0 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .suggest_popup_group ul li input.checked::after {
+    top: 0.05rem;
+    left: 0.03rem;
+  }
+  .tech_analysis_popup_close {
+    position: absolute;
+    right: 50%;
+    bottom: -0.5rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    margin: -0.3rem;
+    background: #767676;
+    box-sizing: border-box;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+  .tech_analysis_popup_close:after,
+  .tech_analysis_popup_close:before {
+    height: 60%;
+    background: #fff;
+  }
+  .tech_analysis_popup_content h4 {
+    font-size: 0.28rem;
+  }
+  .tech_analysis_table_top {
+    font-size: 0.22rem;
+  }
+
+  .tech_analysis_over .date_text {
+    font-size: 0.22rem;
+    padding: 0.1rem 0.1rem 0 0;
+  }
+  .tech_analysis_over .tech_analysis_table.table2 tr td p,
+  .tech_analysis_over .tech_analysis_table.table3 tr td p {
+    font-size: 0.22rem;
+  }
+  .tech_analysis_over .tech_analysis_table.table3 tr td,
+  .tech_analysis_over .tech_analysis_table.table2 tr td:first-child p,
+  .tech_analysis_over .tech_analysis_table.table3 tr td:first-child p {
+    font-size: 0.26rem;
+  }
+  .tech_analysis_over .tech_analysis_table.table3 td {
+    height: 0.8rem;
+  }
+  .tech_analysis_table tr th .bg_green,
+  .tech_analysis_table tr th .bg_red,
+  .tech_analysis_table tr th .bg_normal {
+    height: 0.92rem;
+  }
+
+  .tech_analysis_menu li,
+  .tech_analysis_time_menu > span,
+  .submit_btn,
+  a {
+    cursor: default;
+  }
+}
+
+@media screen and (max-width: 750px), screen and (max-height: 800px) {
+  .tech_analysis_over {
+    height: 6rem;
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./register.css">
+</head>
+
+<body>
+    <div id="register" class="register">
+        <form ref="registerForm">
+            <div class="input_wrap">
+                <input class="" type="text" maxlength="11" placeholder="手机号码" v-model="inputValue.phoneNum" ref="phoneNum"
+                    @blur="checkPhoneNum('checkContainActivateMobile')" />
+                <span ref="ruleCode_phone"></span>
+            </div>
+            <div class="input_wrap">
+                <input class="" type="text" placeholder="验证码" maxlength="6" v-model="inputValue.code" ref="code"
+                    @blur="checkCode('validateVerifyCode')" />
+                <span ref="ruleCode_verify">
+                    123
+                </span>
+                <div class="" @click="geeTest">
+                    <p>{{codeBtn}}</p>
+                </div>
+            </div>
+            <div class="input_wrap">
+                <input class="" type="text" placeholder="邮箱地址" v-model="inputValue.email" ref="email"
+                    @blur="checkEmail('checkContainActivateEmail')" />
+                <span ref="ruleCode_email">
+
+                </span>
+            </div>
+            <div class="input_wrap">
+                <input class="" type="text" placeholder="姓名" v-model="inputValue.name" ref="name"
+                    @blur="checkName" />
+                <span ref="ruleCode_name">
+
+                </span>
+            </div>
+            <div class="input_wrap">
+                <input class="" type="text" maxlength="18" placeholder="身份证" v-model="inputValue.id" ref="id"
+                    @blur="checkId('checkContainActivateID')" />
+                <span ref="ruleCode_id">
+
+                </span>
+            </div>
+            <div class="input_wrap">
+                <input class="" :type="show_password?'text':'password'" placeholder="自设密码 (6~16位)" ref="passWord"
+                    v-model="inputValue.passWord" @blur="checkPassWord('checkContainActivateEmail')" />
+                <span class="" @click=""></span>
+                <span ref="ruleCode_password"></span>
+            </div>
+            <div class="">
+                <div @click="registerRealAccount">送出</div>
+            </div>
+        </form>
+        <!--提示信息區塊 默认隐藏-->
+        <div ref="formTips">
+
+        </div>
+        <Gtva ref="gt" @verify_suc="getVerifyCode"></Gtva>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./geetest.js"></script>
+    <script src="./register_vue3.js"></script>
+</body>
+
+</html>

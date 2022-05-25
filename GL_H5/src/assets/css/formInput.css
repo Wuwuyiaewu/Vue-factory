@@ -1,0 +1,119 @@
+.form-container .input-control {
+  position: relative;
+  font-size: 0.28rem;
+  margin: 0.3rem 0;
+}
+.form-container .input-control label {
+  font-family: PingFang SC Medium;
+  color: #000;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.form-container .input-control .input-wrap {
+  display: flex;
+  /* justify-content: center; */
+  border: 1px solid #888888;
+  border-radius: 0.12rem;
+  align-items: center;
+  overflow: hidden;
+}
+input:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 50px white inset;
+}
+.form-container .input-control input {
+  box-sizing: border-box;
+  /* width: 100%; */
+  flex: 1;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  height: 0.64rem;
+  padding: 0 0.2rem;
+  line-height: 0.64rem;
+}
+.form-container .input-control input::placeholder {
+  color: #d1d1d1;
+  font-family: PingFang SC Medium;
+}
+.form-container .input-control .input-clear {
+  color: #bdbdbd;
+  margin-right: 0.2rem;
+}
+.form-container .input-control .toggle-icon i {
+  display: block;
+  width: 0.68rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.form-container .input-control .toggle-icon i.icon-show {
+  height: 0.3rem;
+  background-image: url(~@/assets/images/register/password-show.png);
+}
+.form-container .input-control .toggle-icon i.icon-hide {
+  height: 0.42rem;
+  background-image: url(~@/assets/images/register/password-hide.png);
+}
+.form-container .input-control.error * {
+  color: #f72c4d;
+}
+.form-container .input-control.error input {
+  border-color: #f72c4d;
+}
+.form-container .input-control.error p {
+  font-size: 0.24rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* Strength-indicator */
+.strength-indicator-container {
+  display: flex;
+  align-items: center;
+}
+.strength-indicator {
+  flex: 1;
+  margin: 0.32rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.strength-indicator div {
+  width: 1.97rem;
+  height: 0.06rem;
+  background-color: #d1d1d1;
+}
+.strength-indicator-container.weak .strength-indicator div:nth-child(1) {
+    background-color: #F83C3C;
+}
+.strength-indicator-container.weak p {
+    color: #F83C3C;
+}
+.strength-indicator-container.moderate .strength-indicator div:nth-child(1),
+.strength-indicator-container.moderate .strength-indicator div:nth-child(2) {
+    background-color: #F8AA3C;
+}
+.strength-indicator-container.moderate p {
+    color: #52C478;
+}
+.strength-indicator-container.strong .strength-indicator div:nth-child(1),
+.strength-indicator-container.strong .strength-indicator div:nth-child(2),
+.strength-indicator-container.strong .strength-indicator div:nth-child(3) {
+    background-color: #52C478;
+}
+.strength-indicator-container.strong p {
+    color: #52C478;
+}
+
+/* Get Code */
+.get-code {
+  font-family: PingFang SC Medium;
+  font-size: 0.28rem;
+  color: #1E85FF;
+  display: block;
+  margin-right: 0.2rem;
+}
+.get-code.disabled {
+  color: #d1d1d1;
+}

@@ -1,0 +1,156 @@
+/* .assets-overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999999;
+} */
+.assets-overlay-container .assets-overlay {
+  background-color: #fff;
+  color: #222222;
+  position: relative;
+  padding-bottom: 1.3rem;
+  font-size: 0.28rem;
+  font-family: PingFang SC Medium;
+  text-align: center;
+  padding: 0.4rem 0.3rem;
+  box-sizing: border-box;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.assets-overlay .heading p {
+  font-size: 0.35rem;
+}
+.assets-overlay .heading .account-switch {
+  margin: 0 auto;
+  position: relative;
+  background-color: #f2f8ff;
+}
+.assets-overlay .heading .account-type-switcher {
+  top: 0.6rem;
+  background-color: #f2f8ff;
+}
+.assets-overlay .heading .account-switch p {
+  color: #007aff;
+  font-size: 0.28rem;
+}
+.assets-overlay .margin-level {
+  padding: 0.3rem 0 0.15rem;
+}
+.assets-overlay .margin-level .head {
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+.assets-overlay .margin-level .head .margin-percent {
+  color: #1ab46a;
+}
+/* .assets-overlay .margin-level .margin-bar {
+  width: 100%;
+  border-radius: 0.125rem;
+  height: 0.16rem;
+  margin: 0.2rem 0;
+  background-color: #1ab46a;
+} */
+.assets-overlay .margin-level .van-progress {
+  width: 100%;
+  margin: 0.2rem 0;
+}
+.assets-overlay .margin-level .van-progress .van-progress__portion {
+  transition: all 0.5s ease-in-out;
+}
+.assets-overlay .capital-content {
+  text-align: left;
+}
+.assets-overlay .capital-content span {
+  color: #888888;
+  font-size: 0.24rem;
+  line-height: 0.28rem;
+}
+.assets-overlay .capital-summary {
+  justify-content: space-between;
+  margin: 0.3rem 0;
+}
+.assets-overlay .capital-summary .description {
+  font-size: 0.27rem;
+}
+.assets-overlay .capital-summary .legend-color {
+  display: inline-block;
+  margin-right: 0.1rem;
+  width: 0.19rem;
+  height: 0.19rem;
+}
+.assets-overlay .capital-summary .net .legend-color {
+  background-color: #f72c4d;
+}
+.assets-overlay .capital-summary .net .amount {
+  color: #f72c4d;
+}
+.assets-overlay .capital-summary .available-margin .legend-color {
+  background-color: #fe6a1a;
+}
+.assets-overlay .capital-summary .available-margin .amount {
+  color: #fe6a1a;
+}
+.assets-overlay .capital-summary .dedicated-margin .legend-color {
+  background-color: #007aff;
+}
+.assets-overlay .capital-summary .dedicated-margin .amount {
+  color: #007aff;
+}
+.assets-overlay .deposit-btn {
+  width: 6.4rem;
+  height: 0.89rem;
+  line-height: 0.89rem;
+  border-radius: 0.02rem;
+  margin: 0 auto 0.2rem;
+  background-color: #007aff;
+  color: #fff;
+}
+
+.collapse-icon {
+  margin: 0.5rem auto 0;
+  left: 50%;
+  z-index: 2002;
+  position: fixed;
+  -webkit-animation: upAndDown 2s ease-in-out infinite alternate;
+  animation: upAndDown 2s ease-in-out infinite alternate;
+}
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0) translateX(-50%); /* The added translateX is to center the icon horizontally */
+  }
+  100% {
+    transform: translateY(0.1rem) translateX(-50%);
+  }
+}
+
+/* Doughnut Chart */
+.doughnut-chart {
+  position: relative;
+}
+#equity-chart {
+  position: relative;
+  height: 4rem;
+  width: 4rem;
+  margin: 0 auto;
+  z-index: 2;
+}
+.doughnut-chart .chart-text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.doughnut-chart .chart-text p {
+  padding: 0.1rem 0;
+}
+.doughnut-chart .chart-text .equity-amount {
+  font-size: 0.4rem;
+  font-weight: bold;
+}

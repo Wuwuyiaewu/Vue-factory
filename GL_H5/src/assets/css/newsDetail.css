@@ -1,0 +1,161 @@
+.newsDetail .navTitle {
+  border-bottom: solid 0.01rem #ddd;
+}
+.newsDetail .newsCon {
+  overflow: hidden;
+  margin: 0 0.3rem;
+  padding: 1rem 0;
+}
+.newsDetail .newsCon h1 {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  font-size: 0.36rem;
+  font-weight: bold;
+  margin: 0.3rem 0 0.1rem;
+}
+.newsDetail .newsCon time {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  font-size: 0.24rem;
+  color: #999;
+}
+.newsDetail .newsCon .product-info {
+  width: 50%;
+  padding: 0.5rem 0;
+  font-size: 0.3rem;
+}
+.newsDetail .newsCon .product-info .product-name {
+  margin-right: 0.2rem;
+  font-family: PingFang SC;
+  font-weight: bold;
+  font-size: 0.3rem !important;
+}
+.newsDetail .newsCon .product-info .product-price {
+  font-family: SFProText;
+  font-weight: bold;
+  font-size: 0.3rem !important;
+}
+/* .newsDetail .rise, .newsDetail.alt .fall {
+  color: #f72c4d;
+}
+.newsDetail .fall, .newsDetail.alt .rise {
+  color: #1ab46a;
+} */
+.newsDetail .newsCon .product-info i,
+.newsDetail .float-footer .product-data i {
+  display: inline-block;
+  width: 0.1rem;
+  height: 0.25rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-left: 0.05rem;
+}
+/* .newsDetail i.rise {
+  background-image: url("../images/index/a_top_rise.png");
+}
+.newsDetail i.fall {
+  background-image: url("../images/index/a_top_decline.png");
+}
+.newsDetail.alt i.rise {
+  background-image: url("../images/index/a2_top_rise.png");
+}
+.newsDetail.alt i.fall {
+  background-image: url("../images/index/a2_top_decline.png");
+} */
+.newsDetail .newsCon .newsItem {
+  overflow: hidden;
+  padding-bottom: 1rem;
+  font-size: 0.28rem;
+  line-height: 0.48rem;
+}
+.newsDetail .newsCon .newsItem img {
+  width: 100%;
+}
+.newsDetail .newsCon p,
+.newsDetail .newsCon span {
+  overflow: hidden;
+  /* display: block; */
+  width: 100% !important;
+  font-size: 0.28rem !important;
+  line-height: 0.48rem !important;
+  padding: 0.1rem 0 !important;
+  /* display: contents !important; */
+}
+
+.newsDetail .float-footer {
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  height: 1rem;
+  background: #fff;
+  box-shadow: 0px -2px 2px #30303014;
+  font-size: 0.28rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsDetail .float-footer .product-data {
+  flex: 3;
+  height: 100%;
+  line-height: 1rem;
+  padding-left: 0.4rem;
+}
+.newsDetail .float-footer .product-data span:nth-child(1) {
+  font-family: PingFang SC;
+  font-size: 0.28rem;
+  font-weight: bold;
+  color: #222222;
+  margin-right: 0.3rem;
+}
+.newsDetail .float-footer .product-data span:nth-child(2) {
+  font-family: SFProText;
+  font-weight: bold;
+}
+.newsDetail .float-footer .product-data span:nth-child(4) {
+  font-family: SFProText;
+  font-weight: bold;
+  margin-left: 0.3rem;
+}
+.newsDetail .float-footer .quote-btn {
+  flex: 1;
+  font-size: 0.3rem;
+  font-family: PingFang SC Medium;
+  height: 100%;
+  background-color: #3490FF;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Control the font size here */
+.newsDetail.lg-font .newsCon h1 {
+  font-size: 0.40rem;
+}
+.newsDetail.lg-font .newsCon time {
+  font-size: 0.28rem;
+}
+.newsDetail.lg-font .newsCon .product-info .product-name {
+  font-size: 0.34rem !important;
+}
+.newsDetail.lg-font .newsCon .product-info .product-price {
+  font-size: 0.34rem !important;
+}
+.newsDetail.lg-font .newsCon .newsItem {
+  font-size: 0.32rem;
+}
+.newsDetail.lg-font .newsCon p,
+.newsDetail.lg-font .newsCon span {
+  font-size: 0.32rem !important;
+}
+.newsDetail.lg-font .float-footer {
+  font-size: 0.3rem;
+}
+.newsDetail.lg-font .float-footer .product-data span:nth-child(1) {
+  font-size: 0.32rem;
+}
+.newsDetail.lg-font .float-footer .quote-btn {
+  font-size: 0.34rem;
+}

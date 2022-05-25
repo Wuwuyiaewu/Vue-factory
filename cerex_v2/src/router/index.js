@@ -174,6 +174,16 @@ const routes = [{
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
+  scrollBehavior: function (to, from, savedPosition) {
+    if (to.hash) {
+      // return { selector: to.hash }
+      //Or for Vue 3:
+      // return {el: to.hash}
+      return {el: to.hash}
+    } else {
+      return { x: 0, y: 0 }
+    }
+  },
   routes
 })
 

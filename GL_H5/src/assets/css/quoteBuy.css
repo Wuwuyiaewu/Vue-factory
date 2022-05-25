@@ -1,0 +1,436 @@
+.isOpenNav{ overflow: hidden; }
+.chartbuy{ width: 7.5rem; transition: .4s; position: relative; }
+
+.chartbuy .navTitle { width: 100%; background: #007AFF; height: 1.28rem;}
+.chartbuy .navTitle .navItem{ width: 100%; padding: .28rem .38rem; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;}
+.chartbuy .navTitle .back{width: .14rem;}
+.chartbuy .navTitle .treaty{ width: .27rem;}
+.chartbuy .navTitle .search{ width: .32rem; height: .32rem; }
+
+.chartbuy .navTitle .product { width: 82%; text-align: left; color: #fff; }
+.chartbuy .navTitle .product p:nth-child(1){ font-weight: bold; font-size: .31rem; line-height: .38rem; display: flex; align-items: center;}
+.chartbuy .navTitle .product p:nth-child(1) img{ width: .3rem; height: .25rem; margin-left: .1rem; }
+.chartbuy .navTitle .product p:nth-child(2){ font-size: .24rem; line-height: .36rem; }
+
+
+/* 切换产品弹窗 */
+.tabsPopBox{ background: #fff; width: 0rem; height: 100%; position: fixed; top: 0; z-index: 2; display: flex; flex-wrap: wrap; box-shadow: .33rem 0 .4rem #00000014; overflow:hidden; transition: .1s;}
+.tabsPopBox.moveout{ width: 5rem; transition: .2s; visibility: visible; }
+.tabsPopBox .tab_title{ height: 1.28rem; width: 100%; background: #007AFF; font-size: .36rem; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff; }
+.tabsPopBox .tabpop_left{ display: flex; width: 2.4rem; background: #F3F3F3; height: 100%; }
+.tabsPopBox .tabpop_left ul{ width: 100%;}
+.tabsPopBox .tabpop_left ul li{ width: 100%; font-size: .26rem; text-align: center; padding: .28rem 0; }
+.tabsPopBox .tabpop_left ul li.checked{ font-weight: bold; background: #fff;}
+
+.tabsPopBox .tabpop_right{ width: 2.6rem; height: 100%; padding: .2rem 0 1.35rem 0; box-sizing: border-box; }
+.tabsPopBox .tabpop_right ul{ height: 100%; overflow-y: scroll; box-sizing: border-box; -ms-overflow-style: none; overflow: -moz-scrollbars-none; }
+.tabsPopBox .tabpop_right ul::-webkit-scrollbar { width: 0 !important }
+.tabsPopBox .tabpop_right ul li{ text-align: center; font-size: .28rem; color: #222222; margin-bottom: .25rem; }
+.tabsPopBox .tabpop_right ul li label{ display: block; width: 100%; font-size: .24rem; color: #888888;}
+.tabsPopBox .tabpop_right ul li.checked,.tabsPopBox .tabpop_right ul li.checked label{ color: #007AFF;}
+
+.tabsPopBox_bg{ background: rgba(0,0,0,.2); width: 100%; height: 100%; position: fixed; z-index: 1; left: 0; top: 0; }
+
+
+
+.chartbuy .char_price{ width: 100%; padding-top: .5rem;}
+.chartbuy .char_price ul{ width: 100%; display: flex; margin: 0 auto; justify-content: space-between; position: relative; padding: 0 .32rem; box-sizing: border-box; }
+.chartbuy .char_price ul li{ width: 3.39rem; height: .97rem; font-size: .28rem; color: #fff; display: flex; align-items: center; box-sizing: border-box; border-radius: .08rem; background-color: #D7D7D7; }
+.chartbuy .char_price ul li:nth-of-type(1){ padding-right: .4rem; justify-content: flex-end; }
+.chartbuy .char_price ul li:nth-of-type(2){ padding-left: .4rem; justify-content: flex-start; }
+
+.chartbuy .char_price ul li em{ font-size: .42rem; margin: 0 .18rem; }
+.chartbuy .char_price ul li.rise i{ width: .11rem; height: .24rem; display: block; background: url(../images/quotation/bottom_rise.png) no-repeat center center/100%;}
+.chartbuy .char_price ul li.fall i{ width: .11rem; height: .24rem; display: block; background: url(../images/quotation/bottom_fall.png) no-repeat center center/100%;}
+.chartbuy .char_price ul label{ display: block; width: .57rem; position: absolute; height: .29rem; line-height: .28rem; border-radius: .04rem; background: #fff; left: 50%; top: 50%; transform: translate(-50%,-50%); font-size: .22rem; color: #888888; text-align: center; }
+
+
+.chartbuy .fixedCon{ overflow: hidden; height: 100%; width: 100%; margin-top: .42rem; }
+
+.chartbuy .fixedCon .masking{
+      overflow: hidden;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 999999999;
+      background: rgba(0,0,0,.5);
+}
+.chartbuy .fixedCon .tcCon{
+      overflow: hidden;
+      width: 100%;
+      background: #fff;
+}
+.chartbuy .fixedCon .tcCon .fixedItem{
+      overflow: hidden;
+      width: 7.5rem;
+      margin: 0 auto;
+      padding: 0 .3rem; box-sizing: border-box;
+}
+
+.chartbuy .fixedCon .tcCon .tcTit{ 
+      padding: .32rem 0; font-size: .28rem; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center;
+      border-bottom: solid 1px rgba(141, 144, 155, .12);
+}
+.chartbuy .fixedCon .tcCon .tcTit ul{ display: flex;}
+.chartbuy .fixedCon .tcCon .tcTit ul li{ width: 1.2rem; height: .56rem; line-height: .56rem; background: #F2F8FF; border-radius: .02rem; text-align: center; margin-left: .12rem; }
+.chartbuy .fixedCon .tcCon .tcTit ul li.checked{ background: #007AFF; color: #fff;}
+
+
+
+.chartbuy .fixedCon .tcCon .itemCon{ overflow: hidden; }
+.chartbuy .fixedCon .tcCon .itemCon .item{overflow: hidden;margin: .2rem .3rem .1rem;}
+.chartbuy .fixedCon .tcCon .itemCon .item ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item ul li{
+      overflow: hidden;
+      width: 3.45rem;
+      height: .8rem;
+      line-height: .8rem;
+      border-top:solid .01rem #ccc;
+      border-bottom:solid .01rem #ccc;
+      margin-bottom: .01rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item ul li:first-child{
+      border-top-left-radius: .06rem;
+      border-bottom-left-radius: .06rem;
+      border-left:solid .01rem #ccc;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item ul li:last-child{
+      border-top-right-radius: .06rem;
+      border-bottom-right-radius: .06rem;
+      border-right:solid .01rem #ccc;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item ul li.buy{
+      background: #4AC158;
+      border-left:solid .01rem #4AC158;
+      border-top:solid .01rem #4AC158;
+      border-bottom:solid .01rem #4AC158;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item ul li.sell{
+      background: #FB605A;
+      border-left:solid .01rem #FB605A;
+      border-top:solid .01rem #FB605A;
+      border-bottom:solid .01rem #FB605A;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item ul li.level{
+      background: #eee;
+      border-left:solid .01rem #eee;
+      border-top:solid .01rem #eee;
+      border-bottom:solid .01rem #eee;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item ul li p{
+      overflow: hidden;
+      display: block;
+      float: left;
+      width: .92rem;
+      font-size: .24rem;
+      padding: 0 0 0 .35rem;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item ul li.buy p,.chartbuy .fixedCon .tcCon .itemCon .item ul li.sell p{color: #fff}
+.chartbuy .fixedCon .tcCon .itemCon .item ul li span{
+      overflow: hidden;
+      float: left;
+      font-size: .32rem;
+      font-weight: bold;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item ul li.buy span, .chartbuy .fixedCon .tcCon .itemCon .item ul li.sell span{color: #fff}
+.chartbuy .fixedCon .tcCon .itemCon .item ul li em{
+      overflow: hidden;
+      display: block;
+      float: right;
+      width: .18rem;
+      height: .27rem;
+      margin: 0 0 0 .25rem;
+}
+/* .chartbuy .fixedCon .tcCon .itemCon .item ul li em.rise{ background: url("../images/quotation/a2_top_rise.png") no-repeat; background-size: 100% 100%;}
+.chartbuy .fixedCon .tcCon .itemCon .item ul li em.fall{ background: url("../images/quotation/a2_top_decline.png") no-repeat; background-size: 100% 100%;} */
+
+
+.chartbuy .fixedCon .tcCon .itemCon .item1{
+      width: 100%; box-sizing: border-box; padding: .32rem 0; display: flex; justify-content: space-between; align-items: center; border-bottom: solid 1px rgba(141, 144, 155, .12);
+}
+
+.chartbuy .fixedCon .tcCon .itemCon .item1 .itemsetbox{ display: flex;}
+
+.chartbuy .fixedCon .tcCon .itemCon .volumebox{ display: flex; flex-wrap: wrap; justify-content: flex-end; flex: 1; }
+.chartbuy .fixedCon .tcCon .itemCon .volumebox .setbox{
+      display: flex; width: 3.32rem; height: .68rem; background: #F2F8FF; border-radius: .02rem; align-items: center; justify-content: space-between;
+}
+.chartbuy .fixedCon .tcCon .itemCon .volumebox .reset{
+      width: .68rem; height: .68rem; background: #F2F8FF; display: flex; justify-content: center; align-items: center; margin-left: .06rem;
+}
+.chartbuy .fixedCon .tcCon .itemCon .volumebox .reset img{ width: .44rem; }
+
+.chartbuy .fixedCon .tcCon .itemCon .volumebox input{ border: none; background: transparent; font-size: .29rem; text-align: center; height: .68rem; line-height: .68rem; box-sizing: border-box; padding: 0 .2rem; flex: 1; overflow: hidden; }
+
+
+.chartbuy .fixedCon .tcCon .itemCon .item1 .quickVolume{ margin-top: .15rem; }
+.chartbuy .fixedCon .tcCon .itemCon .item1 .quickVolume ul{ display: flex; width: 100%; }
+.chartbuy .fixedCon .tcCon .itemCon .item1 .quickVolume ul li{
+width: .77rem; height: .4rem; line-height: .4rem; text-align: center; background: #F2F8FF; border-radius: .02rem; font-size: .23rem; margin-left: .07rem;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item1 .quickVolume ul li.checked{ background: #007AFF; color: #fff; }
+
+
+.chartbuy .fixedCon .tcCon .itemCon .item1 p{
+      display: block;
+      font-size: .28rem;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item1 p span{
+      width: 100%;
+      display: flex;
+      color: #888888;
+      font-size: .21rem; line-height: .21rem;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item1 p span.err{color: #FB605A}
+
+
+.chartbuy .fixedCon .tcCon .itemCon .volumebox .pic{ width: .55rem; height: 100%;}
+
+.chartbuy .fixedCon .tcCon .itemCon .volumebox .pic.add{
+      background: url("../../assets/images/quotation/volume_plus.png") no-repeat left center; background-size: .23rem .23rem;
+}
+.chartbuy .fixedCon .tcCon .itemCon .volumebox .pic.add.stop{
+      background: url("../../assets/images/quotation/volume_plus_p.png") no-repeat left center; background-size: .23rem .23rem;
+}
+.chartbuy .fixedCon .tcCon .itemCon .volumebox .pic.cut{
+      background: url("../../assets/images/quotation/volume_subtract.png") no-repeat right center; background-size: .23rem .23rem;
+}
+.chartbuy .fixedCon .tcCon .itemCon .volumebox .pic.cut.stop{
+      background: url("../../assets/images/quotation/volume_subtract_p.png") no-repeat right center; background-size: .23rem .23rem;
+}
+
+
+
+.chartbuy .fixedCon .tcCon .itemCon .item1 input::placeholder{ color: #666; font-weight: normal; font-size: .28rem; }
+
+.chartbuy .fixedCon .tcCon .itemCon .item2{
+      overflow: hidden;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item2 ul{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item2 ul li{
+      font-size: .24rem; color: #888888; padding-top: .15rem; 
+}
+
+.chartbuy .fixedCon .tcCon .itemCon .item2 ul li p{
+      overflow: hidden;
+      display: block;
+      color: #999;
+      font-size: .24rem;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item2 ul li p em.fall{
+      display: inline;
+      color: #FB605A;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item2 ul li p em.rise{
+      display: inline;
+      color: #4AC158;
+}
+
+.chartbuy .fixedCon .tcCon .itemCon .item2 span{
+      display: block;
+      width: 6.42rem;
+      height: .88rem;
+      background: #FF6A1A;
+      text-align: center;
+      line-height: .88rem;
+      border-radius: .06rem;
+      color: #fff;
+      font-size: .31rem;
+      position: relative;
+      margin: 1.85rem auto 1rem auto;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item2 span img {
+      position: absolute;
+      top: .26rem;
+      right: 1rem;
+      width: .38rem;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item2 span.err{background: #999}
+
+.chartbuy .fixedCon .tcCon .itemCon .item3{
+      overflow: hidden;
+      padding: .32rem 0;
+      border-bottom: solid 1px rgba(141, 144, 155, .12);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.chartbuy .fixedCon .tcCon .itemCon .item3 p{
+      overflow: hidden;
+      display: block;
+      font-size: .28rem;
+      width: 3.45rem;
+      height: .55rem;
+      line-height: .55rem;
+      float: left;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item3 p span{
+      display: inline;
+      color: #999;
+      font-size: .22rem;
+}
+
+.chartbuy .fixedCon .tcCon .itemCon .item3 ul{ display: flex;}
+.chartbuy .fixedCon .tcCon .itemCon .item3 ul li{ 
+      width: 1.19rem; height: .56rem; background: #F2F8FF; border-radius: .02rem; font-size: .3rem; line-height: .56rem;
+      text-align: center; margin-left: .15rem;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item3 ul li.checked{ background: #007AFF; color: #fff; }
+
+
+.chartbuy .fixedCon .tcCon .itemCon .item3 ul li p{float: none; width: auto; margin-left: .2rem;}
+.chartbuy .fixedCon .tcCon .itemCon .item3 ul li .radio {
+      display: none;
+}
+
+.chartbuy .fixedCon .tcCon .itemCon .item4{
+      padding: .32rem 0;
+      border-bottom: solid 1px rgba(141, 144, 155, .12);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item4 .pendTypeBox{
+      display: flex; flex-wrap: wrap; position: relative;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item4 p{
+      font-size: .28rem;
+      display: flex;
+      align-items: center;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item4 p i{
+      margin-left: .08rem;
+      display: block; width: .12rem; height: .06rem; background: url(../images/quotation/pendType_ico.png) no-repeat center center/100%;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item4 p.checked i{ 
+      transform: rotate(180deg);
+}
+
+.chartbuy .fixedCon .tcCon .itemCon .item4 .pendTypeBox span{
+      font-size: .22rem; color: #888888; width: 100%;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item4 .pendTypeBox ul{
+      position: absolute;
+      left: .28rem;
+      top: .25rem;
+      width: 1.89rem;
+      height: 2.36rem;
+      background: #FFFFFF;
+      box-sizing: border-box;
+      background: url(../images/quotation/pendTypeBox_bg.png) no-repeat center center/100%;
+      padding-top: .4rem;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item4 .pendTypeBox ul li{
+      width: 1.27rem; height: .56rem; font-size: .28rem; color: #252525; line-height: .56rem; margin: .2rem auto 0 auto; text-align: center;
+}
+.chartbuy .fixedCon .tcCon .itemCon .item4 .pendTypeBox ul li.checked{
+      background: #F2F8FF; border-radius: .02rem;
+}
+
+
+
+
+/* 止盈止损 */
+
+.chartbuy .fixedCon .tcCon .itemCon .isShow{overflow: hidden}
+.chartbuy .fixedCon .tcCon .itemCon .isShow .titShow{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .32rem 0;
+      border-bottom: solid 1px rgba(141, 144, 155, .12); flex-wrap: wrap;
+}
+.chartbuy .fixedCon .tcCon .itemCon .isShow .titShow p{
+      font-size: .28rem;
+}
+
+.chartbuy .fixedCon .tcCon .itemCon .isShow .titShow .arrow{
+      overflow: hidden;
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+}
+.chartbuy .fixedCon .tcCon .itemCon .isShow .titShow .arrow ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-radius: .04rem;
+      display: flex;
+      justify-content: center;
+}
+.chartbuy .fixedCon .tcCon .itemCon .isShow .titShow .arrow ul li{
+      text-align: center;
+      width: 1.19rem;
+      height: .56rem; line-height: .56rem; font-size: .3rem;
+      background: #F2F8FF;
+      border-radius: .02rem; margin-left: .15rem;
+}
+.chartbuy .fixedCon .tcCon .itemCon .isShow .titShow .arrow ul li.checked{
+      color: #fff;
+      background: #007AFF;
+}
+.chartbuy .fixedCon .tcCon .itemCon .isShow .titShow .arrow span{
+      width: .18rem; height: .12rem; background: url("../images/quotation/item_icodown.png") no-repeat center center/100%; margin: 0 .12rem 0 .22rem;
+}
+.chartbuy .fixedCon .tcCon .itemCon .isShow .titShow .arrow span.checked{
+      background: url("../images/quotation/item_icoup.png") no-repeat center center/100%;
+}
+
+.chartbuy .fixedCon .tcCon .itemCon .isShow .conHide{ width: 100%; overflow: hidden; margin-top: .45rem; }
+.chartbuy .fixedCon .tcCon .itemCon .isShow .conHide .item1{ border: none; padding: 0; }
+.chartbuy .fixedCon .tcCon .itemCon .isShow .conHide .item1:nth-child(2){ margin-top: .27rem;}
+
+
+/* 最大偏差 */
+.chartbuy .rangeScope { overflow: hidden; border-bottom: solid 1px rgba(141, 144, 155, .12);}
+.chartbuy .rangeScope .showItem { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: .32rem 0; }
+.chartbuy .rangeScope .showItem p { font-size: .28rem; line-height: 0.55rem;}
+.chartbuy .rangeScope .showItem p span { display: inline; color: #999; font-size: 0.22rem;}
+.chartbuy .rangeScope .showItem p span.err { color: #fb605a;}
+.chartbuy .rangeScope .showItem .rightCon { overflow: hidden; display: flex; justify-content: flex-end; align-items: center;}
+.chartbuy .rangeScope .showItem .rightCon label { font-size: .3rem; }
+.chartbuy .rangeScope .showItem .rightCon span { background: url("../images/quotation/item_icodown.png") no-repeat center center/100%; width: .18rem; height: .12rem; margin: 0 .12rem 0 .23rem;}
+.chartbuy .rangeScope .showItem .rightCon span.checked { background: url("../images/quotation/item_icoup.png") no-repeat center center/100%;}
+.chartbuy .rangeScope .rangbox_bg{ width: 100%; height: 100%; display: flex; background: rgba(0,0,0,.5); position: fixed; top: 0; z-index: 1; left: 0; }
+.chartbuy .rangeScope .rangbox{ width: 100%; height: 5.93rem; background: #fff; position: fixed; bottom: 0; z-index: 2; left: 0;}
+.chartbuy .rangeScope .rangbox .rangeTit{ position: relative; height: 1rem; width: 6.9rem; border-bottom: solid 1px rgba(141, 144, 155, .12); margin: 0 auto; font-size: .31rem; text-align: center; line-height: 1rem; }
+.chartbuy .rangeScope .rangbox .rangeTit img{ position: absolute; right: 0; top: .39rem; }
+.chartbuy .rangeScope .rangbox .rangeDesc{ text-align: center; font-size: .24rem; line-height: .32rem; margin-top: .42rem; }
+.chartbuy .rangeScope .rangbox .rangeNum{ font-size: .63rem; text-align: center; margin-top: .56rem;}
+.chartbuy .rangeScope .rangbox .rangeNum span{ width: 100%; font-size: .24rem; display: block; color: #888888; }
+.chartbuy .rangeScope .rangbox .barbox{ width: 100%; display: flex; align-items: center; justify-content: center; margin-top: .88rem; }
+.chartbuy .rangeScope .rangbox .barbox span{ font-size: .23rem; color: #888888;}
+.chartbuy .rangeScope .rectItem { overflow: hidden; width: 5.02rem; position: relative; margin: 0 .3rem; }
+.chartbuy .rangeScope .rect { width: 100%; height: .16rem; background: #D7D7D7; border-radius: .16rem;}
+.chartbuy .rangeScope .circle { width: 100%; position: absolute; top: 0; display: flex; justify-content: flex-start; overflow: hidden; border-radius: .13rem; }
+.chartbuy .rangeScope .rectItem span { overflow: hidden; display: block; background: #FE6A1A; height: .16rem; padding-left: .16rem; border-radius: .16rem;}
+.chartbuy .rangeScope .circle p { width: .16rem; height: .16rem; background: #FF9D68; border-radius: .16rem; margin-left: -.16rem;  }
+
+
+/* 撤单弹窗 */
+.chartbuy .popFixed .tcCon{ width: 6.38rem; background: #FFFFFF; border-radius: .12rem; padding: .6rem .3rem .55rem .3rem; box-sizing: border-box;}
+.chartbuy .popFixed .tcCon .item{ padding: 0; border-bottom: none;}
+.chartbuy .popFixed .tcCon .item span{color: #0288FB; font-size: .37rem; line-height: .37rem; margin-bottom: .3rem;}
+.chartbuy .popFixed .tcCon .item p{ line-height: .4rem; color: #B0B0B0; }
+.chartbuy .popFixed .tcCon .btnCon{ width: 100%; display: flex; justify-content: center; margin-top: .43rem; }
+.chartbuy .popFixed .tcCon .btnCon span{ width: 2.68rem; height: .79rem; line-height: .79rem; background: #FF6A1A; border-radius: .62rem; color: #fff; font-size: .3rem; margin: 0 .1rem; }

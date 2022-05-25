@@ -1,18 +1,24 @@
 <template>
-<Banner/>
-  <div class="teaching_center_page" v-if="detail_init">
-    <h1>{{ detail_init.title }}</h1>
-    <div class="teaching_center_page_wrap">
-      <div v-html="detail_init.content"></div>
-      <div class="next_btn">
-        <router-link :to="{ path: `${detail_des.id}` }" v-show="detail_init.index !== 0"
-          >上一篇</router-link
-        >
-        <router-link :to="{ path: `${detail_asc.id}` }" v-show="detail_init.index + 1 !== newbie_length"
-          >下一篇</router-link
-        >
-        <!-- <a @click="indexMover -= 1" v-show="notFirst_init">上一篇</a>
+  <div>
+    <Banner />
+    <div class="teaching_center_page" v-if="detail_init">
+      <h1>{{ detail_init.title }}</h1>
+      <div class="teaching_center_page_wrap">
+        <div v-html="detail_init.content"></div>
+        <div class="next_btn">
+          <router-link
+            :to="{ path: `${detail_des.id}` }"
+            v-show="detail_init.index !== 0"
+            >上一篇</router-link
+          >
+          <router-link
+            :to="{ path: `${detail_asc.id}` }"
+            v-show="detail_init.index + 1 !== newbie_length"
+            >下一篇</router-link
+          >
+          <!-- <a @click="indexMover -= 1" v-show="notFirst_init">上一篇</a>
         <a @click="indexMover += 1" v-show="notEnd_init">下一篇</a> -->
+        </div>
       </div>
     </div>
   </div>
@@ -21,7 +27,7 @@
 <script>
 import Banner from "@/components/Banner";
 export default {
-   components: {
+  components: {
     Banner,
   },
   props: ["id"],
@@ -50,21 +56,21 @@ export default {
     },
     // 上一篇按鈕
     detail_des() {
-        let data = {};
-        if(this.pollingIndex(data) === 0){
-          return this.newbie_list[0];
-        }else{
-          return this.newbie_list[this.pollingIndex(data) -1];
-        }
+      let data = {};
+      if (this.pollingIndex(data) === 0) {
+        return this.newbie_list[0];
+      } else {
+        return this.newbie_list[this.pollingIndex(data) - 1];
+      }
     },
     // 下一篇按鈕
     detail_asc() {
-        let data = {};
-        if(this.pollingIndex(data) !== this.newbie_list.length -1){
-          return this.newbie_list[this.pollingIndex(data) + 1];
-        }else{
-          return this.newbie_list[this.newbie_list.length -1];
-        }
+      let data = {};
+      if (this.pollingIndex(data) !== this.newbie_list.length - 1) {
+        return this.newbie_list[this.pollingIndex(data) + 1];
+      } else {
+        return this.newbie_list[this.newbie_list.length - 1];
+      }
     },
   },
   methods: {
@@ -86,13 +92,13 @@ export default {
       vm.callBack();
     },
     // 遍歷資料取索引
-    pollingIndex(data){
+    pollingIndex(data) {
       this.newbie_list.forEach((el) => {
         if (el.id === this.queryAttr.id) {
           data = el;
         }
       });
-      return data.index
+      return data.index;
     },
   },
   created() {

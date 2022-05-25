@@ -1,0 +1,14 @@
+.aboutUs .content{padding-bottom: 1rem;}
+.aboutUs .content p,.aboutUs .content span{
+      overflow: hidden;
+      display: block;
+      font-size: .28rem;
+      line-height: .42rem;
+      margin: .1rem .3rem;
+      text-align: justify;
+}
+.aboutUs .content span{
+      font-size: .32rem;
+      font-weight: bold;
+      margin: .2rem .3rem;
+}

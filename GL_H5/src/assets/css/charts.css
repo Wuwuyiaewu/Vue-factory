@@ -1,0 +1,24 @@
+.chart .content{ padding-top: 0;}
+.chart .price_box{ display: flex; box-sizing: border-box; padding: .22rem .38rem .22rem .38rem; justify-content: space-between; align-items: center; }
+.chart .price_box .price_left { width: 45%; text-align: left; display: flex; flex-wrap: wrap; }
+
+.chart .price_box .price_left span{ font-weight: bold; font-size: .49rem; line-height: .49rem; display: flex; align-items: center;}
+.chart .price_box .price_left span em{ width: .18rem; height: .27rem; margin: 0 0 0 .1rem; background-size: 100%;}
+
+.chart .price_box .price_left p{ font-size: .24rem; line-height: .24rem; width: 100%; margin-top: .02rem; }
+.chart .price_box .price_left p label{display: inline; margin-left: .28rem; }
+.chart .price_box .price_left p i{display: none;}
+.chart .price_box .price_left p.rise i{display: inline; }
+
+.chart .price_box .price_right { width: 55%; padding: .15rem 0;}
+.chart .price_box .price_right ul{ width: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.chart .price_box .price_right ul li{ font-size: .26rem; margin: .02rem 0; width: 50%;}
+.chart .price_box .price_right ul li span{ display: inline; }
+
+.chart .chartNav { width: 100%; }
+.chart .chartNav ul{ width: 6.86rem; height: .54rem; display: flex; justify-content: space-between; border: 1px solid #CECECE; border-radius: .57rem; margin: 0 auto; padding: 0 .34rem; box-sizing: border-box;}
+.chart .chartNav ul li{ font-size: .24rem; color: #888888; line-height: .52rem; }
+.chart .chartNav ul li.checked{ color: #FE6A1A; font-weight: bold; }
+
+.chart .clchart{ position: relative; margin: .26rem 0 0 0; }
+.chart .clchart .myChart { height: 6rem;}

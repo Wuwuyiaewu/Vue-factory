@@ -1,0 +1,75 @@
+/* Step 2 - Supplementary Info */
+.supplementary-info .content {
+    margin: 0 0.4rem;
+}
+.supplementary-info .header-section p {
+  font-family: PingFang SC Medium;
+  font-size: 0.28rem;
+  text-align: center;
+}
+.supplementary-info .header-section p.remind-msg {
+  font-size: 0.26rem;
+}
+.supplementary-info .account-type-switch {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 0.55rem;
+  padding-bottom: 0.5rem;
+}
+.supplementary-info .account-type-switch .switch {
+  border: 1px solid #3490ff;
+  border-radius: 0.04rem;
+  color: #3490ff;
+  font-size: 0.3rem;
+  font-family: PingFang SC Medium;
+  width: 1.6rem;
+  height: 0.63rem;
+  line-height: 0.63rem;
+  text-align: center;
+  cursor: pointer;
+}
+.supplementary-info .account-type-switch .switch.active {
+  border: none;
+  background-color: #edf6fe;
+}
+.supplementary-info .account-type-switch p {
+  width: 94%;
+  position: absolute;
+  font-size: 0.24rem;
+  bottom: 0;
+  color: #3490ff;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.supplementary-info .account-type-switch p img {
+  display: inline-block;
+  height: 0.26rem;
+  width: 0.26rem;
+  margin-right: 0.1rem;
+  overflow: auto;
+}
+.supplementary-info .account-type-switch p span {
+  color: #d1d1d1;
+}
+.supplementary-info .account-type-switch p span strong {
+  color: #f72c4d;
+}
+.supplementary-info .submit-box {
+  text-align: center;
+}
+.supplementary-info .submit-btn {
+  outline: none;
+  border: none;
+  text-align: center;
+  margin: 1rem auto;
+  width: 3.26rem;
+  height: 0.71rem;
+  font-size: 0.31rem;
+  line-height: 0.71rem;
+  background-color: #007aff;
+  color: #fff;
+  border-radius: 0.55rem;
+}

@@ -1,0 +1,600 @@
+.isOpenNav{ overflow: hidden; }
+.quoteChart{ width: 7.5rem; transition: .4s; position: relative; }
+
+.quoteChart .navTitle { width: 100%; background: #007AFF; height: 1.28rem;}
+.quoteChart .navTitle .navItem{ width: 100%; padding: .28rem .38rem; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;}
+.quoteChart .navTitle .back{width: .14rem;}
+.quoteChart .navTitle .treaty{ width: .27rem;}
+.quoteChart .navTitle .search{ width: .32rem; height: .32rem; }
+
+.quoteChart .navTitle .product { width: 82%; text-align: left; color: #fff; }
+.quoteChart .navTitle .product p:nth-child(1){ font-weight: bold; font-size: .31rem; line-height: .38rem; display: flex; align-items: center;}
+.quoteChart .navTitle .product p:nth-child(1) img{ width: .3rem; height: .25rem; margin-left: .1rem; }
+.quoteChart .navTitle .product p:nth-child(2){ font-size: .24rem; line-height: .36rem; }
+
+.quoteChart .botFixed {
+      position: fixed;
+      height: .9rem;
+      width: 100%;
+      background: #fff;
+      bottom: .97rem;
+      left: 0;
+      z-index: 99;
+      box-shadow:0 -.04rem .1rem 0 rgba(204,204,204,0.4);
+}
+.quoteChart .botFixed ul{
+      overflow: hidden;
+      margin: 0 auto;
+      padding: 0 0 0 .4rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 7.1rem;
+}
+.quoteChart .botFixed ul li{
+      overflow: hidden;
+      list-style: none;
+}
+.quoteChart .botFixed ul li:nth-child(1){width: 1.9rem}
+.quoteChart .botFixed ul li img{width: .44rem}
+.quoteChart .botFixed ul li:nth-child(1) img{margin: 0 auto}
+.quoteChart .botFixed ul li span{
+      overflow: hidden;
+      display: block;
+      font-size: .22rem;
+}
+.quoteChart .botFixed ul li:nth-child(1) span{text-align: center}
+.quoteChart .botFixed ul li p{
+      overflow: hidden;
+      width: 2.8rem;
+      height: .9rem;
+      font-size: .3rem;
+      text-align: center;
+      line-height: .9rem;
+      color: #fff;
+}
+.quoteChart .botFixed ul li p.buy{background: #51B64C;}
+.quoteChart .botFixed ul li p.sell{background: #FB605A}
+
+.quoteChart .fixedCon{
+      overflow: hidden;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 99999999;
+}
+.quoteChart .fixedCon .masking{
+      overflow: hidden;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 999999999;
+      background: rgba(0,0,0,.5);
+}
+.quoteChart .fixedCon .tcCon{
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 9999999999;
+      background: #fff;
+}
+.quoteChart .fixedCon .tcCon .fixedItem{
+      overflow: hidden;
+      width: 7.5rem;
+      margin: 0 auto;
+}
+.quoteChart .fixedCon .tcCon .tcTit{
+      overflow: hidden;
+      padding: 0 .23rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: solid .01rem #ddd;
+}
+.quoteChart .fixedCon .tcCon .tcTit img{width: .44rem;padding: .22rem 0}
+.quoteChart .fixedCon .tcCon .titCon{overflow: hidden;margin-top: .2rem}
+.quoteChart .fixedCon .tcCon .titCon ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.quoteChart .fixedCon .tcCon .titCon ul li{
+      overflow: hidden;
+      list-style: none;
+      margin: 0 .56rem;
+}
+.quoteChart .fixedCon .tcCon .titCon ul li span{
+      overflow: hidden;
+      display: block;
+      font-size: .3rem;
+      font-weight: bold;
+      margin-bottom: .16rem;
+}
+.quoteChart .fixedCon .tcCon .titCon ul li p{
+      overflow: hidden;
+      width: .3rem;
+      height: .06rem;
+      background: #0A95FF;
+      margin: .1rem auto 0;
+      display: none;
+}
+.quoteChart .fixedCon .tcCon .titCon ul li.checked span{color: #000;margin: 0}
+.quoteChart .fixedCon .tcCon .titCon ul li.checked p{display: block}
+.quoteChart .fixedCon .tcCon .itemCon{overflow: hidden;}
+.quoteChart .fixedCon .tcCon .itemCon .item{overflow: hidden;margin: .2rem .3rem .1rem;}
+.quoteChart .fixedCon .tcCon .itemCon .item ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item ul li{
+      overflow: hidden;
+      width: 3.45rem;
+      height: .8rem;
+      line-height: .8rem;
+      border-top:solid .01rem #ccc;
+      border-bottom:solid .01rem #ccc;
+      margin-bottom: .01rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item ul li:first-child{
+      border-top-left-radius: .06rem;
+      border-bottom-left-radius: .06rem;
+      border-left:solid .01rem #ccc;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item ul li:last-child{
+      border-top-right-radius: .06rem;
+      border-bottom-right-radius: .06rem;
+      border-right:solid .01rem #ccc;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item ul li.buy{
+      background: #4AC158;
+      border-left:solid .01rem #4AC158;
+      border-top:solid .01rem #4AC158;
+      border-bottom:solid .01rem #4AC158;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item ul li.sell{
+      background: #FB605A;
+      border-left:solid .01rem #FB605A;
+      border-top:solid .01rem #FB605A;
+      border-bottom:solid .01rem #FB605A;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item ul li.level{
+      background: #eee;
+      border-left:solid .01rem #eee;
+      border-top:solid .01rem #eee;
+      border-bottom:solid .01rem #eee;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item ul li p{
+      overflow: hidden;
+      display: block;
+      float: left;
+      width: .92rem;
+      font-size: .24rem;
+      padding: 0 0 0 .35rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item ul li.buy p,.quoteChart .fixedCon .tcCon .itemCon .item ul li.sell p{color: #fff}
+.quoteChart .fixedCon .tcCon .itemCon .item ul li span{
+      overflow: hidden;
+      float: left;
+      font-size: .32rem;
+      font-weight: bold;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item ul li.buy span, .quoteChart .fixedCon .tcCon .itemCon .item ul li.sell span{color: #fff}
+.quoteChart .fixedCon .tcCon .itemCon .item ul li em{
+      overflow: hidden;
+      display: block;
+      float: right;
+      width: .18rem;
+      height: .27rem;
+      margin: 0 0 0 .25rem;
+}
+
+
+.quoteChart .fixedCon .tcCon .itemCon .item1{
+      overflow: hidden;
+      padding: .46rem 0 .15rem;
+      margin: 0 .3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item1 p{
+      overflow: hidden;
+      display: block;
+      font-size: .28rem;
+      width: 3.45rem;
+      height: .55rem;
+      line-height: .55rem;
+      float: left;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item1 p span{
+      display: inline;
+      color: #999;
+      font-size: .22rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item1 p span.err{color: #FB605A}
+.quoteChart .fixedCon .tcCon .itemCon .item1 .pic{
+      float: left;
+      width: .5rem;
+      height: .5rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item1 .pic.add{
+      background: url("../../assets/images/quotation/a_chart_increase.png") no-repeat;
+      background-size: 100% 100%;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item1 .pic.add.stop{
+      background: url("../../assets/images/quotation/a_chart_increase_p.png") no-repeat;
+      background-size: 100% 100%;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item1 .pic.cut{
+      background: url("../../assets/images/quotation/a_chart_reduce.png") no-repeat;
+      background-size: 100% 100%;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item1 .pic.cut.stop{
+      background: url("../../assets/images/quotation/a_chart_reduce_p.png") no-repeat;
+      background-size: 100% 100%;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item1 input{
+      overflow: hidden;
+      float: left;
+      width: 2.45rem;
+      border: none;
+      background: transparent;
+      font-size: .32rem;
+      font-weight: bold;
+      text-align: center;
+      height: .5rem;
+      line-height: .5rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item1 input::placeholder{color: #666;font-family: Microsoft JhengHei, Microsoft YaHei, arial, sans-serif;font-weight: normal;font-size: .28rem}
+.quoteChart .fixedCon .tcCon .itemCon .item2{
+      overflow: hidden;
+      margin: .46rem .3rem .15rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item2 ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item2 ul li{
+      overflow: hidden;
+      border-right: solid .01rem #ccc;
+      padding: 0 .1rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item2 ul li:last-child{border: none}
+.quoteChart .fixedCon .tcCon .itemCon .item2 ul li p{
+      overflow: hidden;
+      display: block;
+      color: #999;
+      font-size: .24rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item2 ul li p em.fall{
+      display: inline;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item2 ul li p em.rise{
+      display: inline;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item2 span{
+      overflow: hidden;
+      display: block;
+      width: 6.9rem;
+      height: .9rem;
+      background: #FB605A;
+      text-align: center;
+      line-height: .9rem;
+      border-radius: .06rem;
+      color: #fff;
+      font-size: .3rem;
+      margin: .15rem 0;
+      position: relative;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item2 span img {
+      position: absolute;
+      top: .26rem;
+      right: 1rem;
+      width: .38rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item2 span.err{background: #999}
+.quoteChart .fixedCon .tcCon .itemCon .item3{
+      overflow: hidden;
+      padding: .46rem 0 .15rem;
+      margin: 0 .3rem;
+      border-bottom: solid .01rem #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3.border {border-bottom: none;}
+.quoteChart .fixedCon .tcCon .itemCon .item3.margin{
+      padding: 0 0 .15rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3 p{
+      overflow: hidden;
+      display: block;
+      font-size: .28rem;
+      width: 3.45rem;
+      height: .55rem;
+      line-height: .55rem;
+      float: left;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3 p span{
+      display: inline;
+      color: #999;
+      font-size: .22rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3 ul{
+      overflow: hidden;
+      float: left;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 3.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3 ul li{
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3 ul li p{float: none;width: auto;margin-left: .2rem;}
+.quoteChart .fixedCon .tcCon .itemCon .item3 ul li .radio {
+      display: none;
+}
+
+.radio + label,.radio {
+      color: transparent;
+      border: solid .04rem #D8EDFF;
+      width: .36rem;
+      height: .36rem;
+      border-radius: 100%;
+}
+.radio + label span {
+      display: none;
+      color: transparent;
+      background: #3699FF;
+      width: .18rem;
+      height: .18rem;
+      border-radius: 100%;
+      margin: .09rem 0 0 .09rem;
+}
+.radio:checked + label {
+      color: transparent;
+      border: solid .04rem #D8EDFF;
+}
+
+.radio:checked + label span{
+      display: block;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3 .inputCon{
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3 .inputCon span{
+      overflow: hidden;
+      display: block;
+      width: 3.45rem;
+      height: .55rem;
+      line-height: .55rem;
+      float: left;
+      color: #999;
+      font-size: .22rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3 .inputCon span.err{color: #FB605A}
+.quoteChart .fixedCon .tcCon .itemCon .item3 .inputCon .pic{
+      float: left;
+      width: .5rem;
+      height: .5rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3 .inputCon .pic.add{
+      background: url("../../assets/images/quotation/a_chart_increase.png") no-repeat;
+      background-size: 100% 100%;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3 .inputCon .pic.add.stop{
+      background: url("../../assets/images/quotation/a_chart_increase_p.png") no-repeat;
+      background-size: 100% 100%;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3 .inputCon .pic.cut{
+      background: url("../../assets/images/quotation/a_chart_reduce.png") no-repeat;
+      background-size: 100% 100%;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3 .inputCon .pic.cut.stop{
+      background: url("../../assets/images/quotation/a_chart_reduce_p.png") no-repeat;
+      background-size: 100% 100%;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3 .inputCon input{
+      overflow: hidden;
+      float: left;
+      width: 2.45rem;
+      border: none;
+      background: transparent;
+      font-size: .32rem;
+      font-weight: bold;
+      text-align: center;
+      height: .5rem;
+      line-height: .5rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .item3 .inputCon input::placeholder{color: #666;font-family: Microsoft JhengHei, Microsoft YaHei, arial, sans-serif;font-weight: normal;font-size: .28rem}
+.quoteChart .fixedCon .tcCon .itemCon .isShow{overflow: hidden}
+.quoteChart .fixedCon .tcCon .itemCon .isShow .titShow{
+      overflow: hidden;
+      background: #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .2rem .3rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .isShow .titShow p{
+      overflow: hidden;
+      width: 50%;
+      color: #999;
+      font-size: .28rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .isShow .titShow .arrow{
+      overflow: hidden;
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+}
+.quoteChart .fixedCon .tcCon .itemCon .isShow .titShow .arrow ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-radius: .04rem;
+      display: flex;
+      justify-content: center;
+}
+.quoteChart .fixedCon .tcCon .itemCon .isShow .titShow .arrow ul li{
+      overflow: hidden;
+      list-style: none;
+      width: .6rem;
+      height: .36rem;
+      text-align: center;
+      line-height: .36rem;
+      font-size: .22rem;
+      border: solid .01rem #0A95FF;
+}
+.quoteChart .fixedCon .tcCon .itemCon .isShow .titShow .arrow ul li.checked{
+      color: #fff;
+      background: #0A95FF;
+}
+.quoteChart .fixedCon .tcCon .itemCon .isShow .titShow .arrow span{
+      overflow: hidden;
+      background: url("../images/quotation/a_chart_open.png") no-repeat;
+      background-size: 100% 100%;
+      width: .5rem;
+      height: .5rem;
+      transform: rotate(180deg);
+      margin-left: .2rem;
+}
+.quoteChart .fixedCon .tcCon .itemCon .isShow .titShow .arrow span.checked{
+      transform: rotate(0deg);
+}
+.quoteChart .fixedCon .tcCon .itemCon .isShow .conHide{overflow: hidden;}
+.quoteChart .fixedCon .tcCon .itemCon .isShow .conHide .item1{border-bottom: solid .01rem #ddd;}
+
+
+
+/* 相关 */
+.quoteChart .aboutNews{ margin: .4rem auto 1.2rem auto;}
+.quoteChart .newsNav { width: 6.86rem; margin: 0 auto; }
+.quoteChart .newsNav ul{ display: flex; justify-content: space-between; align-items: center; height: .6rem; border-bottom: solid 1px #f5f7f7;}
+.quoteChart .newsNav ul li{ height: 100%; position: relative; font-size: .26rem; color: #888888; width: 1.48rem; text-align: center; line-height: .6rem; }
+.quoteChart .newsNav ul li.checked::after { content: ""; display: block; width: 1.48rem; height: .06rem; background: #FE6A1A; position: absolute; bottom: 0; left: 0; }
+.quoteChart .newsNav ul li.checked{ color: #222222;}
+
+.quoteChart .newsCon{ width: 6.86rem; margin: 0 auto; }
+.quoteChart .newsCon .list1{ width: 6.42rem; margin: 0 auto;}
+.quoteChart .newsCon .list1 .tech_analysis_time_menu > span{ font-size: .26rem;}
+.quoteChart .newsCon .list1 .tech_analysis_table th, .quoteChart .newsCon .list1 .tech_analysis_table td{ height: .8rem; font-size: .28rem;}
+.quoteChart .newsCon .list1 .tech_analysis_table tr td p{ font-size: .26rem;}
+.quoteChart .newsCon .list1 .tech_analysis_table_top td{ font-size: .26rem;}
+.quoteChart .newsCon .list1 .tech_analysis_table td p span.redFont { color: #e3525c;}
+.quoteChart .newsCon .list1 .tech_analysis_popup_content h4{ margin-bottom: .12rem;}
+
+.quoteChart .newsCon .list1 .tech_analysis_popup { position: relative; background: #fff; z-index: 0; box-sizing: border-box; }
+.quoteChart .newsCon .list1 .tech_analysis_popup_content{ width: 100%; padding: 0;}
+.quoteChart .newsCon .list1 .tech_analysis_over{ height: auto; margin: 0 auto; }
+.quoteChart .newsCon .list1 .tech_analysis_over .tech_analysis_table.table2 tr td p, .tech_analysis_over .tech_analysis_table.table3 tr td p{ font-size: .26rem;}
+.quoteChart .newsCon .list1 .tech_analysis_over .tech_analysis_table.table2 td{ height: .94rem; font-size: .26rem;}
+.quoteChart .newsCon .list1 .tech_analysis_time_menu{ border-radius: .13rem;}
+.quoteChart .newsCon .list1 .tech_analysis_table .bg_red span { color: #e3525c;}
+.quoteChart .newsCon .list1 .tech_analysis_table .bg_green span{ color: #1AB46A;}
+.quoteChart .newsCon .list1 .tech_analysis_table .bg_red span.shake{ color: #fff;}
+.quoteChart .newsCon .list1 .tech_analysis_table .bg_green span.shake{ color: #fff;}
+
+
+.quoteChart .newsCon .list2 ul{ width: 100%; padding-bottom: .4rem; }
+.quoteChart .newsCon .list2 ul li{ margin-top: .35rem;}
+.quoteChart .newsCon .list2 ul li span{ overflow: hidden; display: block; width: 100%; font-size: .26rem; white-space: nowrap; text-overflow:ellipsis; color: #222222;}
+.quoteChart .newsCon .list2 ul li time{ display: block; width: 100%; font-size: .22rem; line-height: .38rem; color: #888888;}
+
+.quoteChart .newsCon .list3 .title{ width: 100%; display: flex; justify-content: space-between; font-size: .22rem; color: #222; margin: .5rem 0; }
+.quoteChart .newsCon .list3 ul{ display: flex; width: 5.85rem; height: 3.53rem; margin: 0 auto; justify-content: space-between; padding-bottom: .5rem; }
+.quoteChart .newsCon .list3 ul li{ width: .87rem; font-size: .22rem; text-align: center; color: #fff; line-height: .28rem; }
+.quoteChart .newsCon .list3 ul li .column{ display: flex; flex-direction: column; width: .87rem; height: 3.1rem; background: #2F93FF; margin-bottom: .15rem; }
+.quoteChart .newsCon .list3 ul li .column .buy{ background: #FF9155; display: flex; flex-direction: column; justify-content: flex-start; box-sizing: border-box; overflow: hidden; }
+.quoteChart .newsCon .list3 ul li .column .buy label{ margin-top: .05rem;}
+.quoteChart .newsCon .list3 ul li .column .buy span{ width: 100%; display: block;}
+.quoteChart .newsCon .list3 ul li .column .sell{ display: flex; flex: 1; flex-direction: column; justify-content: flex-end; box-sizing: border-box; overflow: hidden; }
+.quoteChart .newsCon .list3 ul li .column .sell span{ margin-bottom: .05rem;}
+.quoteChart .newsCon .list3 ul li .time{ color: #888888;}
+
+.quoteChart .newsCon .list4 ul{ width: 100%; margin-top: .26rem; padding: 0 .2rem; box-sizing: border-box;}
+.quoteChart .newsCon .list4 ul li{ font-size: .24rem; margin-bottom: .4rem;}
+.quoteChart .newsCon .list4 ul li .row1{ display: flex; align-items: center;}
+.quoteChart .newsCon .list4 ul li .row1 span:nth-child(2) img { width: .54rem; height: .33rem; margin: 0 .37rem 0 .37rem; }
+.quoteChart .newsCon .list4 ul li .row1 span:nth-child(3){ display: flex; align-items: center;}
+.quoteChart .newsCon .list4 ul li .row1 span:nth-child(3) i{ display: block; width: .21rem; height: .22rem; background: url(../images/news/star_empty.png) no-repeat center center/100%; margin-right: .03rem; }
+.quoteChart .newsCon .list4 ul li .row1 span:nth-child(3) i.star_full{ background: url(../images/news/star.png) no-repeat center center/100%;}
+.quoteChart .newsCon .list4 ul li .row2{ font-weight: bold; margin: .1rem 0 .1rem 0; font-size: .26rem; }
+.quoteChart .newsCon .list4 ul li .row3{ font-size: .22rem; color: #888888; }
+.quoteChart .newsCon .list4 ul li .row3 span{ margin-right: .32rem;}
+
+.char_botFixed{ width: 7.5rem; padding: .1rem 0; position: fixed; bottom: 0; background: #f8f8f8; }
+.char_botFixed ul{ width: 7.2rem; display: flex; margin: 0 auto; justify-content: space-between; position: relative; }
+.char_botFixed ul li{ width: 3.55rem; height: .97rem; font-size: .25rem; color: #fff; display: flex; align-items: center; padding-left: .28rem; box-sizing: border-box; border-radius: .08rem; }
+.char_botFixed ul li:nth-of-type(1){ padding-right: .65rem; justify-content: flex-end; }
+.char_botFixed ul li:nth-of-type(2){ padding-left: .65rem; justify-content: flex-start; }
+.char_botFixed ul li em{ font-size: .31rem; margin: 0 .2rem;}
+.char_botFixed ul li.rise i{ width: .11rem; height: .24rem; display: block; background: url(../images/quotation/bottom_rise.png) no-repeat center center/100%;}
+.char_botFixed ul li.fall i{ width: .11rem; height: .24rem; display: block; background: url(../images/quotation/bottom_fall.png) no-repeat center center/100%;}
+.char_botFixed ul label{ display: block; width: .65rem; position: absolute; height: .29rem; line-height: .29rem; border-radius: .04rem; background: #fff; left: 50%; top: 50%; transform: translate(-50%,-50%); font-size: .22rem; color: #888888; text-align: center; }
+
+.tabsPopBox{ background: #fff; width: 0rem; height: 100%; position: fixed; top: 0; z-index: 2; display: flex;
+flex-wrap: wrap; box-shadow: .33rem 0 .4rem #00000014; overflow:hidden;
+}
+.tabsPopBox.moveout{ width: 5rem; transition: .2s; visibility: visible; }
+.tabsPopBox .tab_title{ height: 1.28rem; width: 100%; background: #007AFF; font-size: .36rem; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff; }
+.tabsPopBox .tabpop_left{ display: flex; width: 2.4rem; background: #F3F3F3; height: 100%; }
+.tabsPopBox .tabpop_left ul{ width: 100%;}
+.tabsPopBox .tabpop_left ul li{ width: 100%; font-size: .26rem; text-align: center; padding: .28rem 0; }
+.tabsPopBox .tabpop_left ul li.checked{ font-weight: bold; background: #fff;}
+
+.tabsPopBox .tabpop_right{ width: 2.6rem; height: 100%; padding: .2rem 0 1.35rem 0; box-sizing: border-box; }
+.tabsPopBox .tabpop_right ul{ height: 100%; overflow-y: scroll; box-sizing: border-box; -ms-overflow-style: none; overflow: -moz-scrollbars-none; }
+.tabsPopBox .tabpop_right ul::-webkit-scrollbar { width: 0 !important }
+.tabsPopBox .tabpop_right ul li{ text-align: center; font-size: .28rem; color: #222222; margin-bottom: .25rem; }
+.tabsPopBox .tabpop_right ul li label{ display: block; width: 100%; font-size: .24rem; color: #888888;}
+.tabsPopBox .tabpop_right ul li.checked,.tabsPopBox .tabpop_right ul li.checked label{ color: #007AFF;}
+
+.tabsPopBox_bg{ background: rgba(0,0,0,.2); width: 100%; height: 100%; position: fixed; z-index: 1; left: 0; top: 0; }
+
+
+/* 撤单弹窗 */
+.quoteChart .popFixed .tcCon{ width: 6.38rem; background: #FFFFFF; border-radius: .12rem; padding: .6rem .3rem .55rem .3rem; box-sizing: border-box;}
+.quoteChart .popFixed .tcCon .item{ padding: 0; border-bottom: none;}
+.quoteChart .popFixed .tcCon .item span{color: #0288FB; font-size: .37rem; line-height: .37rem; margin-bottom: .3rem;}
+.quoteChart .popFixed .tcCon .item p{ line-height: .4rem; color: #B0B0B0; }
+.quoteChart .popFixed .tcCon .btnCon{ width: 100%; display: flex; justify-content: center; margin-top: .43rem; }
+.quoteChart .popFixed .tcCon .btnCon span{ width: 2.68rem; height: .79rem; line-height: .79rem; background: #FF6A1A; border-radius: .62rem; color: #fff; font-size: .3rem; margin: 0 .1rem; }

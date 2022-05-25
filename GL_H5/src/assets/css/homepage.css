@@ -1,0 +1,259 @@
+.homepage .banner{margin-bottom: .4rem;}
+.homepage .banner .swiper-container{width: 6.9rem;}
+.homepage .banner .swiper-slide img{width: 6.9rem;margin: 0 auto;border-radius: .06rem}
+.homepage .banner .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{bottom:0}
+.homepage .layout{overflow: hidden;border-bottom:  solid .24rem #F7F7F7}
+.homepage .layout:last-child{border-bottom: solid 1rem #eee;}
+.homepage .layout.last{border-bottom: solid 1.78rem #eee;}
+.homepage .title {
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: .2rem .3rem;
+}
+.homepage .title span{
+      overflow: hidden;
+      font-size: .3rem;
+      font-weight: bold;
+      position: relative;
+      padding: 0 .15rem .1rem 0;
+}
+.homepage .title span::after{
+      content: '';
+      position: absolute;
+      width: 1.24rem;
+      height: .26rem;
+      background: rgba(0,160,233,.14);
+      bottom: 0;
+      right: 0;
+}
+.homepage .title a{
+      overflow: hidden;
+      font-size: .24rem;
+      color: #999;
+}
+.homepage .content{overflow: hidden;border-bottom: solid  env(safe-area-inset-bottom) #eee;padding-top: 0}
+.homepage .conList{overflow: hidden;margin-bottom: .25rem}
+.homepage .conList .item{
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top:.01rem solid #eee;
+      border-bottom:.01rem solid #eee;
+      padding: .1rem .3rem .1rem .4rem;
+}
+.homepage .conList .item p{
+      overflow: hidden;
+      font-size: .24rem;
+      color: #999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.homepage .conList .item p span {
+      background: url("../images/index/a_top_rise.png") no-repeat;
+      background-size: 100% 100%;
+      width: .15rem;
+      height: .2rem;
+      margin: .1em 0 0 .05rem
+}
+.homepage .conList .item p.checked span {
+      background: url("../images/index/a_top_decline.png") no-repeat;
+      background-size: 100% 100%;
+}
+.homepage .conList ul{
+      overflow: hidden;
+      display: block;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+}
+.homepage .conList ul li{
+      overflow: hidden;
+      width: 6.75rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .2rem .3rem .3rem .45rem;
+}
+.homepage .conList ul li.rise{background: rgba(180,216,178,.16)}
+.homepage .conList ul li.fall{background: rgba(253,221,219,.2)}
+.homepage .conList ul li span:first-child{
+      font-size: .28rem;
+}
+.homepage .conList ul li span:first-child em{
+      overflow: hidden;
+      display: block;
+      font-size: .2rem;
+      color: #999;
+      width: 3.1rem;
+}
+.homepage .conList ul li span:nth-child(2){
+      font-size: .3rem;
+      font-weight: bold;
+      width: 1.8rem;
+      border-radius: .05rem;
+      height: .54rem;
+      line-height: .54rem;
+      text-align: center;
+      color: #fff;
+      margin-right: .2rem;
+}
+.homepage .conList ul li span:nth-child(3){
+      font-size: .3rem;
+      width: 1.8rem;
+      height: .54rem;
+      line-height: .54rem;
+      text-align: center;
+      border-radius: .05rem;
+      float: right;
+      color: #fff;
+}
+.homepage .conList ul li span:nth-child(2).rise,.homepage .conList ul li span:nth-child(3).rise{background: #51B64C;}
+.homepage .conList ul li span:nth-child(2).fall,.homepage .conList ul li span:nth-child(3).fall{background: #FB605A}
+.homepage .conList ul li span:nth-child(2).level,.homepage .conList ul li span:nth-child(3).level{background: #666}
+.homepage .swiperList{margin: .3rem .2rem .4rem .2rem}
+.homepage .swiperList  .swiper-slide img{width: 2.16rem;margin: 0 .1rem}
+.homepage .swiperList  .swiper-pagination{display: none}
+.homepage .conList1{overflow: hidden}
+.homepage .conList1 .listNav{overflow: hidden;margin-bottom: .3rem}
+.homepage .conList1 .listNav ul{
+      overflow: hidden;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 .45rem;
+}
+.homepage .conList1 .listNav ul li{
+      overflow: hidden;
+      list-style: none;
+      position: relative;
+      height: .74rem;
+}
+.homepage .conList1 .listNav ul li p{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: .25rem;
+      width: 0;
+      height: 0;
+      border-top: .14rem solid #0A95FF;
+      border-right: .16rem solid rgba(0,0,0,0);
+      border-bottom: .16rem solid rgba(0,0,0,0);
+      border-left: .14rem solid rgba(0,0,0,0);
+      display: none;
+}
+.homepage .conList1 .listNav ul li span{
+      overflow: hidden;
+      display: block;
+      font-size: .24rem;
+      color: #666;
+      padding: 0 .25rem;
+      background: #EAEAEA;
+      text-align: center;
+      height: .46rem;
+      line-height: .46rem;
+      border-radius: .06rem;
+}
+.homepage .conList1 .listNav ul li.checked span{background: #0A95FF;color: #fff}
+.homepage .conList1 .listNav ul li.checked p{display: block}
+.homepage .conList1 .list {
+      overflow: hidden;
+      margin: 0 .3rem;
+}
+.homepage .conList1 .list ul{
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+}
+.homepage .conList1 .list ul li{
+      overflow: hidden;
+      list-style: none;
+      border-bottom: solid .01rem #EBEBEB;
+      padding: .3rem 0;
+}
+.homepage .conList1 .list ul li:last-child{border-bottom: none}
+.homepage .conList1 .list .itemCon {
+      overflow: hidden;
+      height: 1.5rem;
+      position: relative;
+}
+.homepage .conList1 .list .itemKey {
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      margin-top: .22rem;
+}
+.homepage .conList1 .list .itemKey .item{
+      overflow: hidden;
+      width: 2.73rem;
+      height: .54rem;
+      border-radius: .06rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 .16rem;
+}
+.homepage .conList1 .list .itemKey .item.rise{border:.01rem solid #DCF0DB;}
+.homepage .conList1 .list .itemKey .item.fall{border:.01rem solid #FEDFDE;}
+.homepage .conList1 .list .itemKey .item.level{border:.01rem solid #666;}
+.homepage .conList1 .list .itemKey .item p{
+      overflow: hidden;
+      font-size: .24rem;
+}
+.homepage .conList1 .list .itemKey .item span{
+      overflow: hidden;
+      font-size: .28rem;
+}
+.homepage .conList1 .list .itemKey .item.rise span{color: #51B64C;}
+.homepage .conList1 .list .itemKey .item.fall span{color: #FB605A;}
+.homepage .conList1 .list .itemKey .item.level span{color: #666;}
+.homepage .conList1 .list .leftCon{
+      overflow: hidden;
+      width: 4.4rem;
+      float: left;
+}
+.homepage .conList1 .list .leftCon .item1{
+      overflow: hidden;
+      width: 100%;
+      font-size: .3rem;
+      line-height: .42rem;
+}
+.homepage .conList1 .list .leftCon .item1 p{
+      overflow: hidden;
+      width: 100%;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient: vertical;
+}
+.homepage .conList1 .list .leftCon .item2{
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: absolute;
+      bottom: .06rem;
+}
+.homepage .conList1 .list .leftCon .item2 img{width: .22rem;margin-right: .15rem}
+.homepage .conList1 .list .leftCon .item2 time{
+      overflow: hidden;
+      font-size: .24rem;
+      color: #999;
+}
+.homepage .conList1 .list .rightCon{
+      overflow: hidden;
+      width: 2.2rem;
+      height: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      float: right;
+}
+.homepage .conList1 .list .rightCon img{width: 100%}

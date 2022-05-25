@@ -1,0 +1,102 @@
+/* My Assets */
+.my-assets {
+  background: url(~@/assets/images/mine/top_bg.png) no-repeat;
+  background-size: cover;
+}
+.my-assets .overview {
+  padding: 0.4rem;
+}
+.my-assets .overview .mine-icon {
+  width: 1.02rem;
+  height: 1.02rem;
+  align-self: flex-start;
+}
+.my-assets .overview .assets-summary {
+  position: relative;
+  flex: 1;
+  align-items: flex-start;
+  margin-left: 0.35rem;
+}
+.my-assets .overview .assets-summary p {
+  color: #ffffff;
+  font-size: 0.24rem;
+  font-family: PingFang SC Medium;
+}
+.my-assets .overview .assets-summary .title {
+  font-size: 0.27rem;
+}
+.my-assets .overview .assets-summary .assets-amount {
+  font-size: 0.42rem;
+  font-family: SFProText;
+  font-weight: bold;
+  padding: 0.15rem 0;
+}
+.my-assets .overview .assets-summary .assets-amount .dollar-sign {
+  margin-right: 0.2rem;
+}
+.my-assets .btns-group {
+  justify-content: space-evenly;
+  padding-bottom: 1.2rem;
+}
+.my-assets .btns-group .btn-left {
+  background-color: #ffc53a;
+}
+.my-assets .btns-group .btn-right {
+  background-color: #a035004d;
+}
+/* Top Menu */
+.mine {
+  padding-bottom: 1.2rem;
+}
+.mine .top-menu {
+  justify-content: space-evenly;
+  margin-top: -0.6rem;
+}
+.mine .top-menu .menu-card {
+  width: 1.47rem;
+  height: 1.66rem;
+  border-radius: 0.12rem;
+  font-size: 0.28rem;
+  font-family: PingFang SC Medium;
+  color: #222222;
+  background-color: #fff;
+  box-shadow: 0px 0px 6px #ff6e0d42;
+}
+.mine .top-menu .menu-card img {
+  max-width: 0.48rem;
+  min-height: 0.48rem;
+  max-height: 0.48rem;
+  object-fit: contain;
+  margin-bottom: 0.18rem;
+}
+
+/* Bot Menu */
+.mine .bot-menu {
+  margin-top: 0.5rem;
+}
+.mine .bot-menu .menu-list-item {
+  width: 100%;
+  height: 0.93rem;
+  font-size: 0.28rem;
+  font-family: PingFang SC Medium;
+  color: #222222;
+  border-bottom: 1px solid rgba(141, 144, 155, 0.12);
+}
+.mine .bot-menu .menu-list-item:last-child {
+  border-bottom: none;
+}
+.mine .bot-menu .menu-list-item img {
+  min-width: 0.48rem;
+  max-width: 0.48rem;
+  max-height: 0.48rem;
+  object-fit: contain;
+  margin-left: 0.4rem;
+  margin-right: 0.45rem;
+}
+.mine .bot-menu .menu-list-item p {
+  flex: 1;
+  text-align: left;
+}
+.mine .bot-menu .menu-list-item .van-icon-arrow {
+  margin-right: 0.4rem;
+}

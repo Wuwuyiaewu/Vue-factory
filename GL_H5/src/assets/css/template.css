@@ -1,0 +1,1428 @@
+@charset "utf-8";
+/*css reset 整体布局*/
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+table,
+th,
+td,
+span,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+li,
+ol {
+  list-style: none;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  -webkit-appearance: none;
+}
+
+img {
+  overflow: hidden;
+  display: block;
+  border: 0;
+}
+
+html {
+  font-size: 50px;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background: #ffffff;
+}
+
+/*清除浮动*/
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  /*font-family: Microsoft JhengHei, Microsoft YaHei, arial, sans-serif;*/
+  font-family: PingFang SC, -apple-system, BlinkMacSystemFont, Helvetica Neue,
+    Helvetica, Segoe UI, Arial, Roboto, PingFang SC, miui, Hiragino Sans GB,
+    Microsoft Yahei, sans-serif;
+  color: #222222;
+}
+.isOpenNav {
+  overflow: hidden;
+}
+
+html, body, #main {
+  height: 100%;
+}
+
+#main {
+  background: #fff;
+  max-height: 100vh;
+  height: 100%;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+#main > div:not(.loading):not(.popFixed) {
+  overflow-y: auto;
+  height: 100%;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mainFixed {
+  /* position: fixed; */
+  overflow: hidden;
+  height: 100%;
+  max-width: 7.5rem;
+}
+.header {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.36rem 0.3rem 0.3rem;
+}
+
+.header img {
+  overflow: hidden;
+  width: 0.44rem;
+}
+
+.header .logo {
+  overflow: hidden;
+  width: 1.5rem;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+}
+
+.nav .masking {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav .navCon {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 5rem;
+  background: #fff;
+}
+
+.nav .navCon .loginHide {
+  display: none !important;
+}
+
+.nav .navCon .cutOver {
+  overflow: hidden;
+  text-align: right;
+  color: #999;
+  font-size: 0.24rem;
+  padding: 0.25rem 0.35rem 0 0;
+}
+
+.nav .navCon .login {
+  overflow: hidden;
+  padding: 1rem 0 0.7rem;
+}
+
+.nav .navCon .login.loginSuc {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.nav .navCon .login span {
+  overflow: hidden;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  margin: 0 auto 0.1rem;
+}
+
+.nav .navCon .login span img {
+  width: 100%;
+}
+
+.nav .navCon .login.loginSuc span {
+  margin: 0 0.24rem 0 0.5rem;
+}
+
+.nav .navCon .login p {
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  font-size: 0.3rem;
+  font-weight: bold;
+}
+
+.nav .navCon .login.loginSuc p em {
+  display: inline;
+}
+
+.nav .navCon .hideSuc {
+  overflow: hidden;
+}
+
+.nav .navCon .hideSuc .money {
+  overflow: hidden;
+  width: 3.38rem;
+  height: 1rem;
+  background: #f1f7fb;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 0.15rem 0 0.05rem 0.5rem;
+}
+
+.nav .navCon .hideSuc .money p {
+  overflow: hidden;
+  display: block;
+  font-size: 0.24rem;
+  color: #999;
+}
+
+.nav .navCon .hideSuc .money span {
+  overflow: hidden;
+  display: block;
+  font-size: 0.44rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav .navCon .hideSuc .hideList {
+  overflow: hidden;
+  margin: 0.27rem 0 0 0.5rem;
+}
+
+.nav .navCon .hideSuc .hideList ul {
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav .navCon .hideSuc .hideList ul li {
+  overflow: hidden;
+  width: 100%;
+  padding: 0.07rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav .navCon .hideSuc .hideList ul li img {
+  width: 0.36rem;
+  margin-right: 0.1rem;
+}
+
+.nav .navCon .hideSuc .hideList ul li p {
+  overflow: hidden;
+  display: block;
+  font-size: 0.24rem;
+}
+
+.nav .navCon .hideSuc .hideList ul li p em {
+  display: none;
+}
+
+.nav .navCon .hideSuc .hideList ul li p.rise em {
+  display: inline;
+}
+
+.nav .navCon .hideSuc .hideList ul li p.rise {
+  color: #51b64c;
+}
+
+.nav .navCon .hideSuc .hideList ul li p.fall {
+  color: #fb605a;
+}
+
+.nav .navCon .hideSuc .hideList ul li p.level {
+  color: #666;
+}
+
+.nav .navCon .hideSuc .btnList {
+  overflow: hidden;
+  margin: 0.4rem 0 0.7rem 0.5rem;
+}
+
+.nav .navCon .hideSuc .btnList a {
+  overflow: hidden;
+  display: block;
+  width: 1.8rem;
+  height: 0.6rem;
+  float: left;
+  line-height: 0.6rem;
+  text-align: center;
+  font-size: 0.28rem;
+  color: #0a95ff;
+  border-radius: 0.06rem;
+  margin-right: 0.38rem;
+  border: solid 0.02rem #0a95ff;
+}
+
+.nav .navCon .navList {
+  overflow: hidden;
+}
+
+.nav .navCon .navList ul {
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav .navCon .navList ul li {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  border-bottom: 0.01rem solid #ddd;
+  padding: 0.2rem 0;
+}
+
+.nav .navCon .navList ul li a {
+  overflow: hidden;
+  display: block;
+  color: #333;
+  font-size: 0.28rem;
+  padding: 0 0.45rem;
+  border-left: solid 0.06rem transparent;
+}
+
+.nav .navCon .navList ul li:hover a {
+  border-left: solid 0.06rem #0a95ff;
+}
+
+.bottom {
+  position: fixed;
+  z-index: 99;
+  bottom: 0.97rem;
+  width: 7.5rem;
+  height: 0.78rem;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0.1rem #ddd;
+}
+
+.bottom.isShow {
+  display: none;
+}
+
+.bottom span {
+  overflow: hidden;
+  display: block;
+  float: left;
+  width: 4rem;
+  color: #999;
+  font-size: 0.26rem;
+  margin: 0 0.3rem;
+  height: 0.78rem;
+  line-height: 0.78rem;
+}
+
+.bottom a {
+  overflow: hidden;
+  display: block;
+  float: right;
+  width: 1.6rem;
+  height: 0.56rem;
+  line-height: 0.56rem;
+  text-align: center;
+  color: #fff;
+  background: #0a95ff;
+  border-radius: 0.06rem;
+  font-size: 0.26rem;
+  margin: 0.08rem 0.3rem 0 0.13rem;
+}
+
+.errInfo {
+  overflow: hidden;
+  background: #fed3da;
+  padding: 0 0.3rem;
+  height: 0.46rem;
+  font-size: 0.24rem;
+  line-height: 0.46rem;
+  color: #f72c4d;
+  text-align: center;
+}
+
+.popFixed {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popFixed .masking {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 9999999999;
+  background: rgba(0, 0, 0, 0.63);
+}
+
+.popFixed .tcCon {
+  overflow: hidden;
+  position: fixed;
+  width: 6rem;
+  z-index: 99999999999;
+  background: #fff;
+  border-radius: 0.1rem;
+}
+
+.popFixed .tcCon .item {
+  overflow: hidden;
+  padding: 0.45rem 0;
+  border-bottom: solid 0.01rem #ddd;
+}
+
+.popFixed .tcCon .item span {
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  font-size: 0.32rem;
+  font-weight: bold;
+  margin-bottom: 0.15rem;
+}
+
+.popFixed .tcCon .item p {
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  font-size: 0.28rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.popFixed .tcCon .btnCon {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.popFixed .tcCon .btnCon span {
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  font-size: 0.32rem;
+  color: #0a95ff;
+  width: 2.98rem;
+  height: 0.84rem;
+  line-height: 0.84rem;
+  float: left;
+}
+
+.popFixed .tcCon .btnCon span:first-child {
+  border-right: solid 0.01rem #ddd;
+}
+.popFixed .tcCon .btnCon span:last-child {
+  font-weight: bold;
+}
+.popFixed .tcCon .btnCon.only span {
+  width: 100%;
+  border: none;
+  font-weight: normal;
+}
+.popFixed .tc_layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popFixed .tcCon1 {
+  overflow: hidden;
+  position: relative;
+  width: 5.02rem;
+  height: 3.93rem;
+  margin: 0 auto;
+  z-index: 99999999999;
+  background: url("../images/index/ad_float_singup1.png") no-repeat;
+  background-size: 100% 100%;
+  padding-top: 3.6rem;
+}
+.popFixed .tcCon1 p {
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  font-size: 0.28rem;
+  line-height: 0.48rem;
+  color: #fff;
+}
+.popFixed .tcCon1 p span {
+  display: inline;
+  color: #ffa941;
+  font-size: 0.32rem;
+  font-weight: bold;
+}
+.popFixed .tcCon1 .tc_item {
+  width: 3.8rem;
+  position: relative;
+  margin: 1.1rem auto 0;
+}
+.popFixed .tcCon1 .tc_item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0.567rem;
+  width: 2.67rem;
+  height: 0.7rem;
+  opacity: 0.2;
+  border-radius: 0.35rem;
+  box-shadow: 0 0.1rem 0.1rem #ffa941;
+}
+.popFixed .tcCon1 .tc_item a {
+  overflow: hidden;
+  display: block;
+  width: 3.3rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  text-align: center;
+  font-size: 0.3rem;
+  border-radius: 0.35rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 9;
+  background: linear-gradient(
+    -90deg,
+    rgba(255, 124, 52, 1),
+    rgba(255, 154, 61, 1),
+    rgba(255, 174, 66, 1)
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(255, 124, 52, 1),
+    rgba(255, 154, 61, 1),
+    rgba(255, 174, 66, 1)
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(255, 124, 52, 1),
+    rgba(255, 154, 61, 1),
+    rgba(255, 174, 66, 1)
+  );
+  background: -o-linear-gradient(
+    90deg,
+    rgba(255, 124, 52, 1),
+    rgba(255, 154, 61, 1),
+    rgba(255, 174, 66, 1)
+  );
+  background: -ms-linear-gradient(
+    90deg,
+    rgba(255, 124, 52, 1),
+    rgba(255, 154, 61, 1),
+    rgba(255, 174, 66, 1)
+  );
+  color: #fff;
+}
+.turn {
+  /* background: rgba(0, 0, 0, 0.5); */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+}
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 11111111111111111;
+  top: 0;
+  left: 0;
+}
+
+.turn img,
+.loading img {
+  width: 1.24rem;
+  margin: 0 auto;
+}
+
+.turn span,
+.loading span {
+  overflow: hidden;
+  text-align: center;
+  font-size: 0.3rem;
+  color: #666;
+  margin-top: 0.15rem;
+}
+.loading span {
+  color: #ddd;
+}
+.headNav .navTitle {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  /* left: 0; */
+  width: 100%;
+  max-width: 750px;
+  background: #fff;
+  z-index: 1999;
+}
+.headNav .navTitle .navItem {
+  overflow: hidden;
+  width: 6.9rem;
+  margin: 0 auto;
+  padding: 0.28rem 0.3rem;
+  position: relative;
+}
+.headNav .navTitle span {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  display: block;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  font-size: 0.32rem;
+  font-weight: bold;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.headNav .navTitle img {
+  width: 0.44rem;
+  position: relative;
+  z-index: 2;
+  float: left;
+}
+.headNav .navTitle img.help {
+  float: right;
+}
+.headNav .navTitle p {
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  background: url("../images/nav/a_top_list.png") no-repeat;
+  background-size: 100% 100%;
+  width: 0.46rem;
+  height: 0.46rem;
+  float: right;
+  margin-top: 0.03rem;
+}
+
+.headNav .navTitle p.checked {
+  background: url("../images/nav/a_top_view.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.headNav .navTitle .optional {
+  position: relative;
+  z-index: 2;
+  width: 0.46rem;
+  float: right;
+  margin-left: 0.42rem;
+}
+.headNav .navTitle .login {
+  background: none;
+  color: #fe6a1a;
+  font-size: 0.28rem;
+  position: relative;
+  z-index: 2;
+  width: auto;
+  float: right;
+}
+#tab {
+  max-width: 750px;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  /* left: 0; */
+  width: 100%;
+  z-index: 4;
+  background: #fff;
+  height: 0.97rem;
+  padding-bottom: env(safe-area-inset-bottom);
+  /* box-shadow: -0.05rem 0 0.1rem rgba(0, 0, 0, 0.3); */
+}
+#tab ul {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.05rem;
+}
+#tab ul li {
+  overflow: hidden;
+}
+#tab ul li p {
+  font-family: PingFang SC Regular;
+  overflow: hidden;
+  display: block;
+  font-size: 0.25rem;
+  color: #252525;
+  text-align: center;
+}
+#tab ul li.check p {
+  color: #fe6a1a;
+}
+#tab ul li span {
+  overflow: hidden;
+  display: block;
+  width: 0.46rem;
+  height: 0.46rem;
+  margin: 0.05rem auto;
+}
+#tab ul li span.sp_home {
+  background: url("../images/tab/a_tabbar_home.png") no-repeat;
+  background-size: 100% 100%;
+}
+#tab ul li.check span.sp_home {
+  background: url("../images/tab/a_tabbar_home_p.png") no-repeat;
+  background-size: 100% 100%;
+}
+#tab ul li span.sp_market {
+  background: url("../images/tab/a_tabbar_market.png") no-repeat;
+  background-size: 100% 100%;
+}
+#tab ul li.check span.sp_market {
+  background: url("../images/tab/a_tabbar_market_p.png") no-repeat;
+  background-size: 100% 100%;
+}
+#tab ul li span.sp_register {
+  margin: 0 auto;
+  height: 0.85rem;
+  width: 0.85rem;
+  background: url("../images/tab/register.png") no-repeat;
+  background-size: 100% 100%;
+  animation: acc_list_icon 2s;
+  animation-iteration-count: infinite;
+}
+#tab ul li span.sp_trade {
+  background: url("../images/tab/a_tabbar_trade.png") no-repeat;
+  background-size: 100% 100%;
+  height: 0.37rem;
+  margin: 0.095rem 0;
+}
+#tab ul li.check span.sp_trade {
+  background: url("../images/tab/a_tabbar_trade_p.png") no-repeat;
+  background-size: 100% 100%;
+}
+#tab ul li span.sp_info {
+  background: url("../images/tab/a_tabbar_info.png") no-repeat;
+  background-size: 100% 100%;
+}
+#tab ul li.check span.sp_info {
+  background: url("../images/tab/a_tabbar_info_p.png") no-repeat;
+  background-size: 100% 100%;
+}
+#tab ul li span.sp_mine {
+  background: url("../images/tab/a_tabbar_mine.png") no-repeat;
+  background-size: 100% 100%;
+}
+#tab ul li.check span.sp_mine {
+  background: url("../images/tab/a_tabbar_mine_p.png") no-repeat;
+  background-size: 100% 100%;
+}
+@keyframes acc_list_icon {
+  0%,
+  28%,
+  100% {
+    transform: rotate(0deg);
+  }
+  4%,
+  12%,
+  20% {
+    transform: rotate(-5deg);
+  }
+  8%,
+  16%,
+  24% {
+    transform: rotate(5deg);
+  }
+}
+.content {
+  padding-top: 1.05rem;
+}
+.verifyCode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 0.02rem #f0f0f0;
+  background: #f0f0f0;
+  height: 0.8rem;
+  margin: 0.2rem auto 0;
+  border-radius: 0.42rem;
+  padding: 0 0.25rem;
+}
+.verifyCode.border {
+  border: 0.02rem solid #0088cf;
+  background: #fafcff;
+}
+.verifyCode .itemVerify {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 0.2rem;
+}
+.verifyCode span {
+  overflow: hidden;
+  font-size: 0.28rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+}
+.verifyCode img {
+  width: 0.44rem;
+}
+.verifyCode a {
+  overflow: hidden;
+  width: 1.6rem;
+  height: 0.36rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.24rem;
+  background: #00a6ff;
+  border-radius: 0.18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.verifyCode a.gray {
+  background: #b3b3b3;
+}
+.verifyCode input {
+  height: 0.8rem;
+  color: #333;
+  background: transparent;
+  outline: none;
+  border: 0;
+  font-size: 0.28rem;
+  font-weight: bold;
+  width: 2rem;
+}
+.verifyCode input::placeholder {
+  color: #999;
+  font-size: 0.26rem;
+  background: transparent;
+}
+.verifyCode input::-webkit-input-placeholder {
+  color: #999;
+  font-size: 0.26rem;
+  background: transparent;
+}
+.verifyCode input::-moz-placeholder {
+  color: #999;
+  font-size: 0.26rem;
+  background: transparent;
+}
+.verifyCode input::-ms-input-placeholder {
+  color: #999;
+  font-size: 0.26rem;
+  background: transparent;
+}
+.verifyCode .input-item:-webkit-autofill,
+.verifyCode .input-item:-webkit-autofill:hover,
+.verifyCode .input-item:-webkit-autofill:focus {
+  -webkit-text-fill-color: #333 !important;
+  -webkit-box-shadow: inset 0 0 0 1000px transparent !important;
+  box-shadow: inset 0 0 0 1000px #fff !important;
+  height: 0.76rem;
+}
+.errMessage {
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  font-size: 0.24rem;
+  line-height: 0.36rem;
+  color: #e93636;
+  margin: 0 auto;
+}
+.orderHelp .content {
+  overflow: hidden;
+  width: 6.9rem;
+  margin: 0 auto;
+  padding-top: 1.05rem;
+}
+
+.orderHelp .conList {
+  overflow: hidden;
+  position: relative;
+  margin: 0.2rem 0 0.5rem;
+}
+
+.orderHelp .conList span {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  font-size: 0.3rem;
+  font-weight: bold;
+}
+
+.orderHelp .conList ul {
+  overflow: hidden;
+  display: block;
+  margin: 0.4rem 0 0 0;
+  list-style: none;
+  background: #f1f7fb;
+  border-radius: 0.06rem;
+  padding: 0 0.2rem;
+}
+
+.orderHelp .conList ul::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 0.25rem solid rgba(0, 0, 0, 0);
+  border-bottom: 0.25rem solid #f1f7fb;
+  border-right: 0.25rem solid rgba(0, 0, 0, 0);
+  border-left: 0.25rem solid rgba(0, 0, 0, 0);
+  top: 0.3rem;
+  left: 0.3rem;
+}
+
+.orderHelp .conList ul li {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  padding: 0.2rem 0;
+}
+
+.orderHelp .conList ul li p {
+  overflow: hidden;
+  display: block;
+  font-size: 0.24rem;
+  line-height: 0.42rem;
+}
+
+.orderHelp .conList ul li .item {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.2rem 0.3rem;
+}
+
+.orderHelp .conList ul li .item:nth-child(odd) {
+  background: #fff;
+}
+
+.orderHelp .conList ul li .item:last-child {
+  margin-bottom: -0.2rem;
+}
+
+.orderHelp .conList ul li .item .itemCon {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderHelp .conList ul li .item .itemCon.flex {
+  justify-content: flex-end;
+}
+
+.orderHelp .conList ul li .item .itemCon .itemWidth {
+  overflow: hidden;
+  width: 65%;
+}
+
+.orderHelp .conList ul li .item .itemCon .itemWidth .widthCon {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderHelp .conList ul li .item .itemCon .itemWidth .widthCon p {
+  overflow: hidden;
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+}
+
+.orderHelp .conList ul li .item p:last-child {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.orderHelp .conList ul li .item .itemCon p:last-child {
+  color: #0a95ff;
+}
+
+.orderHelp .conList ul li .item .itemCon .itemWidth p:last-child {
+  color: #333;
+}
+
+.orderHelp .conList ul li .item p em {
+  overflow: hidden;
+  background: url("../images/quotation/a_chart_open.png") no-repeat;
+  background-size: 100% 100%;
+  width: 0.5rem;
+  height: 0.5rem;
+  transform: rotate(180deg);
+}
+
+.orderHelp .conList ul li .item p em.checked {
+  transform: rotate(0deg);
+}
+#iframeCon {
+  overflow: hidden;
+  padding-top: 1rem;
+  width: 7.5rem;
+}
+#iframe {
+  overflow: hidden;
+  width: 1px;
+  min-width: 100%;
+  *width: 100%;
+}
+.noData {
+  overflow: hidden;
+  padding-bottom: 0.75rem;
+}
+.noData.pad-top {
+  padding-top: 1rem;
+}
+
+.noData img {
+  width: 1.5rem;
+  margin: 0 auto 0.3rem;
+  padding-top: 1.25rem;
+}
+
+.noData p {
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  font-size: 0.28rem;
+  color: #888888;
+}
+
+.noData span {
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  font-size: 0.3rem;
+  color: #fff;
+  width: 2.2rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  margin: 0.75rem auto 0;
+  border-radius: 0.4rem;
+  background: #0b95ff;
+}
+
+/*置顶按钮*/
+#top-btn {
+  overflow: hidden;
+  position: fixed;
+  width: 1.01rem;
+  height: 1.01rem;
+  right: 0;
+  bottom: 1.37rem;
+  z-index: 100;
+  display: none;
+}
+
+#top-btn.show {
+  display: block;
+}
+
+#top-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+.arrow-show {
+  right: 0.2rem;
+}
+
+.download {
+  overflow: hidden;
+  width: 6.9rem;
+  padding: 0 0.3rem;
+  height: 1rem;
+  background: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.download .close {
+  width: 0.22rem;
+  position: absolute;
+  top: 0.1rem;
+  left: 0.1rem;
+}
+.download .logo {
+  width: 0.74rem;
+  margin-left: 0.1rem;
+}
+.download .downCon {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.download .downCon .item {
+  overflow: hidden;
+  color: #fff;
+  margin-left: 0.2rem;
+}
+.download .downCon span,
+.download .downCon p {
+  overflow: hidden;
+  display: block;
+  font-size: 0.24rem;
+}
+.download .downCon span {
+  font-size: 0.28rem;
+}
+.download a {
+  overflow: hidden;
+  display: block;
+  width: 1.4rem;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  background: #ff9f00;
+  color: #fff;
+  font-size: 0.24rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 0.06rem;
+}
+
+.section {
+  position: relative;
+  background-color: white;
+  margin-bottom: 0.2rem;
+}
+.section.last {
+  margin-bottom: 0.65rem;
+}
+.section-header {
+  position: relative;
+  padding-top: 0.3rem;
+  margin: 0 0.3rem 0.3rem;
+  display: flex;
+  align-items: center;
+}
+.section-header img {
+  height: 0.26rem;
+  margin-right: 0.1rem;
+}
+.section-header p {
+  font-size: 0.3rem;
+  font-weight: bold;
+}
+.section-header .header-link {
+  font-family: PingFang SC Regular;
+  position: absolute;
+  font-weight: medium;
+  font-size: 0.26rem;
+  color: #fe6a1a;
+  right: 0;
+}
+
+/* Common & Convenient CSS Classes */
+.btn {
+  text-align: center;
+  width: 3.26rem;
+  height: 0.71rem;
+  font-size: 0.31rem;
+  line-height: 0.71rem;
+  color: #fff;
+  border-radius: 0.55rem;
+}
+.btn-primary {
+  text-align: center;
+  width: 3.26rem;
+  height: 0.71rem;
+  font-size: 0.31rem;
+  line-height: 0.71rem;
+  background-color: #007aff;
+  color: #fff;
+  border-radius: 0.55rem;
+}
+.btn-disabled {
+  text-align: center;
+  width: 3.26rem;
+  height: 0.71rem;
+  font-size: 0.31rem;
+  line-height: 0.71rem;
+  background-color: #bfbfbf;
+  color: #fff;
+  border-radius: 0.55rem;
+}
+.flex-h {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+@media screen and (min-width: 750px) {
+  body,
+  html {
+    background: #fff;
+  }
+  #main {
+    width: 750px;
+    margin: 0 auto;
+  }
+}
+
+.xs-text {
+  transform-origin: left;
+  transform: scale(0.7);
+}
+
+/* 交易通用头部 */
+.template {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+}
+.template .navTitle {
+  width: 7.5rem;
+  margin: 0 auto;
+  background: #007aff;
+  height: 1.28rem;
+  position: relative;
+}
+.template .navTitle .navItem {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+.template .navTitle .navItem .back {
+  width: 0.44rem;
+  position: absolute;
+  left: 0.3rem;
+  top: 0.42rem;
+}
+.template .navTitle p {
+  font-size: 0.36rem;
+  line-height: 0.44rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.template .navTitle p.symbol {
+  font-size: 0.24rem;
+  line-height: 0.24rem;
+  line-height: 0.24rem;
+}
+
+.TradeErrorBox {
+  width: 100%;
+}
+.TradeErrorBox .tcCon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.86rem;
+}
+.TradeErrorBox .tcCon img {
+  width: 0.64rem;
+  height: 0.64rem;
+}
+.TradeErrorBox .tcCon .item {
+  width: 100%;
+  text-align: center;
+  font-size: 0.24rem;
+  color: #888888;
+  margin: 0.2rem;
+}
+.TradeErrorBox .tcCon .item .title {
+  font-size: 0.36rem;
+  color: #f72c4d;
+  font-weight: bold;
+  line-height: 0.54rem;
+  margin-bottom: 0.15rem;
+}
+.TradeErrorBox .tcCon .btnCon {
+  position: absolute;
+  bottom: 0.85rem;
+}
+.TradeErrorBox .tcCon .btnCon span {
+  width: 6.42rem;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  font-size: 0.31rem;
+  color: #fff;
+  background: #ff6a1a;
+  border-radius: 0.02rem;
+  text-align: center;
+  display: block;
+}
+
+.no-pad {
+  padding: 0;
+}
+
+/* Vant related CSS */
+
+.van-loading {
+  display: inline-block;
+  margin-left: 0.2rem;
+}
+.van-toast .van-loading {
+  margin-left: 0;
+}
+
+.kIcon-wrap .van-dropdown-item {
+  margin-top: 1px;
+}
+
+/* 漲跌顏色*/
+:root {
+  --rise-color: var(--rise-color-1);
+  --rise-color-1: #f72c4d;
+  --rise-color-2: #1ab46a;
+  --fall-color: var(--fall-color-1);
+  --fall-color-1: #1ab46a;
+  --fall-color-2: #f72c4d;
+  --level: #666;
+  --rise-arrow: var(--rise-arrow-1);
+  --fall-arrow: var(--fall-arrow-1);
+  --rise-arrow-1: url("../images/index/a_top_rise.png");
+  --rise-arrow-2: url("../images/index/a2_top_rise.png");
+  --fall-arrow-1: url("../images/index/a_top_decline.png");
+  --fall-arrow-2: url("../images/index/a2_top_decline.png");
+
+  /* 粗箭头 */
+  --rise-arrowbold: var(--rise-arrowbold-1);
+  --fall-arrowbold: var(--fall-arrowbold-1);
+  --rise-arrowbold-1: url("../images/quotation/a_top_rise.png");
+  --rise-arrowbold-2: url("../images/quotation/a2_top_rise.png");
+  --fall-arrowbold-1: url("../images/quotation/a_top_decline.png");
+  --fall-arrowbold-2: url("../images/quotation/a2_top_decline.png");
+}
+.rise {
+  color: var(--rise-color);
+}
+.fall {
+  color: var(--fall-color);
+}
+.level {
+  color: var(--level);
+}
+i.rise {
+  background-image: var(--rise-arrow);
+}
+i.fall {
+  background-image: var(--fall-arrow);
+}
+
+.rise .arrowbold {
+  background-image: var(--rise-arrowbold);
+}
+.fall .arrowbold {
+  background-image: var(--fall-arrowbold);
+}
+
+.rise .bgcolor,
+.rise.bgcolor,
+.chartbuy .char_price ul li.rise.bgcolor {
+  background-color: var(--rise-color);
+}
+.fall .bgcolor,
+.fall.bgcolor,
+.chartbuy .char_price ul li.fall.bgcolor {
+  background-color: var(--fall-color);
+}
+.level .bgcolor,
+.level.bgcolor,
+.chartbuy .char_price ul li.level.bgcolor  {
+  background-color: var(--level);
+}

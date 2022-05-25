@@ -1,0 +1,16 @@
+.modifyPwd .form-box {
+  margin: 0 auto;
+  padding: 1.08rem 0.3rem;
+  border-radius: 0.2rem;
+  position: relative;
+}
+.modifyPwd .form-btns {
+  margin-top: 0.75rem;
+  justify-content: space-evenly;
+}
+.modifyPwd .forget-or-no-pwd {
+  margin-top: 0.45rem;
+  font-size: 0.26rem;
+  color: #888888;
+  text-align: center;
+}

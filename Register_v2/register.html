@@ -11,17 +11,16 @@
 
 <body>
     <div id="register" class="register">
-        <form ref="registerForm">
+        <fieldset>
             <div class="input_wrap">
-                <input class="" type="text" maxlength="11" placeholder="手机号码" v-model="inputValue.phoneNum" ref="phoneNum"
-                    @blur="checkPhoneNum('checkContainActivateMobile')" />
-                <span ref="ruleCode_phone"></span>
+                <input class="" type="text" maxlength="11" placeholder="手机号码" v-model="inputValue.phoneNum"
+                    ref="phoneNum" @blur="checkPhoneNum('checkContainActivateMobile')" />
+                <span ref="ruleCode_phone" :class="{pass:registerFinally.phoneNum}"></span>
             </div>
             <div class="input_wrap">
                 <input class="" type="text" placeholder="验证码" maxlength="6" v-model="inputValue.code" ref="code"
                     @blur="checkCode('validateVerifyCode')" />
-                <span ref="ruleCode_verify">
-                    123
+                <span ref="ruleCode_verify" :class="{pass:registerFinally.code}">
                 </span>
                 <div class="" @click="geeTest">
                     <p>{{codeBtn}}</p>
@@ -30,34 +29,33 @@
             <div class="input_wrap">
                 <input class="" type="text" placeholder="邮箱地址" v-model="inputValue.email" ref="email"
                     @blur="checkEmail('checkContainActivateEmail')" />
-                <span ref="ruleCode_email">
+                <span ref="ruleCode_email" :class="{pass:registerFinally.email}">
 
                 </span>
             </div>
             <div class="input_wrap">
-                <input class="" type="text" placeholder="姓名" v-model="inputValue.name" ref="name"
-                    @blur="checkName" />
-                <span ref="ruleCode_name">
+                <input class="" type="text" placeholder="姓名" v-model="inputValue.name" ref="name" @blur="checkName" />
+                <span ref="ruleCode_name" :class="{pass:registerFinally.name}">
 
                 </span>
             </div>
             <div class="input_wrap">
                 <input class="" type="text" maxlength="18" placeholder="身份证" v-model="inputValue.id" ref="id"
                     @blur="checkId('checkContainActivateID')" />
-                <span ref="ruleCode_id">
+                <span ref="ruleCode_id" :class="{pass:registerFinally.id}">
 
                 </span>
             </div>
             <div class="input_wrap">
                 <input class="" :type="show_password?'text':'password'" placeholder="自设密码 (6~16位)" ref="passWord"
                     v-model="inputValue.passWord" @blur="checkPassWord('checkContainActivateEmail')" />
+                <span ref="ruleCode_password" :class="{pass:registerFinally.passWord}"></span>
                 <span class="" @click=""></span>
-                <span ref="ruleCode_password"></span>
             </div>
-            <div class="">
-                <div @click="registerRealAccount">送出</div>
+            <div class="input_wrap">
+                <div class="submit" @click="registerRealAccount">送出</div>
             </div>
-        </form>
+        </fieldset>
         <!--提示信息區塊 默认隐藏-->
         <div ref="formTips">
 

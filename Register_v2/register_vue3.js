@@ -20,7 +20,7 @@ const vm = Vue.createApp({
 				// 檢查驗證碼正確
 				validateVerifyCode: "/accountApi/validateVerifyCode",
 				// 註冊 GTS2 帳號
-				openGTS2Account:"/accountApi/openGTS2Account"
+				openGTS2Account: "/accountApi/openGTS2Account"
 			},
 			// 樣本參數
 			demoValue: "?mobilePhone=18000002970&password=abcd1234&idDocumentNumber=226835198001013775&email=ray032309@test.com&accountLevel=STD&chineseName=%E5%93%88%E7%B6%AD%E4%B8%89&code=963732",
@@ -75,7 +75,7 @@ const vm = Vue.createApp({
 			// * log_reg
 			// 驗證REG
 			regRule: {
-				mobileReg: { reg0: /^(1)\d{10}$/ },
+				mobileReg: { reg0: /^(1+\d{10})$/ },
 				mobileHkReg: { reg0: /^(\+852\s)?[5689]{1}\d{7}$/ },
 				emailReg: { reg0: /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,5})$/ },
 				ruleReg: { reg0: /\d{6}/ },
@@ -117,11 +117,13 @@ const vm = Vue.createApp({
 		},
 		// 驗證碼 驗證
 		fetchVerifyCode(url) {
+			const vm = this
 			return fetch(url).then(res => {
 				return res.json()
 			}).then(response => {
 				console.log(response);
 				if (response.result === 0) {
+					vm.registerFinally.code = true
 					return response.message
 				} else {
 					throw response.message
@@ -137,7 +139,8 @@ const vm = Vue.createApp({
 		// * log_reg
 		// 手機、密碼、郵件等 REG 與 空數值相關檢查
 		// (數值,錯誤提示,驗證規則)
-		checkData(value, text, reg) {
+		checkData(value, text, reg, key) {
+			const vm = this
 			let _value = value
 			let _text = text
 			let _reg = []
@@ -153,6 +156,7 @@ const vm = Vue.createApp({
 						reject(_text.failReg);
 					}
 				}
+				vm.$refs[key].classList.remove("shake")
 				resolve(true)
 			})
 		},
@@ -178,7 +182,7 @@ const vm = Vue.createApp({
 				params: vm.inputValue.phoneNum,
 			}
 			try {
-				vm.registerFinally.phoneNum = await vm.checkData(vm.inputValue.phoneNum, vm.checkState.phoneNum, vm.regRule.mobileReg)
+				vm.registerFinally.phoneNum = await vm.checkData(vm.inputValue.phoneNum, vm.checkState.phoneNum, vm.regRule.mobileReg, "phoneNum")
 				vm.$refs.ruleCode_phone.textContent = await vm.fetchSend(data)
 				vm.registerFinally.phoneNum = true
 			} catch (error) {
@@ -237,9 +241,9 @@ const vm = Vue.createApp({
 			const vm = this
 			let url = `${vm.baseUrl}${vm.accountApi[el]}?channel=S&mobilePhone=${vm.inputValue.phoneNum}&code=${vm.inputValue.code}`
 			try {
-				vm.registerFinally.code = await vm.checkData(vm.inputValue.code, vm.checkState.code, vm.regRule.ruleReg)
-				vm.$refs.ruleCode_verify.textContent = await vm.fetchVerifyCode(url)
+				await vm.checkData(vm.inputValue.code, vm.checkState.code, vm.regRule.ruleReg, "code")
 				vm.registerFinally.code = true
+				vm.$refs.ruleCode_verify.textContent = await vm.fetchVerifyCode(url)
 			} catch (error) {
 				vm.$refs.ruleCode_verify.textContent = error
 				vm.registerFinally.code = false
@@ -254,7 +258,7 @@ const vm = Vue.createApp({
 				params: vm.inputValue.email,
 			}
 			try {
-				vm.registerFinally.email = await vm.checkData(vm.inputValue.email, vm.checkState.email, vm.regRule.emailReg)
+				vm.registerFinally.email = await vm.checkData(vm.inputValue.email, vm.checkState.email, vm.regRule.emailReg, "email")
 				vm.$refs.ruleCode_email.textContent = await vm.fetchSend(data)
 				vm.registerFinally.email = true
 			} catch (error) {
@@ -271,7 +275,7 @@ const vm = Vue.createApp({
 				params: vm.inputValue.id,
 			}
 			try {
-				vm.registerFinally.id = await vm.checkData(vm.inputValue.id, vm.checkState.id, vm.regRule.IdReg)
+				vm.registerFinally.id = await vm.checkData(vm.inputValue.id, vm.checkState.id, vm.regRule.IdReg, "id")
 				vm.$refs.ruleCode_id.textContent = await vm.fetchSend(data)
 				vm.registerFinally.id = true
 			} catch (error) {
@@ -294,7 +298,7 @@ const vm = Vue.createApp({
 		async checkPassWord(el) {
 			const vm = this
 			try {
-				vm.registerFinally.passWord = await vm.checkData(vm.inputValue.passWord, vm.checkState.passWord, vm.regRule.passwordReg)
+				vm.registerFinally.passWord = await vm.checkData(vm.inputValue.passWord, vm.checkState.passWord, vm.regRule.passwordReg, "passWord")
 				vm.$refs.ruleCode_password.textContent = "正确"
 				vm.registerFinally.passWord = true
 			} catch (error) {
@@ -308,18 +312,24 @@ const vm = Vue.createApp({
 			const vm = this
 			for (const key of Object.keys(vm.registerFinally)) {
 				if (!vm.registerFinally[key]) {
-					vm.$refs[key].setAttribute('placeholder', vm.checkState[key].failKeyIn)
+					vm.$refs[key].classList.add('shake')
 					return
 				}
 			}
 			let message = await fetch(`${vm.baseUrl}${vm.accountApi.openGTS2Account}?mobilePhone=${vm.inputValue.phoneNum}&password=${vm.inputValue.passWord}&idDocumentNumber=${vm.inputValue.id}&email=${vm.inputValue.email}&accountLevel=STD&chineseName=${vm.inputValue.name}&code=${vm.inputValue.code}`)
-			.then(res => {
-				return res.json()
-			}).then(response=>{
-				return response.message
-			}).catch(err=>{
-				return err.message
-			})
+				.then(res => {
+					return res.json()
+				}).then(response => {
+					console.log(response);
+					sessionStorage.setItem('mobilePhone', vm.inputValue.phoneNum)  
+					sessionStorage.setItem('password', vm.inputValue.passWord)  
+					sessionStorage.setItem('accountNum', response.iResult.customerNumber)
+					alert(`註冊成功 手機號碼為 ${vm.inputValue.phoneNum} 密碼為 ${vm.inputValue.passWord}`)
+					return response.message
+				}).catch(err => {
+					alert(err.message)
+					return err.message
+				})
 			console.log(message);
 		},
 		async openRealAccount() {

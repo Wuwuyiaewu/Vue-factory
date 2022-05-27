@@ -28,6 +28,7 @@ body {
         /*stacking fieldsets above each other*/
         position: relative;
         .input_wrap {
+            position: relative;
             input {
                 padding: 15px;
                 border: 1px solid #ccc;
@@ -46,6 +47,52 @@ body {
                 &.pass {
                     color: green;
                 }
+            }
+            .codeBtn{
+                cursor: pointer;
+                margin-top: 10px;
+                text-align: center;
+                width: 150px;
+                padding: 2px;
+                border: 1px solid #000;
+                border-radius: 4px;
+                box-shadow: inset -2px -2px 3px rgb(120, 120, 120);
+                &:hover {
+                    box-shadow: inset 0px -1px 0px #ccc;
+                }
+            }
+            span.wait{
+                position: absolute;
+            }
+            span.checked{
+                position: absolute;
+                top: 50%;
+                right: 8px;
+                transform: translateY(-50%);
+                font-size: 20px;
+                line-height: 20px;
+                width: 40px;
+                &::before{
+                    content: 'V';
+                    color: green;
+                }
+            }
+            span.pw_btn_hidden{
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                right: 8px;
+                transform: translateY(-50%);
+                background-image: url(./hidden_pw.png);
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+                display: inline-block;
+                width: 42px;
+                height: 30px;
+            }
+            span.pw_btn_show{
+                background-image: url(./show_pw.png);
             }
             .submit {
                 cursor: pointer;

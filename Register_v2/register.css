@@ -44,6 +44,10 @@ body {
   position: relative;
 }
 
+.register fieldset .input_wrap {
+  position: relative;
+}
+
 .register fieldset .input_wrap input {
   padding: 15px;
   border: 1px solid #ccc;
@@ -65,6 +69,63 @@ body {
 
 .register fieldset .input_wrap span.pass {
   color: green;
+}
+
+.register fieldset .input_wrap .codeBtn {
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+  width: 150px;
+  padding: 2px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  -webkit-box-shadow: inset -2px -2px 3px #787878;
+          box-shadow: inset -2px -2px 3px #787878;
+}
+
+.register fieldset .input_wrap .codeBtn:hover {
+  -webkit-box-shadow: inset 0px -1px 0px #ccc;
+          box-shadow: inset 0px -1px 0px #ccc;
+}
+
+.register fieldset .input_wrap span.wait {
+  position: absolute;
+}
+
+.register fieldset .input_wrap span.checked {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 20px;
+  line-height: 20px;
+  width: 40px;
+}
+
+.register fieldset .input_wrap span.checked::before {
+  content: 'V';
+  color: green;
+}
+
+.register fieldset .input_wrap span.pw_btn_hidden {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-image: url(./hidden_pw.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 42px;
+  height: 30px;
+}
+
+.register fieldset .input_wrap span.pw_btn_show {
+  background-image: url(./show_pw.png);
 }
 
 .register fieldset .input_wrap .submit {

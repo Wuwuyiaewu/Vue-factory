@@ -24,7 +24,7 @@ const vm = Vue.createApp({
 			},
 			// 樣本參數
 			demoValue: "?mobilePhone=18000002970&password=abcd1234&idDocumentNumber=226835198001013775&email=ray032309@test.com&accountLevel=STD&chineseName=%E5%93%88%E7%B6%AD%E4%B8%89&code=963732",
-			// 表單偵測項目
+			// 表單偵測項目 全為 true 時通過驗證即可開戶
 			inputValue: {
 				phoneNum: "",
 				code: "",
@@ -131,9 +131,6 @@ const vm = Vue.createApp({
 			}).catch(err => {
 				return err
 			})
-			// https://misapi.glamexapp.com/accountApi/openGTS2Account?mobilePhone=14324324324&password=abcd1234&idDocumentNumber=421121197909107319&email=ewqewqe@dwq.dwq&accountLevel=STD&chineseName=%E5%93%88%E7%B6%AD%E4%B8%89&code=802709
-
-			// ?mobilePhone=18000002970&password=abcd1234&idDocumentNumber=226835198001013775&email=ray032309@test.com&accountLevel=STD&chineseName=%E5%93%88%E7%B6%AD%E4%B8%89&code=963732
 		},
 		// * log_text
 		// * log_reg
@@ -163,7 +160,7 @@ const vm = Vue.createApp({
 		// 設定密碼小眼睛
 		pw_btn() {
 			console.log('pw_btn');
-			this.$refs.pw_btn.classList.toggle("show_pw")
+			this.$refs.pw_btn.classList.toggle("show_password")
 			this.show_password = !this.show_password
 		},
 		resetInput(ele) {
@@ -183,7 +180,10 @@ const vm = Vue.createApp({
 			}
 			try {
 				vm.registerFinally.phoneNum = await vm.checkData(vm.inputValue.phoneNum, vm.checkState.phoneNum, vm.regRule.mobileReg, "phoneNum")
+				// 獲取後台重複驗證
 				vm.$refs.ruleCode_phone.textContent = await vm.fetchSend(data)
+				// 清除紅色錯誤提示
+				vm.$refs.ruleCode_phone.textContent = ""
 				vm.registerFinally.phoneNum = true
 			} catch (error) {
 				vm.$refs.ruleCode_phone.textContent = error
@@ -193,6 +193,12 @@ const vm = Vue.createApp({
 		//傳送驗證碼 ( 需極驗拼圖通過才會發送 )
 		geeTest() {
 			let vm = this;
+			if(!vm.registerFinally.phoneNum){
+				vm.$refs.phoneNum.classList.add('shake')
+					let clearInet = setTimeout(() => {
+						vm.$refs.phoneNum.classList.remove('shake')
+					}, 500);
+			}
 			if (vm.registerFinally.phoneNum && !vm.verifyTrigger) {
 				vm.$refs.gt.verify();
 			}
@@ -242,8 +248,9 @@ const vm = Vue.createApp({
 			let url = `${vm.baseUrl}${vm.accountApi[el]}?channel=S&mobilePhone=${vm.inputValue.phoneNum}&code=${vm.inputValue.code}`
 			try {
 				await vm.checkData(vm.inputValue.code, vm.checkState.code, vm.regRule.ruleReg, "code")
-				vm.registerFinally.code = true
 				vm.$refs.ruleCode_verify.textContent = await vm.fetchVerifyCode(url)
+				vm.registerFinally.code = true
+				vm.$refs.ruleCode_verify.textContent = ""
 			} catch (error) {
 				vm.$refs.ruleCode_verify.textContent = error
 				vm.registerFinally.code = false
@@ -261,6 +268,7 @@ const vm = Vue.createApp({
 				vm.registerFinally.email = await vm.checkData(vm.inputValue.email, vm.checkState.email, vm.regRule.emailReg, "email")
 				vm.$refs.ruleCode_email.textContent = await vm.fetchSend(data)
 				vm.registerFinally.email = true
+				vm.$refs.ruleCode_email.textContent = ""
 			} catch (error) {
 				vm.$refs.ruleCode_email.textContent = error
 				vm.registerFinally.email = false
@@ -278,6 +286,7 @@ const vm = Vue.createApp({
 				vm.registerFinally.id = await vm.checkData(vm.inputValue.id, vm.checkState.id, vm.regRule.IdReg, "id")
 				vm.$refs.ruleCode_id.textContent = await vm.fetchSend(data)
 				vm.registerFinally.id = true
+				vm.$refs.ruleCode_id.textContent = ""
 			} catch (error) {
 				vm.$refs.ruleCode_id.textContent = error
 				vm.registerFinally.id = false
@@ -292,17 +301,19 @@ const vm = Vue.createApp({
 				return
 			}
 			vm.registerFinally.name = true
-			vm.$refs.ruleCode_name.textContent = "正确"
+			vm.$refs.ruleCode_name.textContent = ""
 		},
 		//密碼驗證
 		async checkPassWord(el) {
 			const vm = this
 			try {
 				vm.registerFinally.passWord = await vm.checkData(vm.inputValue.passWord, vm.checkState.passWord, vm.regRule.passwordReg, "passWord")
-				vm.$refs.ruleCode_password.textContent = "正确"
+				vm.$refs.ruleCode_password.textContent = "通过"
+				vm.$refs.ruleCode_password.setAttribute('style', 'color:green;')
 				vm.registerFinally.passWord = true
 			} catch (error) {
 				vm.$refs.ruleCode_password.textContent = error
+				vm.$refs.ruleCode_password.setAttribute('style', 'color:red;')
 				vm.registerFinally.passWord = false
 			}
 		},
@@ -313,6 +324,9 @@ const vm = Vue.createApp({
 			for (const key of Object.keys(vm.registerFinally)) {
 				if (!vm.registerFinally[key]) {
 					vm.$refs[key].classList.add('shake')
+					let clearInet = setTimeout(() => {
+						vm.$refs[key].classList.remove('shake')
+					}, 500);
 					return
 				}
 			}
@@ -321,8 +335,8 @@ const vm = Vue.createApp({
 					return res.json()
 				}).then(response => {
 					console.log(response);
-					sessionStorage.setItem('mobilePhone', vm.inputValue.phoneNum)  
-					sessionStorage.setItem('password', vm.inputValue.passWord)  
+					sessionStorage.setItem('mobilePhone', vm.inputValue.phoneNum)
+					sessionStorage.setItem('password', vm.inputValue.passWord)
 					sessionStorage.setItem('accountNum', response.iResult.customerNumber)
 					alert(`註冊成功 手機號碼為 ${vm.inputValue.phoneNum} 密碼為 ${vm.inputValue.passWord}`)
 					return response.message
@@ -476,7 +490,6 @@ vm.component('Gtva', {
 	methods: {
 		// 弹出极验框进行验证
 		verify() {
-			console.log(this.captchaObj);
 			this.captchaObj.verify();
 		},
 		verifySuc(vaParam) {

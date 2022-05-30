@@ -48,19 +48,7 @@ body {
                     color: green;
                 }
             }
-            .codeBtn{
-                cursor: pointer;
-                margin-top: 10px;
-                text-align: center;
-                width: 150px;
-                padding: 2px;
-                border: 1px solid #000;
-                border-radius: 4px;
-                box-shadow: inset -2px -2px 3px rgb(120, 120, 120);
-                &:hover {
-                    box-shadow: inset 0px -1px 0px #ccc;
-                }
-            }
+            
             span.wait{
                 position: absolute;
             }
@@ -73,8 +61,8 @@ body {
                 line-height: 20px;
                 width: 40px;
                 &::before{
-                    content: 'V';
-                    color: green;
+                    content: '√ ';
+                    color: #018e18;
                 }
             }
             span.pw_btn_hidden{
@@ -106,6 +94,19 @@ body {
                 &:hover {
                     box-shadow: inset 0px -1px 0px #ccc;
                 }
+            }
+        }
+        .codeBtn{
+            cursor: pointer;
+            margin-top: 10px;
+            text-align: center;
+            width: 150px;
+            padding: 2px;
+            border: 1px solid #000;
+            border-radius: 4px;
+            box-shadow: inset -2px -2px 3px rgb(120, 120, 120);
+            &:hover {
+                box-shadow: inset 0px -1px 0px #ccc;
             }
         }
     }

@@ -3,9 +3,9 @@ const vm = Vue.createApp({
 	data() {
 		return {
 			// 成功頁面連結
-			successUrl: "",
+			successUrl: "尚未設定",
 			// 失敗連結
-			failUrl: "",
+			failUrl: "尚未設定",
 			// * log_api
 			baseUrl: "https://misapi.glamexapp.com",
 			accountApi: {
@@ -76,7 +76,6 @@ const vm = Vue.createApp({
 			// 驗證REG
 			regRule: {
 				mobileReg: { reg0: /^(1+\d{10})$/ },
-				mobileHkReg: { reg0: /^(\+852\s)?[5689]{1}\d{7}$/ },
 				emailReg: { reg0: /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,5})$/ },
 				ruleReg: { reg0: /\d{6}/ },
 				passwordReg: {
@@ -96,10 +95,8 @@ const vm = Vue.createApp({
 	watch: {
 	},
 	created() {
-		this.getURLQueryObject();
 	},
 	mounted() {
-		this.getSourceParams();
 	},
 	methods: {
 		// * log_api
@@ -118,18 +115,21 @@ const vm = Vue.createApp({
 		// 驗證碼 驗證
 		fetchVerifyCode(url) {
 			const vm = this
-			return fetch(url).then(res => {
-				return res.json()
-			}).then(response => {
-				console.log(response);
-				if (response.result === 0) {
-					vm.registerFinally.code = true
-					return response.message
-				} else {
-					throw response.message
-				}
-			}).catch(err => {
-				return err
+			return new Promise((resolve,reject)=>{
+				fetch(url).then(res => {
+					return res.json()
+				}).then(response => {
+					console.log(response);
+					if (response.result === '0') {
+						vm.registerFinally.code = true
+						resolve(response.message)
+					} else {
+						reject(response.message)
+					}
+				}).catch(err => {
+					vm.registerFinally.code = false
+					reject(err)
+				})
 			})
 		},
 		// * log_text
@@ -163,13 +163,6 @@ const vm = Vue.createApp({
 			this.$refs.pw_btn.classList.toggle("show_password")
 			this.show_password = !this.show_password
 		},
-		resetInput(ele) {
-			if (ele.classList.contains("wrong")) {
-				ele.classList.remove("wrong");
-				ele.value = "";
-				ele.parentElement.classList.remove("error");
-			}
-		},
 		//手機驗證
 		async checkPhoneNum(el) {
 			const vm = this
@@ -193,11 +186,11 @@ const vm = Vue.createApp({
 		//傳送驗證碼 ( 需極驗拼圖通過才會發送 )
 		geeTest() {
 			let vm = this;
-			if(!vm.registerFinally.phoneNum){
+			if (!vm.registerFinally.phoneNum) {
 				vm.$refs.phoneNum.classList.add('shake')
-					let clearInet = setTimeout(() => {
-						vm.$refs.phoneNum.classList.remove('shake')
-					}, 500);
+				let clearInet = setTimeout(() => {
+					vm.$refs.phoneNum.classList.remove('shake')
+				}, 500);
 			}
 			if (vm.registerFinally.phoneNum && !vm.verifyTrigger) {
 				vm.$refs.gt.verify();
@@ -248,10 +241,11 @@ const vm = Vue.createApp({
 			let url = `${vm.baseUrl}${vm.accountApi[el]}?channel=S&mobilePhone=${vm.inputValue.phoneNum}&code=${vm.inputValue.code}`
 			try {
 				await vm.checkData(vm.inputValue.code, vm.checkState.code, vm.regRule.ruleReg, "code")
-				vm.$refs.ruleCode_verify.textContent = await vm.fetchVerifyCode(url)
-				vm.registerFinally.code = true
+				await vm.fetchVerifyCode(url)
+				console.log('in four');
 				vm.$refs.ruleCode_verify.textContent = ""
 			} catch (error) {
+				console.log('in five');
 				vm.$refs.ruleCode_verify.textContent = error
 				vm.registerFinally.code = false
 			}
@@ -318,7 +312,6 @@ const vm = Vue.createApp({
 			}
 		},
 		//開戶
-
 		async registerRealAccount() {
 			const vm = this
 			for (const key of Object.keys(vm.registerFinally)) {
@@ -338,7 +331,7 @@ const vm = Vue.createApp({
 					sessionStorage.setItem('mobilePhone', vm.inputValue.phoneNum)
 					sessionStorage.setItem('password', vm.inputValue.passWord)
 					sessionStorage.setItem('accountNum', response.iResult.customerNumber)
-					alert(`註冊成功 手機號碼為 ${vm.inputValue.phoneNum} 密碼為 ${vm.inputValue.passWord}`)
+					alert(`註冊成功 手機號碼為 ${vm.inputValue.phoneNum} 密碼為 ${vm.inputValue.passWord} 客戶帳號為 ${response.iResult.customerNumber} 成功頁地址為 ${vm.successUrl}`)
 					return response.message
 				}).catch(err => {
 					alert(err.message)
@@ -346,133 +339,10 @@ const vm = Vue.createApp({
 				})
 			console.log(message);
 		},
-		async openRealAccount() {
-			let vm = this;
-
-			let checkMobile = await vm.checkMobile();
-			if (!checkMobile) {
-				return;
-			}
-			let code = await vm.code();
-			if (!code) {
-				return;
-			}
-			let email = await vm.email();
-			if (!email) {
-				return;
-			}
-			let passWord = await vm.passWord();
-			if (!passWord) {
-				return;
-			}
-			let checkContinue = true;
-			if (!checkContinue) {
-				return;
-			} else {
-				if (vm.requestHeaders.method != "/account/open/openRealAccount") {
-					vm.requestHeaders.method = "/account/open/openRealAccount";
-				}
-				let registerParams = {
-					mobilePhone: vm.inputValue.phoneNum,
-					checkCode: vm.inputValue.ruleCode,
-					passWord: vm.inputValue.passWord,
-					email: vm.inputValue.email,
-				};
-				let reqParams = Object.assign(vm.defaultParams, registerParams);
-				$("#tip").fadeIn().css("display", "flex").delay(6000).fadeOut();
-				$.ajax({
-					headers: vm.requestHeaders,
-					data: JSON.stringify({
-						head: {
-							appKey: vm.appKey
-						},
-						data: reqParams,
-					}),
-					type: "POST",
-					url: vm.baseUrl + "/account/open/openRealAccount",
-					dataType: "json",
-					success: function (result, textStatus, jqXHR) {
-						if (!result || result.code !== 1) {
-							console.log(result.msg)
-							if (result.msg == "验证码错误或者已经超时") {
-								$("#tip").css('display', 'none')
-								$(".form_tips").text(result.msg).show().delay(1500).fadeOut();
-							} else {
-								$("#tip").css('display', 'none')
-								$(".form_tips").text(result.msg).show().delay(1500).fadeOut();
-							}
-							clearInterval(vm.timer);
-							vm.countdown(0);
-						} else {
-							console.log(result);
-							sessionStorage.setItem("phone", vm.inputValue.phoneNum);
-							sessionStorage.setItem("accountNum", result.data.account.customerNumber);
-							sessionStorage.setItem("passWord", vm.inputValue.passWord);
-							let accountLength = result.data.account.accountList.length;
-							if (accountLength < 2) {
-								//location.assign(vm.failUrl);
-								$("#tip").fadeOut();
-								$(".form_tips").text("发生错误").show().delay(1500).fadeOut();
-							} else {
-								let url = new URL(window.location.href);
-								let utm_source = url.searchParams.get("utm_source") == null ? '' : url.searchParams.get("utm_source");
-								if (utm_source == "fd5") {
-									VAD_EVENT.sendAction('submit', { act: 'submit', name: '註冊成功' });
-								}
-								setTimeout(() => {
-									//let search = window.location.search;
-									//toMineLogined_wcjy(mobilePhone,passWord)
-									let theSource = window.location.search;
-									theSource = theSource.substring(1);
-									window.location.href = "/success.html?param=50829&" + theSource;
-								}, 1000);
-							}
-						}
-					},
-				});
-			}
-		},
-		//utm_source
-		getURLQueryObject(url) {
-			if (url === null || url === undefined) {
-				url = window.location.href;
-			}
-			let search = decodeURIComponent(url.substring(url.lastIndexOf("?") + 1));
-			const reg = /([^?&=]+)=([^?&=]*)/g;
-			let obj = {};
-
-			search.replace(reg, (rs, $1, $2) => {
-				let name = decodeURIComponent($1);
-				let val = decodeURIComponent($2);
-				val = String(val);
-				obj[name] = val;
-				return rs;
-			});
-			obj.utm_source ? obj.utm_source.replace("-tr", "") : "";
-			console.log(obj);
-			this.urlParams = obj;
-		},
-		getSourceParams() {
-			let vm = this;
-			if (vm.urlParams.utm_source) {
-				vm.defaultParams.utmcsr = vm.urlParams.utm_source;
-			}
-			if (vm.urlParams.utm_medium) {
-				vm.defaultParams.utmcmd = vm.urlParams.utm_medium;
-			}
-			if (vm.urlParams.utm_campaign) {
-				vm.defaultParams.utmccn = vm.urlParams.utm_campaign;
-			}
-			if (vm.urlParams.utm_content) {
-				vm.defaultParams.utmcct = vm.urlParams.utm_content;
-			}
-			if (vm.urlParams.utm_term) {
-				vm.defaultParams.utmctr = vm.urlParams.utm_term;
-			}
-		},
 	},
 })
 
+// 極驗組件 component
 vm.component('Gtva', {
 	template: `<div></div>`,
 	name: "Gtva",

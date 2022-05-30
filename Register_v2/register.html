@@ -24,9 +24,9 @@
                 <span ref="ruleCode_verify">
                 </span>
                 <span class="wait" :class="{checked:registerFinally.code}"></span>
-                <div class="codeBtn" @click="geeTest">
-                    <p>{{codeBtn}}</p>
-                </div>
+            </div>
+            <div class="codeBtn" @click="geeTest">
+                <p>{{codeBtn}}</p>
             </div>
             <div class="input_wrap">
                 <input class="" type="text" placeholder="邮箱地址" v-model="inputValue.email" ref="email"
@@ -62,14 +62,14 @@
                 <div class="submit" @click="registerRealAccount">送出</div>
             </div>
         </fieldset>
-        <!--提示信息區塊 默认隐藏-->
-        <div ref="formTips">
-
-        </div>
+        <!-- 極驗組件 -->
         <Gtva ref="gt" @verify_suc="getVerifyCode"></Gtva>
     </div>
+    <!-- 套入vue框架 -->
     <script src="https://unpkg.com/vue@next"></script>
+    <!-- 套入極驗套件 -->
     <script src="./geetest.js"></script>
+    <!-- 套入註冊模板與極驗組件 -->
     <script src="./register_vue3.js"></script>
 </body>
 
